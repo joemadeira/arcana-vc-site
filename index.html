@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Arcana Research | Private Market Intelligence</title>
-  <meta name="description" content="Arcana Research is a private market intelligence and strategic advisory platform connecting capital with high-conviction opportunities through research, relationships and execution." />
-  <link rel="canonical" href="https://www.arcanavc.com/" />
 
-  <meta property="og:url" content="https://www.arcanavc.com/" />
+  <meta
+    name="description"
+    content="Arcana Research is a strategic advisory and private investment network focused on private market intelligence, strategic access and high-conviction opportunities."
+  />
+
   <meta property="og:title" content="Arcana Research" />
-  <meta property="og:description" content="Hidden knowledge. Strategic access. High-conviction private opportunities." />
+  <meta
+    property="og:description"
+    content="Private research. Strategic access. High-conviction private opportunities."
+  />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#07030f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
       --bg: #07030f;
-      --bg-soft: #10061f;
+      --bg2: #110721;
       --ink: #ffffff;
-      --muted: rgba(255, 255, 255, .66);
-      --soft: rgba(255, 255, 255, .44);
-      --ghost: rgba(255, 255, 255, .28);
-      --panel: rgba(255, 255, 255, .052);
-      --panel-strong: rgba(255, 255, 255, .088);
-      --line: rgba(255, 255, 255, .115);
-      --line-strong: rgba(143, 255, 210, .30);
+      --muted: rgba(255,255,255,.68);
+      --soft: rgba(255,255,255,.46);
+      --faint: rgba(255,255,255,.28);
+      --panel: rgba(255,255,255,.055);
+      --panel2: rgba(255,255,255,.085);
+      --line: rgba(255,255,255,.11);
+      --line2: rgba(143,255,210,.26);
       --emerald: #8fffd2;
-      --emerald-2: #28d69d;
+      --emerald2: #2ee0a3;
       --purple: #6d3cff;
-      --violet: #b7a1ff;
-      --gold: #f5d78a;
-      --black: #030108;
-      --maxw: 1220px;
-      --radius-xl: 34px;
-      --radius-xxl: 48px;
-      --ease: cubic-bezier(.2, .8, .2, 1);
+      --violet: #b7a4ff;
+      --gold: #f3d28b;
+      --max: 1220px;
+      --radius: 34px;
+      --radius2: 52px;
+      --ease: cubic-bezier(.2,.8,.2,1);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
       min-height: 100vh;
-      color: var(--ink);
       background:
-        radial-gradient(1000px 720px at 8% -14%, rgba(109, 60, 255, .36), transparent 63%),
-        radial-gradient(840px 620px at 98% 6%, rgba(143, 255, 210, .16), transparent 58%),
-        radial-gradient(760px 520px at 48% 105%, rgba(109, 60, 255, .20), transparent 62%),
-        linear-gradient(180deg, #07030f 0%, #090314 46%, #040208 100%);
-      font: 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        radial-gradient(900px 620px at 8% -12%, rgba(109,60,255,.36), transparent 62%),
+        radial-gradient(760px 540px at 100% 4%, rgba(143,255,210,.16), transparent 58%),
+        radial-gradient(840px 620px at 50% 112%, rgba(109,60,255,.22), transparent 62%),
+        linear-gradient(180deg, #07030f 0%, #090313 46%, #040208 100%);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       overflow-x: hidden;
-      text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     body::before {
@@ -66,7 +84,7 @@
       background-image:
         linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
-        radial-gradient(rgba(255,255,255,.28) 1px, transparent 1px);
+        radial-gradient(rgba(255,255,255,.32) 1px, transparent 1px);
       background-size: 54px 54px, 54px 54px, 140px 140px;
       mask-image: linear-gradient(to bottom, black, transparent 78%);
     }
@@ -78,15 +96,29 @@
       z-index: 1;
       pointer-events: none;
       background:
-        linear-gradient(90deg, rgba(0,0,0,.34), transparent 18%, transparent 82%, rgba(0,0,0,.34)),
-        radial-gradient(circle at 50% 0%, transparent 0 38%, rgba(0,0,0,.20) 76%, rgba(0,0,0,.58) 100%);
+        linear-gradient(90deg, rgba(0,0,0,.32), transparent 18%, transparent 82%, rgba(0,0,0,.32)),
+        radial-gradient(circle at 50% 0%, transparent 0 38%, rgba(0,0,0,.22) 78%, rgba(0,0,0,.62) 100%);
     }
 
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, p { text-wrap: pretty; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .wrap {
-      width: min(var(--maxw), calc(100% - 42px));
+    p {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      text-wrap: pretty;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 42px));
       margin: 0 auto;
       position: relative;
       z-index: 3;
@@ -98,7 +130,7 @@
       z-index: 2;
       pointer-events: none;
       opacity: .035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
     }
 
     .aurora {
@@ -121,80 +153,96 @@
     }
 
     @keyframes breathe {
-      from { transform: translate3d(0,0,0) scale(.96) rotate(0deg); opacity: .72; }
-      to { transform: translate3d(-4vw,2vh,0) scale(1.08) rotate(18deg); opacity: 1; }
+      from {
+        transform: translate3d(0,0,0) scale(.96) rotate(0deg);
+        opacity: .72;
+      }
+      to {
+        transform: translate3d(-4vw,2vh,0) scale(1.08) rotate(18deg);
+        opacity: 1;
+      }
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
       backdrop-filter: blur(18px);
-      background: linear-gradient(180deg, rgba(7,3,15,.82), rgba(7,3,15,.42));
+      background: linear-gradient(180deg, rgba(7,3,15,.86), rgba(7,3,15,.48));
       border-bottom: 1px solid rgba(255,255,255,.055);
     }
 
     header {
+      height: 84px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      justify-content: space-between;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 13px;
-      font-weight: 800;
-      letter-spacing: .20em;
+      gap: 14px;
       font-size: 14px;
+      font-weight: 850;
+      letter-spacing: .2em;
       text-transform: uppercase;
     }
 
-    .mark {
+    .brand-mark {
       width: 42px;
       height: 42px;
       border-radius: 16px;
-      border: 1px solid rgba(143,255,210,.40);
       position: relative;
+      border: 1px solid rgba(143,255,210,.42);
       background:
-        radial-gradient(circle at 32% 27%, rgba(143,255,210,.95), transparent 15%),
-        radial-gradient(circle at 72% 74%, rgba(109,60,255,.76), transparent 28%),
-        linear-gradient(135deg, rgba(109,60,255,.34), rgba(40,214,157,.13));
+        radial-gradient(circle at 32% 26%, rgba(143,255,210,.95), transparent 15%),
+        radial-gradient(circle at 74% 74%, rgba(109,60,255,.8), transparent 30%),
+        linear-gradient(135deg, rgba(109,60,255,.34), rgba(143,255,210,.12));
       box-shadow: 0 0 42px rgba(143,255,210,.13), inset 0 1px 0 rgba(255,255,255,.18);
     }
 
-    .mark::before,
-    .mark::after {
+    .brand-mark::before,
+    .brand-mark::after {
       content: "";
       position: absolute;
-      border: 1px solid rgba(255,255,255,.25);
       border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.24);
     }
 
-    .mark::before { inset: 10px; transform: rotate(45deg); }
-    .mark::after { inset: 15px; border-color: rgba(143,255,210,.35); }
+    .brand-mark::before {
+      inset: 10px;
+      transform: rotate(45deg);
+    }
+
+    .brand-mark::after {
+      inset: 15px;
+      border-color: rgba(143,255,210,.36);
+    }
 
     nav {
       display: flex;
-      gap: 26px;
       align-items: center;
+      gap: 28px;
       font-size: 14px;
       color: var(--muted);
     }
 
     nav a {
-      transition: color .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
+      transition: color .25s var(--ease), transform .25s var(--ease);
     }
 
-    nav a:hover { color: white; transform: translateY(-1px); }
+    nav a:hover {
+      color: #fff;
+      transform: translateY(-1px);
+    }
 
     .nav-cta {
-      color: white;
+      color: #fff;
       border: 1px solid rgba(143,255,210,.24);
       border-radius: 999px;
-      padding: 9px 16px;
-      background: rgba(143,255,210,.06);
+      padding: 10px 18px;
+      background: rgba(143,255,210,.07);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
@@ -204,7 +252,7 @@
       grid-template-columns: 1.02fr .98fr;
       gap: 58px;
       align-items: center;
-      padding: 74px 0 98px;
+      padding: 78px 0 100px;
     }
 
     .eyebrow {
@@ -217,48 +265,48 @@
       border-radius: 999px;
       padding: 8px 14px;
       font-size: 13px;
-      margin-bottom: 24px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 18px 60px rgba(0,0,0,.16);
+      font-weight: 650;
+      margin-bottom: 26px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
     }
 
     .eyebrow::before {
       content: "";
       width: 8px;
       height: 8px;
-      border-radius: 99px;
+      border-radius: 999px;
       background: var(--emerald);
-      box-shadow: 0 0 18px rgba(143,255,210,.72);
+      box-shadow: 0 0 18px rgba(143,255,210,.76);
     }
 
     h1 {
-      margin: 0;
       max-width: 900px;
-      font-size: clamp(50px, 7.6vw, 104px);
-      line-height: .90;
+      font-size: clamp(52px, 7.6vw, 106px);
+      line-height: .9;
       letter-spacing: -.085em;
-      font-weight: 760;
+      font-weight: 820;
     }
 
-    .gradient-text {
-      background: linear-gradient(90deg, #fff 0%, #dffff4 34%, #b7a1ff 78%, #f5d78a 112%);
+    .gradient {
+      display: inline;
+      background: linear-gradient(90deg, #fff 0%, #dcfff4 34%, #b7a4ff 78%, #f3d28b 112%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .lead {
+    .hero-lead {
       max-width: 720px;
-      color: var(--muted);
+      margin-top: 30px;
       font-size: clamp(17px, 2vw, 20px);
-      margin: 30px 0 0;
     }
 
     .cred-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      margin-top: 34px;
-      max-width: 690px;
+      margin-top: 36px;
+      max-width: 700px;
       border: 1px solid rgba(255,255,255,.09);
       border-radius: 24px;
       background: rgba(255,255,255,.08);
@@ -267,15 +315,15 @@
     }
 
     .cred {
-      padding: 17px 16px;
-      background: rgba(8,3,18,.70);
+      padding: 18px 16px;
+      background: rgba(8,3,18,.72);
     }
 
     .cred strong {
       display: block;
       color: #fff;
-      line-height: 1.2;
       font-size: 15px;
+      line-height: 1.2;
     }
 
     .cred span {
@@ -283,38 +331,47 @@
       color: var(--soft);
       font-size: 12px;
       line-height: 1.45;
-      margin-top: 5px;
+      margin-top: 6px;
     }
 
-    .cta-row {
+    .actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 34px;
+      margin-top: 38px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
       border-radius: 999px;
-      padding: 13px 20px;
-      font-weight: 750;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.045);
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+      padding: 14px 22px;
+      font-size: 15px;
+      font-weight: 760;
+      transition: transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease);
     }
 
-    .btn.primary {
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
       background: var(--emerald);
       color: #06120d;
-      border-color: var(--emerald);
+      border: 1px solid var(--emerald);
       box-shadow: 0 18px 56px rgba(143,255,210,.18);
     }
 
-    .btn:hover { transform: translateY(-2px); border-color: rgba(143,255,210,.28); }
+    .btn-primary:hover {
+      box-shadow: 0 24px 70px rgba(143,255,210,.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.045);
+      color: #fff;
+    }
 
     .hero-stage {
       position: relative;
@@ -361,15 +418,31 @@
       z-index: 2;
     }
 
-    .r1 { inset: 86px; animation: spin 44s linear infinite; }
-    .r2 { inset: 128px 74px; border-color: rgba(183,161,255,.24); transform: rotate(28deg); animation: spinReverse 62s linear infinite; }
-    .r3 { inset: 72px 142px; border-color: rgba(255,255,255,.12); transform: rotate(-34deg); animation: spin 78s linear infinite; }
-    .r4 { inset: 182px; border-style: dashed; border-color: rgba(245,215,138,.18); animation: spinReverse 54s linear infinite; }
+    .r1 {
+      inset: 86px;
+      animation: spin 44s linear infinite;
+    }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes spinReverse { to { transform: rotate(-360deg); } }
+    .r2 {
+      inset: 128px 74px;
+      border-color: rgba(183,161,255,.24);
+      animation: spinReverse 62s linear infinite;
+    }
 
-    .arcana-object {
+    .r3 {
+      inset: 72px 142px;
+      border-color: rgba(255,255,255,.12);
+      animation: spin 78s linear infinite;
+    }
+
+    .r4 {
+      inset: 182px;
+      border-style: dashed;
+      border-color: rgba(245,215,138,.18);
+      animation: spinReverse 54s linear infinite;
+    }
+
+    .core {
       position: absolute;
       width: 186px;
       height: 186px;
@@ -386,10 +459,11 @@
       border: 1px solid rgba(255,255,255,.18);
       box-shadow: 0 0 110px rgba(143,255,210,.20), inset 0 1px 0 rgba(255,255,255,.22);
       animation: float 6s var(--ease) infinite alternate;
+      transition: transform .18s ease-out;
     }
 
-    .arcana-object::before,
-    .arcana-object::after {
+    .core::before,
+    .core::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -398,15 +472,15 @@
       background: rgba(255,255,255,.035);
     }
 
-    .arcana-object::before { transform: translate3d(24px, -24px, -20px); }
-    .arcana-object::after { transform: translate3d(-24px, 24px, 20px); }
-
-    @keyframes float {
-      from { translate: 0 0; filter: saturate(1); }
-      to { translate: 0 -18px; filter: saturate(1.18); }
+    .core::before {
+      transform: translate3d(24px, -24px, -20px);
     }
 
-    .data-line {
+    .core::after {
+      transform: translate3d(-24px, 24px, 20px);
+    }
+
+    .line {
       position: absolute;
       z-index: 3;
       height: 1px;
@@ -415,16 +489,39 @@
       opacity: .72;
     }
 
-    .l1 { width: 210px; left: 96px; top: 178px; transform: rotate(18deg); }
-    .l2 { width: 250px; right: 84px; top: 230px; transform: rotate(-24deg); }
-    .l3 { width: 235px; left: 84px; bottom: 178px; transform: rotate(-18deg); }
-    .l4 { width: 210px; right: 112px; bottom: 150px; transform: rotate(22deg); }
+    .l1 {
+      width: 210px;
+      left: 96px;
+      top: 178px;
+      transform: rotate(18deg);
+    }
+
+    .l2 {
+      width: 250px;
+      right: 84px;
+      top: 230px;
+      transform: rotate(-24deg);
+    }
+
+    .l3 {
+      width: 235px;
+      left: 84px;
+      bottom: 178px;
+      transform: rotate(-18deg);
+    }
+
+    .l4 {
+      width: 210px;
+      right: 112px;
+      bottom: 150px;
+      transform: rotate(22deg);
+    }
 
     .node {
       position: absolute;
       z-index: 5;
       border: 1px solid rgba(255,255,255,.13);
-      background: rgba(3,1,8,.48);
+      background: rgba(3,1,8,.50);
       backdrop-filter: blur(16px);
       border-radius: 20px;
       padding: 12px 15px;
@@ -433,30 +530,53 @@
       box-shadow: 0 20px 60px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.08);
     }
 
-    .node b { color: #fff; display: block; font-size: 14px; }
-    .n1 { left: 38px; top: 80px; }
-    .n2 { right: 38px; top: 136px; }
-    .n3 { left: 42px; bottom: 132px; }
-    .n4 { right: 54px; bottom: 82px; }
+    .node strong {
+      color: #fff;
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
 
-    .definition-card {
+    .n1 {
+      left: 38px;
+      top: 80px;
+    }
+
+    .n2 {
+      right: 38px;
+      top: 136px;
+    }
+
+    .n3 {
+      left: 42px;
+      bottom: 132px;
+    }
+
+    .n4 {
+      right: 54px;
+      bottom: 82px;
+    }
+
+    .definition {
       position: absolute;
       z-index: 6;
-      inset: auto 28px 28px 28px;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
       border: 1px solid rgba(143,255,210,.16);
       border-radius: 26px;
       padding: 18px;
       background: rgba(143,255,210,.055);
       color: var(--muted);
       font-size: 13px;
+      line-height: 1.6;
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
-    .definition-card strong {
+    .definition strong {
       color: #fff;
       display: block;
       margin-bottom: 4px;
-      letter-spacing: .02em;
     }
 
     .ticker {
@@ -464,12 +584,14 @@
       border-bottom: 1px solid rgba(255,255,255,.08);
       overflow: hidden;
       background: rgba(255,255,255,.025);
+      position: relative;
+      z-index: 3;
     }
 
     .ticker-track {
       display: flex;
       width: max-content;
-      animation: marquee 34s linear infinite;
+      animation: ticker 34s linear infinite;
     }
 
     .ticker span {
@@ -482,6 +604,7 @@
       text-transform: uppercase;
       letter-spacing: .18em;
       white-space: nowrap;
+      font-weight: 650;
     }
 
     .ticker span::before {
@@ -490,21 +613,22 @@
       height: 7px;
       border-radius: 999px;
       background: var(--emerald);
-      opacity: .75;
+      opacity: .78;
     }
 
-    @keyframes marquee { to { transform: translateX(-50%); } }
-
-    section { padding: 92px 0; }
+    .section {
+      padding: 98px 0;
+    }
 
     .section-head {
       display: grid;
       grid-template-columns: 1fr minmax(280px, 390px);
       gap: 44px;
       align-items: end;
+      margin-bottom: 42px;
     }
 
-    .section-kicker {
+    .kicker {
       color: rgba(143,255,210,.80);
       text-transform: uppercase;
       letter-spacing: .29em;
@@ -514,38 +638,67 @@
     }
 
     h2 {
-      margin: 0;
-      max-width: 860px;
+      max-width: 900px;
       font-size: clamp(34px, 4.8vw, 62px);
       line-height: 1;
       letter-spacing: -.056em;
-      font-weight: 740;
+      font-weight: 780;
     }
 
-    .section-copy {
-      max-width: 390px;
-      color: var(--muted);
-      margin: 0;
+    .section-head p {
+      font-size: 15px;
+    }
+
+    .thesis-card {
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(900px 340px at 100% 0%, rgba(143,255,210,.13), transparent 60%),
+        radial-gradient(700px 360px at 0% 100%, rgba(109,60,255,.18), transparent 64%),
+        linear-gradient(135deg, rgba(255,255,255,.088), rgba(255,255,255,.024));
+      border-radius: var(--radius2);
+      padding: clamp(34px, 5vw, 66px);
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 52px;
+      align-items: end;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.18);
+    }
+
+    .quote {
+      margin-top: 28px;
+      color: rgba(255,255,255,.9);
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.14;
+      letter-spacing: -.03em;
+      max-width: 660px;
+    }
+
+    .quote span {
+      color: var(--emerald);
     }
 
     .grid {
       display: grid;
-      gap: 16px;
-      margin-top: 38px;
+      gap: 18px;
     }
 
-    .grid.four { grid-template-columns: repeat(4, 1fr); }
-    .grid.three { grid-template-columns: repeat(3, 1fr); }
-    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     .card {
       position: relative;
       border: 1px solid var(--line);
       background: var(--panel);
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      box-shadow: 0 22px 80px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 30px;
+      min-height: 250px;
       overflow: hidden;
+      box-shadow: 0 22px 80px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.06);
       transition: transform .28s var(--ease), border-color .28s var(--ease), background .28s var(--ease);
     }
 
@@ -564,93 +717,45 @@
     .card:hover {
       transform: translateY(-6px);
       border-color: rgba(143,255,210,.25);
-      background: var(--panel-strong);
+      background: var(--panel2);
     }
 
-    .card:hover::after { opacity: 1; }
+    .card:hover::after {
+      opacity: 1;
+    }
 
     .icon {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: 16px;
       margin-bottom: 28px;
       border: 1px solid rgba(143,255,210,.25);
       background:
         radial-gradient(circle at 35% 28%, rgba(143,255,210,.34), transparent 32%),
-        linear-gradient(135deg, rgba(143,255,210,.16), rgba(109,60,255,.19));
+        linear-gradient(135deg, rgba(143,255,210,.16), rgba(109,60,255,.20));
       box-shadow: 0 0 36px rgba(143,255,210,.08);
     }
 
     .card h3 {
-      margin: 0;
-      font-size: 19px;
-      line-height: 1.22;
-      letter-spacing: -.015em;
+      font-size: 21px;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      margin-bottom: 12px;
     }
 
     .card p {
-      margin: 13px 0 0;
-      color: var(--muted);
       font-size: 14px;
-      line-height: 1.65;
     }
 
-    .thesis {
-      border: 1px solid var(--line);
-      background:
-        radial-gradient(900px 340px at 100% 0%, rgba(143,255,210,.13), transparent 60%),
-        radial-gradient(700px 360px at 0% 100%, rgba(109,60,255,.18), transparent 64%),
-        linear-gradient(135deg, rgba(255,255,255,.088), rgba(255,255,255,.024));
-      border-radius: var(--radius-xxl);
-      padding: clamp(34px, 5vw, 64px);
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 52px;
-      align-items: end;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.18);
-    }
-
-    .thesis p {
-      color: var(--muted);
-      font-size: 19px;
-      margin: 0;
-    }
-
-    .quote {
-      margin-top: 28px;
-      color: rgba(255,255,255,.86);
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 1.14;
-      letter-spacing: -.03em;
-    }
-
-    .quote span { color: var(--emerald); }
-
-    .process { counter-reset: step; }
-
-    .process .card { min-height: 260px; }
-
-    .process .card::before {
-      counter-increment: step;
-      content: "0" counter(step);
-      display: block;
-      color: rgba(143,255,210,.78);
-      font-weight: 850;
-      letter-spacing: .18em;
-      font-size: 12px;
-      margin-bottom: 58px;
-    }
-
-    .split-feature {
+    .method {
       display: grid;
       grid-template-columns: .92fr 1.08fr;
-      gap: 16px;
-      margin-top: 38px;
+      gap: 18px;
     }
 
-    .feature-panel {
-      min-height: 520px;
-      border-radius: var(--radius-xxl);
+    .method-visual {
+      min-height: 540px;
+      border-radius: var(--radius2);
       border: 1px solid rgba(255,255,255,.11);
       background:
         radial-gradient(circle at 50% 40%, rgba(143,255,210,.12), transparent 38%),
@@ -661,16 +766,19 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
-    .feature-panel::before {
+    .method-visual::before {
       content: "";
       position: absolute;
       inset: 44px;
       border-radius: 999px;
       border: 1px solid rgba(143,255,210,.16);
-      box-shadow: 0 0 0 68px rgba(143,255,210,.025), 0 0 0 136px rgba(109,60,255,.035);
+      box-shadow:
+        0 0 0 68px rgba(143,255,210,.025),
+        0 0 0 136px rgba(109,60,255,.035),
+        0 0 0 204px rgba(255,255,255,.018);
     }
 
-    .feature-panel::after {
+    .method-visual::after {
       content: "";
       position: absolute;
       width: 160px;
@@ -686,23 +794,33 @@
       box-shadow: 0 0 90px rgba(143,255,210,.16);
     }
 
-    .feature-list {
+    .steps {
       display: grid;
-      gap: 16px;
+      gap: 18px;
+      counter-reset: step;
     }
 
-    .feature-list .card {
-      min-height: 160px;
+    .step {
+      min-height: 168px;
+      counter-increment: step;
     }
 
-    .audience-card {
-      min-height: 254px;
+    .step::before {
+      content: "0" counter(step);
+      display: block;
+      color: rgba(143,255,210,.82);
+      font-weight: 850;
+      letter-spacing: .18em;
+      font-size: 12px;
+      margin-bottom: 44px;
     }
 
-    .portfolio-card { min-height: 272px; }
+    .portfolio-card {
+      min-height: 292px;
+    }
 
     .visual {
-      height: 118px;
+      height: 122px;
       border-radius: 25px;
       margin-bottom: 28px;
       background:
@@ -741,25 +859,27 @@
     .tag {
       display: inline-flex;
       margin-top: 18px;
-      color: rgba(143,255,210,.80);
+      color: rgba(143,255,210,.82);
       border: 1px solid rgba(143,255,210,.18);
       background: rgba(143,255,210,.055);
       border-radius: 999px;
       padding: 5px 10px;
       font-size: 12px;
+      position: relative;
+      z-index: 2;
     }
 
     .team-card {
       display: grid;
-      grid-template-columns: 124px 1fr;
-      gap: 24px;
-      align-items: start;
+      grid-template-columns: 128px 1fr;
+      gap: 26px;
+      min-height: auto;
     }
 
     .avatar {
-      width: 124px;
-      height: 124px;
-      border-radius: 30px;
+      width: 128px;
+      height: 128px;
+      border-radius: 31px;
       border: 1px solid rgba(255,255,255,.12);
       background:
         linear-gradient(90deg, transparent 0 14%, rgba(255,255,255,.07) 14% 17%, transparent 17% 31%, rgba(255,255,255,.07) 31% 34%, transparent 34%),
@@ -779,11 +899,23 @@
         linear-gradient(135deg, rgba(109,60,255,.28), rgba(143,255,210,.11));
     }
 
+    .team-card h3 {
+      font-size: 26px;
+      letter-spacing: -.03em;
+    }
+
     .meta {
       color: rgba(143,255,210,.78);
-      font-size: 13px;
-      font-weight: 750;
-      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 780;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      margin: 8px 0 18px;
+    }
+
+    .team-card p {
+      font-size: 14px;
+      line-height: 1.78;
     }
 
     .contact {
@@ -792,8 +924,8 @@
         radial-gradient(780px 340px at 0% 0%, rgba(143,255,210,.15), transparent 60%),
         radial-gradient(640px 340px at 100% 100%, rgba(109,60,255,.21), transparent 62%),
         rgba(143,255,210,.065);
-      border-radius: var(--radius-xxl);
-      padding: clamp(38px, 5vw, 66px);
+      border-radius: var(--radius2);
+      padding: clamp(38px, 5vw, 70px);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.22);
       position: relative;
       overflow: hidden;
@@ -811,30 +943,35 @@
       box-shadow: 0 0 0 80px rgba(143,255,210,.03), 0 0 0 160px rgba(109,60,255,.035);
     }
 
-    .contact h2 { max-width: 930px; }
-
-    .contact-note {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 18px;
-      margin: 22px 0 0;
+    .contact h2,
+    .contact p,
+    .contact .actions,
+    .contact .kicker {
       position: relative;
       z-index: 2;
     }
 
+    .contact p {
+      max-width: 720px;
+      margin-top: 22px;
+      font-size: 18px;
+    }
+
     footer {
       color: rgba(255,255,255,.42);
-      padding: 36px 0 50px;
+      padding: 38px 0 56px;
       font-size: 14px;
       display: flex;
       justify-content: space-between;
       gap: 20px;
       border-top: 1px solid rgba(255,255,255,.08);
+      position: relative;
+      z-index: 3;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(22px);
       transition: opacity .75s var(--ease), transform .75s var(--ease);
     }
 
@@ -843,8 +980,39 @@
       transform: translateY(0);
     }
 
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinReverse {
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes float {
+      from {
+        translate: 0 0;
+        filter: saturate(1);
+      }
+      to {
+        translate: 0 -18px;
+        filter: saturate(1.18);
+      }
+    }
+
+    @keyframes ticker {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
@@ -853,58 +1021,145 @@
     }
 
     @media (max-width: 1040px) {
-      nav { display: none; }
+      nav {
+        display: none;
+      }
+
+      .hero,
+      .thesis-card,
+      .section-head,
+      .method,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
 
       .hero {
         min-height: auto;
-        grid-template-columns: 1fr;
-        padding-top: 54px;
+        padding-top: 56px;
       }
 
       .hero-stage {
-        max-width: 610px;
+        max-width: 620px;
         width: 100%;
         min-height: 560px;
         margin: 0 auto;
       }
 
-      .grid.four,
-      .grid.three,
-      .grid.two,
-      .thesis,
-      .section-head,
-      .split-feature {
+      .section-head {
+        gap: 18px;
+      }
+
+      .method-visual {
+        min-height: 420px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      header {
+        height: 74px;
+      }
+
+      .brand {
+        font-size: 13px;
+        letter-spacing: .16em;
+      }
+
+      .hero {
+        padding: 52px 0 64px;
+        gap: 42px;
+      }
+
+      .cred-strip {
         grid-template-columns: 1fr;
       }
 
-      .section-copy { max-width: 720px; }
-      .feature-panel { min-height: 420px; }
-      footer { flex-direction: column; }
-    }
+      .hero-stage {
+        min-height: 470px;
+        border-radius: 36px;
+      }
 
-    @media (max-width: 640px) {
-      .wrap { width: min(100% - 28px, var(--maxw)); }
-      header { padding: 18px 0; }
-      .brand { font-size: 13px; letter-spacing: .16em; }
-      .hero { padding-bottom: 58px; gap: 40px; }
-      section { padding: 62px 0; }
-      .cred-strip { grid-template-columns: 1fr; }
-      .card { padding: 22px; border-radius: 26px; }
-      .team-card { grid-template-columns: 1fr; }
-      .hero-stage { min-height: 470px; border-radius: 36px; }
-      .arcana-object { width: 138px; height: 138px; }
-      .r1 { inset: 70px; }
-      .r2 { inset: 116px 52px; }
-      .r3 { inset: 56px 112px; }
-      .r4 { inset: 160px; }
-      .node { font-size: 12px; padding: 9px 11px; border-radius: 16px; }
-      .node b { font-size: 12px; }
-      .n1 { left: 18px; top: 42px; }
-      .n2 { right: 18px; top: 78px; }
-      .n3 { left: 18px; bottom: 104px; }
-      .n4 { right: 18px; bottom: 64px; }
-      .definition-card, .data-line { display: none; }
-      .feature-panel { display: none; }
+      .core {
+        width: 138px;
+        height: 138px;
+      }
+
+      .r1 {
+        inset: 70px;
+      }
+
+      .r2 {
+        inset: 116px 52px;
+      }
+
+      .r3 {
+        inset: 56px 112px;
+      }
+
+      .r4 {
+        inset: 160px;
+      }
+
+      .node {
+        font-size: 12px;
+        padding: 9px 11px;
+        border-radius: 16px;
+      }
+
+      .node strong {
+        font-size: 12px;
+      }
+
+      .n1 {
+        left: 18px;
+        top: 42px;
+      }
+
+      .n2 {
+        right: 18px;
+        top: 78px;
+      }
+
+      .n3 {
+        left: 18px;
+        bottom: 104px;
+      }
+
+      .n4 {
+        right: 18px;
+        bottom: 64px;
+      }
+
+      .definition,
+      .line,
+      .method-visual {
+        display: none;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .team-card {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 24px;
+        border-radius: 28px;
+      }
+
+      .contact {
+        border-radius: 34px;
+      }
     }
   </style>
 </head>
@@ -914,286 +1169,371 @@
   <div class="aurora"></div>
 
   <div class="topbar">
-    <div class="wrap">
-      <header>
-        <a class="brand" href="#" aria-label="Arcana Research home">
-          <span class="mark" aria-hidden="true"></span>
-          <span>Arcana Research</span>
-        </a>
+    <header class="container">
+      <a href="#" class="brand" aria-label="Arcana Research home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Arcana Research</span>
+      </a>
 
-        <nav aria-label="Primary navigation">
-          <a href="#thesis">Thesis</a>
-          <a href="#method">Method</a>
-          <a href="#clients">Clients</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#team">Team</a>
-          <a class="nav-cta" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Contact</a>
-        </nav>
-      </header>
-    </div>
+      <nav aria-label="Primary navigation">
+        <a href="#thesis">Thesis</a>
+        <a href="#method">Method</a>
+        <a href="#clients">Clients</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#team">Team</a>
+        <a class="nav-cta" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Contact</a>
+      </nav>
+    </header>
   </div>
 
-  <div class="wrap">
-    <main>
-      <section class="hero">
-        <div class="reveal">
-          <div class="eyebrow">Private market intelligence for trusted capital</div>
+  <main>
+    <section class="hero container">
+      <div class="reveal">
+        <div class="eyebrow">Private market intelligence for trusted capital</div>
 
-          <h1>Access is the asset. <span class="gradient-text">Conviction is the edge.</span></h1>
+        <h1>
+          Access is the asset.
+          <span class="gradient">Conviction is the edge.</span>
+        </h1>
 
-          <p class="lead">
-            Arcana Research is a strategic advisory and private investment network built for investors, counterparties and founders operating where opportunity is not public, obvious or easily accessed.
-          </p>
+        <p class="hero-lead">
+          Arcana Research is a strategic advisory and private investment network built for investors, counterparties and founders operating where opportunity is not public, obvious or easily accessed.
+        </p>
 
-          <div class="cred-strip" aria-label="Arcana credibility signals">
-            <div class="cred"><strong>Research-led</strong><span>Market theses before introductions.</span></div>
-            <div class="cred"><strong>Relationship-gated</strong><span>Opportunities validated through trusted networks.</span></div>
-            <div class="cred"><strong>Capital-aligned</strong><span>Selective deployment alongside strategic partners.</span></div>
+        <div class="cred-strip" aria-label="Arcana credibility signals">
+          <div class="cred">
+            <strong>Research-led</strong>
+            <span>Market theses before introductions.</span>
           </div>
 
-          <div class="cta-row">
-            <a class="btn primary" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Start a conversation →</a>
-            <a class="btn" href="#method">See the method</a>
+          <div class="cred">
+            <strong>Relationship-gated</strong>
+            <span>Opportunities validated through trusted networks.</span>
+          </div>
+
+          <div class="cred">
+            <strong>Capital-aligned</strong>
+            <span>Selective deployment alongside strategic partners.</span>
           </div>
         </div>
 
-        <div class="hero-stage reveal" aria-label="Abstract Arcana intelligence network visual">
-          <div class="ring r1"></div>
-          <div class="ring r2"></div>
-          <div class="ring r3"></div>
-          <div class="ring r4"></div>
-          <div class="arcana-object" aria-hidden="true"></div>
+        <div class="actions">
+          <a href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-primary">Start a conversation →</a>
+          <a href="#method" class="btn btn-secondary">See the method</a>
+        </div>
+      </div>
 
-          <div class="data-line l1"></div>
-          <div class="data-line l2"></div>
-          <div class="data-line l3"></div>
-          <div class="data-line l4"></div>
+      <div class="hero-stage reveal" aria-label="Abstract Arcana intelligence network visual">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="ring r4"></div>
 
-          <div class="node n1"><b>Signal</b>Market intelligence</div>
-          <div class="node n2"><b>Trust</b>Counterparty network</div>
-          <div class="node n3"><b>Access</b>Private allocation</div>
-          <div class="node n4"><b>Judgment</b>Selective execution</div>
+        <div class="core" aria-hidden="true"></div>
 
-          <div class="definition-card">
-            <strong>Arcana / är-kā-nə</strong>
-            Deep secrets, mysteries or specialized knowledge. In private markets, the best opportunities are rarely broadcast — they move through trusted people, sharp judgment and timing.
+        <div class="line l1"></div>
+        <div class="line l2"></div>
+        <div class="line l3"></div>
+        <div class="line l4"></div>
+
+        <div class="node n1">
+          <strong>Signal</strong>
+          Market intelligence
+        </div>
+
+        <div class="node n2">
+          <strong>Trust</strong>
+          Counterparty network
+        </div>
+
+        <div class="node n3">
+          <strong>Access</strong>
+          Private allocation
+        </div>
+
+        <div class="node n4">
+          <strong>Judgment</strong>
+          Selective execution
+        </div>
+
+        <div class="definition">
+          <strong>Arcana / är-kā-nə</strong>
+          Deep secrets, mysteries or specialized knowledge. In private markets, the best opportunities are rarely broadcast — they move through trusted people, sharp judgment and timing.
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Arcana themes">
+      <div class="ticker-track">
+        <span>Private research</span>
+        <span>Strategic access</span>
+        <span>Network-led opportunity</span>
+        <span>Founder relationships</span>
+        <span>Selective capital</span>
+        <span>Market intelligence</span>
+        <span>Private research</span>
+        <span>Strategic access</span>
+        <span>Network-led opportunity</span>
+        <span>Founder relationships</span>
+        <span>Selective capital</span>
+        <span>Market intelligence</span>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="thesis">
+      <div class="thesis-card">
+        <div>
+          <div class="kicker">Thesis</div>
+
+          <h2>
+            The best deals do not need more noise. They need the right people.
+          </h2>
+
+          <div class="quote">
+            We sit at the intersection of <span>capital, context and access.</span>
           </div>
         </div>
-      </section>
-    </main>
-  </div>
 
-  <div class="ticker" aria-label="Arcana themes">
-    <div class="ticker-track">
-      <span>Private research</span><span>Strategic access</span><span>Network-led opportunity</span><span>Founder relationships</span><span>Selective capital</span><span>Market intelligence</span><span>Private research</span><span>Strategic access</span><span>Network-led opportunity</span><span>Founder relationships</span><span>Selective capital</span><span>Market intelligence</span>
-    </div>
-  </div>
+        <p>
+          Many sophisticated investors have capital but not the time, proximity or market connectivity to source and assess every private opportunity themselves. Arcana bridges that gap by combining market intelligence, operator insight and trusted relationships into investable conviction.
+        </p>
+      </div>
+    </section>
 
-  <div class="wrap">
-    <main>
-      <section id="thesis" class="reveal">
-        <div class="thesis">
-          <div>
-            <div class="section-kicker">Thesis</div>
-            <h2>The best deals do not need more noise. They need the right people.</h2>
-            <div class="quote">We sit at the intersection of <span>capital, context and access.</span></div>
+    <section class="section container" id="method">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Method</div>
+          <h2>A discreet process for finding signal before consensus.</h2>
+        </div>
+
+        <p>
+          We are not a volume platform. We focus on opportunities where research, access and relationship capital can compound together.
+        </p>
+      </div>
+
+      <div class="method">
+        <div class="method-visual reveal" aria-hidden="true"></div>
+
+        <div class="steps">
+          <div class="card step reveal">
+            <h3>Form the market map</h3>
+            <p>
+              We build thematic views around sectors, founders and ecosystems where technical, cultural or capital shifts create asymmetric potential.
+            </p>
           </div>
 
+          <div class="card step reveal">
+            <h3>Validate through people</h3>
+            <p>
+              We test opportunities through trusted operators, investors and counterparties — the people closest to the market and the founder.
+            </p>
+          </div>
+
+          <div class="card step reveal">
+            <h3>Structure the introduction</h3>
+            <p>
+              We connect aligned capital with selected opportunities where the investor can bring more than money: credibility, network, speed or strategic value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="clients">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Who we serve</div>
+          <h2>Built for capital that values judgment.</h2>
+        </div>
+
+        <p>
+          Arcana is for people and firms who are already credible — but want sharper visibility, better context and warmer access across private markets.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="icon"></div>
+          <h3>Private investors</h3>
           <p>
-            Many sophisticated investors have capital but not the time, proximity or market connectivity to source and assess every private opportunity themselves. Arcana helps bridge that gap: turning research, experience and relationships into investable conviction.
+            Individuals, families and principals looking for trusted guidance, thoughtful deal access and a clearer way to deploy capital.
           </p>
         </div>
-      </section>
 
-      <section id="method">
-        <div class="section-head reveal">
+        <div class="card reveal">
+          <div class="icon"></div>
+          <h3>VCs and syndicates</h3>
+          <p>
+            Firms and networks seeking differentiated deal flow, co-investment relationships and credible counterparty introductions.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon"></div>
+          <h3>Founders and operators</h3>
+          <p>
+            Teams seeking strategic capital, market narrative, warm access and investors who understand the opportunity beyond the deck.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="portfolio">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Portfolio</div>
+          <h2>Selected themes and exposure.</h2>
+        </div>
+
+        <p>
+          Launch placeholders for now. Replace with approved companies, logos or anonymised case studies when ready.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card portfolio-card reveal">
+          <div class="visual"></div>
+          <h3>AI Infrastructure</h3>
+          <p>
+            Applied intelligence, compute, tooling and data infrastructure powering the next generation of software and automation.
+          </p>
+          <span class="tag">Theme placeholder</span>
+        </div>
+
+        <div class="card portfolio-card reveal">
+          <div class="visual v2"></div>
+          <h3>Deep Technology</h3>
+          <p>
+            Frontier technology companies where technical advantage, timing and specialist networks can create compounding advantage.
+          </p>
+          <span class="tag">Theme placeholder</span>
+        </div>
+
+        <div class="card portfolio-card reveal">
+          <div class="visual v3"></div>
+          <h3>Digital Assets</h3>
+          <p>
+            Private and liquid opportunities selected through market structure, network signal and disciplined risk assessment.
+          </p>
+          <span class="tag">Theme placeholder</span>
+        </div>
+
+        <div class="card portfolio-card reveal">
+          <div class="visual v2"></div>
+          <h3>Frontier Markets</h3>
+          <p>
+            High-growth ecosystems where local relationships, timing and trusted access can uncover non-obvious opportunity.
+          </p>
+          <span class="tag">Theme placeholder</span>
+        </div>
+
+        <div class="card portfolio-card reveal">
+          <div class="visual v3"></div>
+          <h3>Private Networks</h3>
+          <p>
+            Syndicates, founders, allocators and counterparties connected through trust, reputation and repeat collaboration.
+          </p>
+          <span class="tag">Network placeholder</span>
+        </div>
+
+        <div class="card portfolio-card reveal">
+          <div class="visual"></div>
+          <h3>Strategic Advisory</h3>
+          <p>
+            Selected mandates supporting capital introductions, investor positioning, narrative refinement and relationship execution.
+          </p>
+          <span class="tag">Mandate placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="team">
+      <div class="section-head reveal">
+        <div>
+          <div class="kicker">Team</div>
+          <h2>Relationship-led. Research-backed. Execution-minded.</h2>
+        </div>
+
+        <p>
+          Arcana’s credibility comes from the judgment, relationships and market intuition of Andrew and Alexandre.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card team-card reveal">
+          <div class="avatar" aria-hidden="true"></div>
+
           <div>
-            <div class="section-kicker">Method</div>
-            <h2>A discreet process for finding signal before consensus.</h2>
-          </div>
-          <p class="section-copy">
-            We are not a volume platform. We focus on opportunities where research, access and relationship capital can compound together.
-          </p>
-        </div>
+            <h3>Andrew Law</h3>
+            <div class="meta">Partner · Capital & Strategy</div>
 
-        <div class="split-feature">
-          <div class="feature-panel reveal" aria-hidden="true"></div>
-          <div class="feature-list process">
-            <div class="card reveal">
-              <h3>Form the market map</h3>
-              <p>We build thematic views around sectors, founders and ecosystems where technical, cultural or capital shifts create asymmetric potential.</p>
-            </div>
-
-            <div class="card reveal">
-              <h3>Validate through people</h3>
-              <p>We test opportunities through trusted operators, investors and counterparties — the people closest to the market and the founder.</p>
-            </div>
-
-            <div class="card reveal">
-              <h3>Structure the introduction</h3>
-              <p>We connect aligned capital with selected opportunities where the investor can bring more than money: credibility, network, speed or strategic value.</p>
-            </div>
+            <p>
+              Andrew graduated from University College London, ranking among the top of his cohort. Recognised for sharp strategic thinking and hands-on leadership, he combines institutional-level judgment with practical execution across investing, operations and growth.
+              <br><br>
+              He co-founded and scaled a direct-to-consumer company into a six-figure enterprise, leading both strategy and operations through its expansion. He later joined Accrete, a private equity firm focused on high-growth technology, where he deepened his experience evaluating and supporting innovative businesses.
+              <br><br>
+              Most recently, Andrew served as CIO of LVL Limited, overseeing investments across real estate, technology and traditional assets while advising on broader strategic allocation and capital deployment.
+            </p>
           </div>
         </div>
-      </section>
 
-      <section id="clients">
-        <div class="section-head reveal">
+        <div class="card team-card reveal">
+          <div class="avatar alex" aria-hidden="true"></div>
+
           <div>
-            <div class="section-kicker">Who we serve</div>
-            <h2>Built for capital that values judgment.</h2>
-          </div>
-          <p class="section-copy">
-            Arcana is for people and firms who are already credible — but want sharper visibility, better context and warmer access across private markets.
-          </p>
-        </div>
+            <h3>Alexandre Chau</h3>
+            <div class="meta">Partner · Market Intelligence</div>
 
-        <div class="grid three">
-          <div class="card audience-card reveal">
-            <div class="icon"></div>
-            <h3>Private investors</h3>
-            <p>Individuals, families and principals looking for trusted guidance, thoughtful deal access and a clearer way to deploy capital.</p>
-          </div>
-
-          <div class="card audience-card reveal">
-            <div class="icon"></div>
-            <h3>VCs and syndicates</h3>
-            <p>Firms and networks seeking differentiated deal flow, co-investment relationships and credible counterparty introductions.</p>
-          </div>
-
-          <div class="card audience-card reveal">
-            <div class="icon"></div>
-            <h3>Founders and operators</h3>
-            <p>Teams seeking strategic capital, market narrative, warm access and investors who understand the opportunity beyond the deck.</p>
+            <p>
+              Alexandre is a French finance professional with more than a decade of experience across both the sell-side and buy-side in Europe and Asia. He holds a Master in Finance from Université Paris Dauphine–PSL and has built a career spanning global banking, institutional asset management and digital assets.
+              <br><br>
+              He began his career at HSBC before joining Goldman Sachs across London and Hong Kong, later moving to Wellington Management where he managed over $12 billion in equity mandates. Following his transition into digital assets in 2020, he led Wellington’s crypto research initiatives and co-authored the firm’s institutional paper on digital assets.
+              <br><br>
+              Alexandre currently focuses on systematic strategies, market structure and capital preservation through his work at Mythos Liquid Capital.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="portfolio">
-        <div class="section-head reveal">
-          <div>
-            <div class="section-kicker">Portfolio</div>
-            <h2>Selected themes and exposure.</h2>
-          </div>
-          <p class="section-copy">
-            Use these as launch placeholders. Swap in approved companies, logos or anonymised case studies when ready.
-          </p>
+    <section class="section container">
+      <div class="contact reveal">
+        <div class="kicker">Contact</div>
+
+        <h2>For opportunities, partnerships and strategic allocation discussions.</h2>
+
+        <p>
+          Share what you are building, sourcing or looking to access. Arcana works selectively and confidentially with aligned founders, investors and counterparties.
+        </p>
+
+        <div class="actions">
+          <a href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-primary">andrew@arcanavc.com</a>
+          <a href="mailto:alex@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-secondary">alex@arcanavc.com</a>
         </div>
+      </div>
+    </section>
+  </main>
 
-        <div class="grid three">
-          <div class="card portfolio-card reveal">
-            <div class="visual"></div>
-            <h3>AI Infrastructure</h3>
-            <p>Applied intelligence, compute, tooling and data infrastructure powering the next generation of software and automation.</p>
-            <span class="tag">Theme placeholder</span>
-          </div>
-
-          <div class="card portfolio-card reveal">
-            <div class="visual v2"></div>
-            <h3>Deep Technology</h3>
-            <p>Frontier technology companies where technical advantage, timing and specialist networks can create compounding advantage.</p>
-            <span class="tag">Theme placeholder</span>
-          </div>
-
-          <div class="card portfolio-card reveal">
-            <div class="visual v3"></div>
-            <h3>Digital Assets</h3>
-            <p>Private and liquid opportunities selected through market structure, network signal and disciplined risk assessment.</p>
-            <span class="tag">Theme placeholder</span>
-          </div>
-
-          <div class="card portfolio-card reveal">
-            <div class="visual v2"></div>
-            <h3>Frontier Markets</h3>
-            <p>High-growth ecosystems where local relationships, timing and trusted access can uncover non-obvious opportunity.</p>
-            <span class="tag">Theme placeholder</span>
-          </div>
-
-          <div class="card portfolio-card reveal">
-            <div class="visual v3"></div>
-            <h3>Private Networks</h3>
-            <p>Syndicates, founders, allocators and counterparties connected through trust, reputation and repeat collaboration.</p>
-            <span class="tag">Network placeholder</span>
-          </div>
-
-          <div class="card portfolio-card reveal">
-            <div class="visual"></div>
-            <h3>Strategic Advisory</h3>
-            <p>Selected mandates supporting capital introductions, investor positioning, narrative refinement and relationship execution.</p>
-            <span class="tag">Mandate placeholder</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="team">
-        <div class="section-head reveal">
-          <div>
-            <div class="section-kicker">Team</div>
-            <h2>Relationship-led. Research-backed. Execution-minded.</h2>
-          </div>
-          <p class="section-copy">
-            The platform is intentionally personal. Arcana’s credibility comes from the judgment, relationships and market intuition of Andrew and Alex.
-          </p>
-        </div>
-
-        <div class="grid two">
-          <div class="card team-card reveal">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>Andrew Law</h3>
-              <div class="meta">Partner · Network & Capital Access</div>
-              <p>
-                Network-driven operator and investor focused on identifying asymmetric opportunities through relationships, market access and practical investment experience.
-              </p>
-            </div>
-          </div>
-
-          <div class="card team-card reveal">
-            <div class="avatar alex" aria-hidden="true"></div>
-            <div>
-              <h3>Alex Chau</h3>
-              <div class="meta">Partner · Strategy & Market Intelligence</div>
-              <p>
-                Investment and market strategist supporting opportunity assessment, counterparty relationships and selective capital deployment across private markets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="contact reveal">
-          <div class="section-kicker">Contact</div>
-          <h2>For opportunities, partnerships and strategic allocation discussions.</h2>
-          <p class="contact-note">
-            Share what you are building, sourcing or looking to access. Arcana works selectively and confidentially with aligned founders, investors and counterparties.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn primary" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">andrew@arcanavc.com</a>
-            <a class="btn" href="mailto:alex@arcanavc.com?subject=Arcana%20Introduction">alex@arcanavc.com</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <span>© <span id="year"></span> Arcana Research. All rights reserved.</span>
-      <span>Private market intelligence · Strategic advisory · Network-led access</span>
-    </footer>
-  </div>
+  <footer class="container">
+    <span>© <span id="year"></span> Arcana Research. All rights reserved.</span>
+    <span>Private market intelligence · Strategic advisory · Network-led access</span>
+  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
 
     document.querySelectorAll(".reveal").forEach((element, index) => {
       element.style.transitionDelay = `${Math.min(index * 35, 220)}ms`;
@@ -1201,18 +1541,27 @@
     });
 
     const stage = document.querySelector(".hero-stage");
-    const object = document.querySelector(".arcana-object");
+    const core = document.querySelector(".core");
 
-    if (stage && object && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      stage.addEventListener("pointermove", (event) => {
+    if (stage && core && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      stage.addEventListener("pointermove", event => {
         const rect = stage.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - .5;
-        const y = (event.clientY - rect.top) / rect.height - .5;
-        object.style.transform = `translate(-50%, -50%) rotateX(${58 - y * 10}deg) rotateZ(${45 + x * 10}deg)`;
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+        core.style.transform = `
+          translate(-50%, -50%)
+          rotateX(${58 - y * 10}deg)
+          rotateZ(${45 + x * 12}deg)
+        `;
       });
 
       stage.addEventListener("pointerleave", () => {
-        object.style.transform = "translate(-50%, -50%) rotateX(58deg) rotateZ(45deg)";
+        core.style.transform = `
+          translate(-50%, -50%)
+          rotateX(58deg)
+          rotateZ(45deg)
+        `;
       });
     }
   </script>
