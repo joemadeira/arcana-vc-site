@@ -4,35 +4,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Arcana Research | Strategic Investment Intelligence</title>
-  <meta name="description" content="Arcana Research is a private investment intelligence and advisory network helping capital access high-conviction private opportunities through research, relationships and strategic execution." />
+  <title>Arcana Research | Private Market Intelligence</title>
+  <meta name="description" content="Arcana Research is a private market intelligence and strategic advisory platform connecting capital with high-conviction opportunities through research, relationships and execution." />
   <link rel="canonical" href="https://www.arcanavc.com/" />
 
   <meta property="og:url" content="https://www.arcanavc.com/" />
   <meta property="og:title" content="Arcana Research" />
-  <meta property="og:description" content="Hidden knowledge. Strategic access. Network-led private opportunities." />
+  <meta property="og:description" content="Hidden knowledge. Strategic access. High-conviction private opportunities." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#07030f" />
 
   <style>
     :root {
       --bg: #07030f;
-      --bg2: #110721;
-      --panel: rgba(255, 255, 255, .052);
-      --panel-strong: rgba(255, 255, 255, .085);
-      --line: rgba(255, 255, 255, .115);
-      --line-strong: rgba(143, 255, 210, .28);
+      --bg-soft: #10061f;
       --ink: #ffffff;
       --muted: rgba(255, 255, 255, .66);
       --soft: rgba(255, 255, 255, .44);
+      --ghost: rgba(255, 255, 255, .28);
+      --panel: rgba(255, 255, 255, .052);
+      --panel-strong: rgba(255, 255, 255, .088);
+      --line: rgba(255, 255, 255, .115);
+      --line-strong: rgba(143, 255, 210, .30);
       --emerald: #8fffd2;
-      --emerald2: #2ce5a8;
+      --emerald-2: #28d69d;
       --purple: #6d3cff;
-      --violet: #9d7cff;
+      --violet: #b7a1ff;
+      --gold: #f5d78a;
       --black: #030108;
-      --maxw: 1200px;
+      --maxw: 1220px;
       --radius-xl: 34px;
-      --radius-lg: 26px;
+      --radius-xxl: 48px;
       --ease: cubic-bezier(.2, .8, .2, 1);
     }
 
@@ -42,14 +44,16 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(900px 620px at 8% -12%, rgba(109, 60, 255, .34), transparent 62%),
-        radial-gradient(760px 520px at 98% 0%, rgba(44, 229, 168, .16), transparent 58%),
-        radial-gradient(760px 620px at 50% 105%, rgba(109, 60, 255, .20), transparent 60%),
-        linear-gradient(180deg, #07030f 0%, #090314 48%, #040208 100%);
       color: var(--ink);
+      background:
+        radial-gradient(1000px 720px at 8% -14%, rgba(109, 60, 255, .36), transparent 63%),
+        radial-gradient(840px 620px at 98% 6%, rgba(143, 255, 210, .16), transparent 58%),
+        radial-gradient(760px 520px at 48% 105%, rgba(109, 60, 255, .20), transparent 62%),
+        linear-gradient(180deg, #07030f 0%, #090314 46%, #040208 100%);
       font: 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       overflow-x: hidden;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
     }
 
     body::before {
@@ -61,9 +65,10 @@
       opacity: .22;
       background-image:
         linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent 82%);
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
+        radial-gradient(rgba(255,255,255,.28) 1px, transparent 1px);
+      background-size: 54px 54px, 54px 54px, 140px 140px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
     }
 
     body::after {
@@ -73,12 +78,12 @@
       z-index: 1;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 0%, transparent 0 36%, rgba(0,0,0,.18) 72%, rgba(0,0,0,.48) 100%);
-      mix-blend-mode: multiply;
+        linear-gradient(90deg, rgba(0,0,0,.34), transparent 18%, transparent 82%, rgba(0,0,0,.34)),
+        radial-gradient(circle at 50% 0%, transparent 0 38%, rgba(0,0,0,.20) 76%, rgba(0,0,0,.58) 100%);
     }
 
     a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
+    h1, h2, h3, p { text-wrap: pretty; }
 
     .wrap {
       width: min(var(--maxw), calc(100% - 42px));
@@ -87,43 +92,62 @@
       z-index: 3;
     }
 
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+    }
+
     .aurora {
       position: fixed;
-      width: 45vw;
-      height: 45vw;
-      min-width: 480px;
-      min-height: 480px;
-      right: -18vw;
-      top: 12vh;
+      width: 50vw;
+      height: 50vw;
+      min-width: 540px;
+      min-height: 540px;
+      right: -20vw;
+      top: 10vh;
       z-index: 0;
       pointer-events: none;
       border-radius: 999px;
       background:
-        radial-gradient(circle at 35% 35%, rgba(143,255,210,.25), transparent 36%),
-        radial-gradient(circle at 62% 58%, rgba(109,60,255,.30), transparent 42%);
-      filter: blur(34px);
-      animation: breathe 9s var(--ease) infinite alternate;
+        radial-gradient(circle at 35% 35%, rgba(143,255,210,.24), transparent 36%),
+        radial-gradient(circle at 62% 58%, rgba(109,60,255,.32), transparent 42%),
+        radial-gradient(circle at 44% 68%, rgba(245,215,138,.10), transparent 34%);
+      filter: blur(38px);
+      animation: breathe 10s var(--ease) infinite alternate;
     }
 
     @keyframes breathe {
-      from { transform: translate3d(0,0,0) scale(.96) rotate(0deg); opacity: .78; }
-      to { transform: translate3d(-4vw,2vh,0) scale(1.08) rotate(16deg); opacity: 1; }
+      from { transform: translate3d(0,0,0) scale(.96) rotate(0deg); opacity: .72; }
+      to { transform: translate3d(-4vw,2vh,0) scale(1.08) rotate(18deg); opacity: 1; }
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(7,3,15,.82), rgba(7,3,15,.42));
+      border-bottom: 1px solid rgba(255,255,255,.055);
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 28px 0;
+      padding: 20px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 13px;
-      font-weight: 780;
-      letter-spacing: .24em;
-      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .20em;
+      font-size: 14px;
       text-transform: uppercase;
     }
 
@@ -135,19 +159,21 @@
       position: relative;
       background:
         radial-gradient(circle at 32% 27%, rgba(143,255,210,.95), transparent 15%),
-        radial-gradient(circle at 72% 74%, rgba(109,60,255,.72), transparent 28%),
+        radial-gradient(circle at 72% 74%, rgba(109,60,255,.76), transparent 28%),
         linear-gradient(135deg, rgba(109,60,255,.34), rgba(40,214,157,.13));
       box-shadow: 0 0 42px rgba(143,255,210,.13), inset 0 1px 0 rgba(255,255,255,.18);
     }
 
+    .mark::before,
     .mark::after {
       content: "";
       position: absolute;
-      inset: 10px;
       border: 1px solid rgba(255,255,255,.25);
       border-radius: 10px;
-      transform: rotate(45deg);
     }
+
+    .mark::before { inset: 10px; transform: rotate(45deg); }
+    .mark::after { inset: 15px; border-color: rgba(143,255,210,.35); }
 
     nav {
       display: flex;
@@ -158,7 +184,7 @@
     }
 
     nav a {
-      transition: color .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease);
+      transition: color .25s var(--ease), transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
     }
 
     nav a:hover { color: white; transform: translateY(-1px); }
@@ -173,11 +199,12 @@
     }
 
     .hero {
+      min-height: calc(100vh - 84px);
       display: grid;
-      grid-template-columns: 1.04fr .96fr;
-      gap: 54px;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 58px;
       align-items: center;
-      padding: 72px 0 98px;
+      padding: 74px 0 98px;
     }
 
     .eyebrow {
@@ -191,7 +218,7 @@
       padding: 8px 14px;
       font-size: 13px;
       margin-bottom: 24px;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 18px 60px rgba(0,0,0,.16);
     }
 
     .eyebrow::before {
@@ -203,54 +230,60 @@
       box-shadow: 0 0 18px rgba(143,255,210,.72);
     }
 
-    h1, h2, h3, p { text-wrap: pretty; }
-
     h1 {
       margin: 0;
-      max-width: 850px;
-      font-size: clamp(48px, 7.2vw, 92px);
-      line-height: .93;
-      letter-spacing: -.075em;
+      max-width: 900px;
+      font-size: clamp(50px, 7.6vw, 104px);
+      line-height: .90;
+      letter-spacing: -.085em;
       font-weight: 760;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #fff 0%, #d8fff1 44%, #a489ff 100%);
+      background: linear-gradient(90deg, #fff 0%, #dffff4 34%, #b7a1ff 78%, #f5d78a 112%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     .lead {
-      max-width: 690px;
+      max-width: 720px;
       color: var(--muted);
       font-size: clamp(17px, 2vw, 20px);
-      margin: 28px 0 0;
+      margin: 30px 0 0;
     }
 
-    .hero-proof {
+    .cred-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 1px;
       margin-top: 34px;
-      max-width: 650px;
+      max-width: 690px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 24px;
+      background: rgba(255,255,255,.08);
+      overflow: hidden;
+      box-shadow: 0 20px 80px rgba(0,0,0,.18);
     }
 
-    .proof-pill {
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.035);
-      border-radius: 18px;
-      padding: 14px;
-      color: var(--soft);
-      font-size: 12px;
-      line-height: 1.4;
+    .cred {
+      padding: 17px 16px;
+      background: rgba(8,3,18,.70);
     }
 
-    .proof-pill strong {
+    .cred strong {
       display: block;
       color: #fff;
-      font-size: 14px;
-      margin-bottom: 3px;
+      line-height: 1.2;
+      font-size: 15px;
+    }
+
+    .cred span {
+      display: block;
+      color: var(--soft);
+      font-size: 12px;
+      line-height: 1.45;
+      margin-top: 5px;
     }
 
     .cta-row {
@@ -267,10 +300,10 @@
       gap: 10px;
       border-radius: 999px;
       padding: 13px 20px;
-      font-weight: 730;
+      font-weight: 750;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.045);
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
@@ -278,81 +311,85 @@
       background: var(--emerald);
       color: #06120d;
       border-color: var(--emerald);
-      box-shadow: 0 16px 50px rgba(143,255,210,.18);
+      box-shadow: 0 18px 56px rgba(143,255,210,.18);
     }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(143,255,210,.28); }
 
-    .intelligence-card {
+    .hero-stage {
       position: relative;
-      min-height: 580px;
-      border-radius: 48px;
+      min-height: 620px;
+      border-radius: 54px;
       border: 1px solid rgba(255,255,255,.12);
       background:
-        linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.024)),
-        radial-gradient(circle at 50% 40%, rgba(143,255,210,.10), transparent 42%);
-      box-shadow: 0 34px 130px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.10);
+        radial-gradient(circle at 50% 44%, rgba(143,255,210,.12), transparent 39%),
+        radial-gradient(circle at 50% 52%, rgba(109,60,255,.20), transparent 48%),
+        linear-gradient(145deg, rgba(255,255,255,.078), rgba(255,255,255,.022));
+      box-shadow: 0 38px 140px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.10);
       overflow: hidden;
       isolation: isolate;
     }
 
-    .intelligence-card::before {
+    .hero-stage::before {
       content: "";
       position: absolute;
-      inset: 34px;
-      border-radius: 40px;
-      border: 1px solid rgba(143,255,210,.18);
+      inset: 32px;
+      border-radius: 44px;
+      border: 1px solid rgba(143,255,210,.16);
       background:
-        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px);
       background-size: 30px 30px;
       mask-image: radial-gradient(circle at 50% 50%, black, transparent 72%);
     }
 
-    .orbit {
+    .hero-stage::after {
+      content: "";
       position: absolute;
-      inset: 82px;
+      inset: -1px;
+      background: conic-gradient(from 180deg at 50% 50%, transparent, rgba(143,255,210,.16), transparent, rgba(109,60,255,.16), transparent);
+      opacity: .18;
+      filter: blur(16px);
+      animation: spin 20s linear infinite;
+    }
+
+    .ring {
+      position: absolute;
       border: 1px solid rgba(143,255,210,.20);
-      border-radius: 50%;
-      animation: spin 44s linear infinite;
+      border-radius: 999px;
+      transform-origin: center;
+      z-index: 2;
     }
 
-    .orbit.two {
-      inset: 128px 70px;
-      border-color: rgba(157,124,255,.24);
-      transform: rotate(28deg);
-      animation-duration: 62s;
-      animation-direction: reverse;
-    }
-
-    .orbit.three {
-      inset: 70px 136px;
-      border-color: rgba(255,255,255,.12);
-      transform: rotate(-34deg);
-      animation-duration: 78s;
-    }
+    .r1 { inset: 86px; animation: spin 44s linear infinite; }
+    .r2 { inset: 128px 74px; border-color: rgba(183,161,255,.24); transform: rotate(28deg); animation: spinReverse 62s linear infinite; }
+    .r3 { inset: 72px 142px; border-color: rgba(255,255,255,.12); transform: rotate(-34deg); animation: spin 78s linear infinite; }
+    .r4 { inset: 182px; border-style: dashed; border-color: rgba(245,215,138,.18); animation: spinReverse 54s linear infinite; }
 
     @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spinReverse { to { transform: rotate(-360deg); } }
 
-    .cube {
+    .arcana-object {
       position: absolute;
-      width: 176px;
-      height: 176px;
+      width: 186px;
+      height: 186px;
       left: 50%;
-      top: 50%;
+      top: 49%;
+      z-index: 4;
       transform: translate(-50%, -50%) rotateX(58deg) rotateZ(45deg);
       transform-style: preserve-3d;
-      border-radius: 24px;
+      border-radius: 26px;
       background:
-        radial-gradient(circle at 30% 20%, rgba(143,255,210,.50), transparent 34%),
-        linear-gradient(135deg, rgba(109,60,255,.48), rgba(143,255,210,.16));
+        radial-gradient(circle at 30% 20%, rgba(143,255,210,.56), transparent 34%),
+        radial-gradient(circle at 80% 82%, rgba(245,215,138,.20), transparent 30%),
+        linear-gradient(135deg, rgba(109,60,255,.50), rgba(143,255,210,.15));
       border: 1px solid rgba(255,255,255,.18);
-      box-shadow: 0 0 100px rgba(143,255,210,.20), inset 0 1px 0 rgba(255,255,255,.22);
+      box-shadow: 0 0 110px rgba(143,255,210,.20), inset 0 1px 0 rgba(255,255,255,.22);
       animation: float 6s var(--ease) infinite alternate;
     }
 
-    .cube::before,
-    .cube::after {
+    .arcana-object::before,
+    .arcana-object::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -361,78 +398,132 @@
       background: rgba(255,255,255,.035);
     }
 
-    .cube::before { transform: translate3d(24px, -24px, -20px); }
-    .cube::after { transform: translate3d(-24px, 24px, 20px); }
+    .arcana-object::before { transform: translate3d(24px, -24px, -20px); }
+    .arcana-object::after { transform: translate3d(-24px, 24px, 20px); }
 
     @keyframes float {
       from { translate: 0 0; filter: saturate(1); }
-      to { translate: 0 -18px; filter: saturate(1.2); }
+      to { translate: 0 -18px; filter: saturate(1.18); }
     }
+
+    .data-line {
+      position: absolute;
+      z-index: 3;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(143,255,210,.44), transparent);
+      transform-origin: left center;
+      opacity: .72;
+    }
+
+    .l1 { width: 210px; left: 96px; top: 178px; transform: rotate(18deg); }
+    .l2 { width: 250px; right: 84px; top: 230px; transform: rotate(-24deg); }
+    .l3 { width: 235px; left: 84px; bottom: 178px; transform: rotate(-18deg); }
+    .l4 { width: 210px; right: 112px; bottom: 150px; transform: rotate(22deg); }
 
     .node {
       position: absolute;
+      z-index: 5;
       border: 1px solid rgba(255,255,255,.13);
-      background: rgba(3,1,8,.44);
-      backdrop-filter: blur(14px);
+      background: rgba(3,1,8,.48);
+      backdrop-filter: blur(16px);
       border-radius: 20px;
       padding: 12px 15px;
       color: rgba(255,255,255,.76);
       font-size: 13px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.08);
+      box-shadow: 0 20px 60px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.08);
     }
 
     .node b { color: #fff; display: block; font-size: 14px; }
-    .n1 { left: 36px; top: 74px; }
-    .n2 { right: 38px; top: 124px; }
-    .n3 { left: 42px; bottom: 112px; }
-    .n4 { right: 54px; bottom: 72px; }
+    .n1 { left: 38px; top: 80px; }
+    .n2 { right: 38px; top: 136px; }
+    .n3 { left: 42px; bottom: 132px; }
+    .n4 { right: 54px; bottom: 82px; }
 
-    .signal {
+    .definition-card {
       position: absolute;
+      z-index: 6;
       inset: auto 28px 28px 28px;
       border: 1px solid rgba(143,255,210,.16);
-      border-radius: 24px;
+      border-radius: 26px;
       padding: 18px;
       background: rgba(143,255,210,.055);
       color: var(--muted);
       font-size: 13px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
-    .signal strong {
+    .definition-card strong {
       color: #fff;
       display: block;
       margin-bottom: 4px;
+      letter-spacing: .02em;
     }
 
-    section { padding: 84px 0; }
+    .ticker {
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      overflow: hidden;
+      background: rgba(255,255,255,.025);
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 34s linear infinite;
+    }
+
+    .ticker span {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 28px;
+      color: var(--soft);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      white-space: nowrap;
+    }
+
+    .ticker span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--emerald);
+      opacity: .75;
+    }
+
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    section { padding: 92px 0; }
 
     .section-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
+      display: grid;
+      grid-template-columns: 1fr minmax(280px, 390px);
+      gap: 44px;
       align-items: end;
     }
 
     .section-kicker {
-      color: rgba(143,255,210,.78);
+      color: rgba(143,255,210,.80);
       text-transform: uppercase;
-      letter-spacing: .28em;
+      letter-spacing: .29em;
       font-size: 12px;
-      font-weight: 820;
+      font-weight: 850;
       margin-bottom: 16px;
     }
 
     h2 {
       margin: 0;
-      max-width: 850px;
-      font-size: clamp(34px, 4.7vw, 58px);
-      line-height: 1.01;
-      letter-spacing: -.052em;
-      font-weight: 730;
+      max-width: 860px;
+      font-size: clamp(34px, 4.8vw, 62px);
+      line-height: 1;
+      letter-spacing: -.056em;
+      font-weight: 740;
     }
 
     .section-copy {
-      max-width: 370px;
+      max-width: 390px;
       color: var(--muted);
       margin: 0;
     }
@@ -440,7 +531,7 @@
     .grid {
       display: grid;
       gap: 16px;
-      margin-top: 36px;
+      margin-top: 38px;
     }
 
     .grid.four { grid-template-columns: repeat(4, 1fr); }
@@ -462,15 +553,17 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(360px 180px at 20% 0%, rgba(143,255,210,.08), transparent 64%);
+      background:
+        radial-gradient(380px 180px at 20% 0%, rgba(143,255,210,.08), transparent 64%),
+        radial-gradient(260px 180px at 100% 100%, rgba(109,60,255,.10), transparent 62%);
       opacity: 0;
       transition: opacity .28s var(--ease);
       pointer-events: none;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(143,255,210,.24);
+      transform: translateY(-6px);
+      border-color: rgba(143,255,210,.25);
       background: var(--panel-strong);
     }
 
@@ -505,16 +598,16 @@
     .thesis {
       border: 1px solid var(--line);
       background:
-        radial-gradient(880px 330px at 100% 0%, rgba(143,255,210,.12), transparent 60%),
-        radial-gradient(680px 330px at 0% 100%, rgba(109,60,255,.17), transparent 64%),
-        linear-gradient(135deg, rgba(255,255,255,.085), rgba(255,255,255,.025));
-      border-radius: 46px;
-      padding: clamp(34px, 5vw, 60px);
+        radial-gradient(900px 340px at 100% 0%, rgba(143,255,210,.13), transparent 60%),
+        radial-gradient(700px 360px at 0% 100%, rgba(109,60,255,.18), transparent 64%),
+        linear-gradient(135deg, rgba(255,255,255,.088), rgba(255,255,255,.024));
+      border-radius: var(--radius-xxl);
+      padding: clamp(34px, 5vw, 64px);
       display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 48px;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 52px;
       align-items: end;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.18);
     }
 
     .thesis p {
@@ -523,30 +616,94 @@
       margin: 0;
     }
 
-    .process {
-      counter-reset: step;
+    .quote {
+      margin-top: 28px;
+      color: rgba(255,255,255,.86);
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.14;
+      letter-spacing: -.03em;
     }
 
-    .process .card {
-      min-height: 248px;
-    }
+    .quote span { color: var(--emerald); }
+
+    .process { counter-reset: step; }
+
+    .process .card { min-height: 260px; }
 
     .process .card::before {
       counter-increment: step;
       content: "0" counter(step);
       display: block;
       color: rgba(143,255,210,.78);
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: .18em;
       font-size: 12px;
-      margin-bottom: 54px;
+      margin-bottom: 58px;
     }
 
-    .portfolio-card { min-height: 248px; }
+    .split-feature {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 16px;
+      margin-top: 38px;
+    }
+
+    .feature-panel {
+      min-height: 520px;
+      border-radius: var(--radius-xxl);
+      border: 1px solid rgba(255,255,255,.11);
+      background:
+        radial-gradient(circle at 50% 40%, rgba(143,255,210,.12), transparent 38%),
+        radial-gradient(circle at 48% 55%, rgba(109,60,255,.20), transparent 50%),
+        rgba(255,255,255,.04);
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    }
+
+    .feature-panel::before {
+      content: "";
+      position: absolute;
+      inset: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(143,255,210,.16);
+      box-shadow: 0 0 0 68px rgba(143,255,210,.025), 0 0 0 136px rgba(109,60,255,.035);
+    }
+
+    .feature-panel::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 40px;
+      border: 1px solid rgba(255,255,255,.14);
+      background:
+        radial-gradient(circle at 30% 20%, rgba(143,255,210,.45), transparent 34%),
+        linear-gradient(135deg, rgba(109,60,255,.36), rgba(143,255,210,.14));
+      box-shadow: 0 0 90px rgba(143,255,210,.16);
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .feature-list .card {
+      min-height: 160px;
+    }
+
+    .audience-card {
+      min-height: 254px;
+    }
+
+    .portfolio-card { min-height: 272px; }
 
     .visual {
-      height: 112px;
-      border-radius: 24px;
+      height: 118px;
+      border-radius: 25px;
       margin-bottom: 28px;
       background:
         radial-gradient(circle at 20% 18%, rgba(143,255,210,.48), transparent 28%),
@@ -567,10 +724,24 @@
       mask-image: linear-gradient(115deg, black, transparent 76%);
     }
 
+    .visual.v2 {
+      background:
+        linear-gradient(120deg, transparent 0 24%, rgba(143,255,210,.18) 24% 25%, transparent 25% 54%, rgba(109,60,255,.25) 54% 55%, transparent 55%),
+        radial-gradient(circle at 72% 30%, rgba(143,255,210,.42), transparent 26%),
+        radial-gradient(circle at 25% 82%, rgba(109,60,255,.42), transparent 34%),
+        rgba(255,255,255,.035);
+    }
+
+    .visual.v3 {
+      background:
+        conic-gradient(from 120deg, rgba(143,255,210,.28), rgba(109,60,255,.30), rgba(245,215,138,.12), rgba(143,255,210,.28)),
+        rgba(255,255,255,.035);
+    }
+
     .tag {
       display: inline-flex;
       margin-top: 18px;
-      color: rgba(143,255,210,.78);
+      color: rgba(143,255,210,.80);
       border: 1px solid rgba(143,255,210,.18);
       background: rgba(143,255,210,.055);
       border-radius: 999px;
@@ -580,14 +751,14 @@
 
     .team-card {
       display: grid;
-      grid-template-columns: 122px 1fr;
+      grid-template-columns: 124px 1fr;
       gap: 24px;
       align-items: start;
     }
 
     .avatar {
-      width: 122px;
-      height: 122px;
+      width: 124px;
+      height: 124px;
       border-radius: 30px;
       border: 1px solid rgba(255,255,255,.12);
       background:
@@ -599,31 +770,56 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
     }
 
+    .avatar.alex {
+      background:
+        linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,.07) 18% 21%, transparent 21% 39%, rgba(255,255,255,.07) 39% 42%, transparent 42%),
+        linear-gradient(0deg, transparent 0 16%, rgba(0,0,0,.18) 16% 19%, transparent 19% 38%, rgba(0,0,0,.16) 38% 41%, transparent 41%),
+        radial-gradient(circle at 64% 22%, rgba(245,215,138,.22), transparent 32%),
+        radial-gradient(circle at 36% 24%, rgba(143,255,210,.28), transparent 34%),
+        linear-gradient(135deg, rgba(109,60,255,.28), rgba(143,255,210,.11));
+    }
+
     .meta {
-      color: rgba(143,255,210,.75);
+      color: rgba(143,255,210,.78);
       font-size: 13px;
-      font-weight: 730;
+      font-weight: 750;
       margin-top: 8px;
     }
 
     .contact {
       border: 1px solid rgba(143,255,210,.24);
       background:
-        radial-gradient(760px 330px at 0% 0%, rgba(143,255,210,.15), transparent 60%),
-        radial-gradient(620px 330px at 100% 100%, rgba(109,60,255,.20), transparent 62%),
+        radial-gradient(780px 340px at 0% 0%, rgba(143,255,210,.15), transparent 60%),
+        radial-gradient(640px 340px at 100% 100%, rgba(109,60,255,.21), transparent 62%),
         rgba(143,255,210,.065);
-      border-radius: 46px;
-      padding: clamp(36px, 5vw, 62px);
+      border-radius: var(--radius-xxl);
+      padding: clamp(38px, 5vw, 66px);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.22);
+      position: relative;
+      overflow: hidden;
     }
 
-    .contact h2 { max-width: 900px; }
+    .contact::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -80px;
+      top: -80px;
+      border-radius: 999px;
+      border: 1px solid rgba(143,255,210,.14);
+      box-shadow: 0 0 0 80px rgba(143,255,210,.03), 0 0 0 160px rgba(109,60,255,.035);
+    }
+
+    .contact h2 { max-width: 930px; }
 
     .contact-note {
-      max-width: 690px;
+      max-width: 720px;
       color: var(--muted);
       font-size: 18px;
       margin: 22px 0 0;
+      position: relative;
+      z-index: 2;
     }
 
     footer {
@@ -638,8 +834,8 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .7s var(--ease), transform .7s var(--ease);
+      transform: translateY(20px);
+      transition: opacity .75s var(--ease), transform .75s var(--ease);
     }
 
     .reveal.in-view {
@@ -656,18 +852,19 @@
       }
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1040px) {
       nav { display: none; }
 
       .hero {
+        min-height: auto;
         grid-template-columns: 1fr;
-        padding-top: 42px;
+        padding-top: 54px;
       }
 
-      .intelligence-card {
-        max-width: 560px;
+      .hero-stage {
+        max-width: 610px;
         width: 100%;
-        min-height: 520px;
+        min-height: 560px;
         margin: 0 auto;
       }
 
@@ -675,180 +872,199 @@
       .grid.three,
       .grid.two,
       .thesis,
-      .section-head {
+      .section-head,
+      .split-feature {
         grid-template-columns: 1fr;
       }
 
-      .section-head {
-        display: grid;
-        align-items: start;
-      }
-
       .section-copy { max-width: 720px; }
-
+      .feature-panel { min-height: 420px; }
       footer { flex-direction: column; }
     }
 
-    @media (max-width: 620px) {
+    @media (max-width: 640px) {
       .wrap { width: min(100% - 28px, var(--maxw)); }
-      header { padding: 22px 0; }
-      .brand { font-size: 14px; letter-spacing: .18em; }
-      .hero { padding-bottom: 58px; }
-      section { padding: 58px 0; }
-      .hero-proof { grid-template-columns: 1fr; }
+      header { padding: 18px 0; }
+      .brand { font-size: 13px; letter-spacing: .16em; }
+      .hero { padding-bottom: 58px; gap: 40px; }
+      section { padding: 62px 0; }
+      .cred-strip { grid-template-columns: 1fr; }
       .card { padding: 22px; border-radius: 26px; }
       .team-card { grid-template-columns: 1fr; }
-      .intelligence-card { min-height: 450px; border-radius: 34px; }
-      .cube { width: 136px; height: 136px; }
-      .orbit { inset: 70px; }
-      .orbit.two { inset: 116px 52px; }
-      .orbit.three { inset: 56px 112px; }
+      .hero-stage { min-height: 470px; border-radius: 36px; }
+      .arcana-object { width: 138px; height: 138px; }
+      .r1 { inset: 70px; }
+      .r2 { inset: 116px 52px; }
+      .r3 { inset: 56px 112px; }
+      .r4 { inset: 160px; }
       .node { font-size: 12px; padding: 9px 11px; border-radius: 16px; }
       .node b { font-size: 12px; }
       .n1 { left: 18px; top: 42px; }
       .n2 { right: 18px; top: 78px; }
-      .n3 { left: 18px; bottom: 92px; }
-      .n4 { right: 18px; bottom: 58px; }
-      .signal { display: none; }
+      .n3 { left: 18px; bottom: 104px; }
+      .n4 { right: 18px; bottom: 64px; }
+      .definition-card, .data-line { display: none; }
+      .feature-panel { display: none; }
     }
   </style>
 </head>
 
 <body>
+  <div class="noise"></div>
   <div class="aurora"></div>
 
+  <div class="topbar">
+    <div class="wrap">
+      <header>
+        <a class="brand" href="#" aria-label="Arcana Research home">
+          <span class="mark" aria-hidden="true"></span>
+          <span>Arcana Research</span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#thesis">Thesis</a>
+          <a href="#method">Method</a>
+          <a href="#clients">Clients</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#team">Team</a>
+          <a class="nav-cta" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Contact</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
   <div class="wrap">
-    <header>
-      <a class="brand" href="#" aria-label="Arcana Research home">
-        <span class="mark" aria-hidden="true"></span>
-        <span>Arcana Research</span>
-      </a>
-
-      <nav aria-label="Primary navigation">
-        <a href="#thesis">Thesis</a>
-        <a href="#approach">Approach</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#team">Team</a>
-        <a class="nav-cta" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Contact</a>
-      </nav>
-    </header>
-
     <main>
       <section class="hero">
         <div class="reveal">
-          <div class="eyebrow">Hidden knowledge for private markets</div>
+          <div class="eyebrow">Private market intelligence for trusted capital</div>
 
-          <h1>Strategic access to opportunities most capital never sees.</h1>
+          <h1>Access is the asset. <span class="gradient-text">Conviction is the edge.</span></h1>
 
           <p class="lead">
-            Arcana Research is a private investment intelligence and advisory network. We combine deep market analysis, trusted relationships and our own capital to identify high-conviction opportunities — then help the right investors access them with context and conviction.
+            Arcana Research is a strategic advisory and private investment network built for investors, counterparties and founders operating where opportunity is not public, obvious or easily accessed.
           </p>
 
-          <div class="hero-proof" aria-label="Arcana operating principles">
-            <div class="proof-pill"><strong>Research first</strong> Thesis-led market selection before capital introductions.</div>
-            <div class="proof-pill"><strong>Network validated</strong> Opportunities sourced through trusted operators and counterparties.</div>
-            <div class="proof-pill"><strong>Selective access</strong> Focused on asymmetric opportunities where insight compounds.</div>
+          <div class="cred-strip" aria-label="Arcana credibility signals">
+            <div class="cred"><strong>Research-led</strong><span>Market theses before introductions.</span></div>
+            <div class="cred"><strong>Relationship-gated</strong><span>Opportunities validated through trusted networks.</span></div>
+            <div class="cred"><strong>Capital-aligned</strong><span>Selective deployment alongside strategic partners.</span></div>
           </div>
 
           <div class="cta-row">
             <a class="btn primary" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Start a conversation →</a>
-            <a class="btn" href="#approach">Explore our approach</a>
+            <a class="btn" href="#method">See the method</a>
           </div>
         </div>
 
-        <div class="intelligence-card reveal" aria-label="Abstract investment intelligence visual">
-          <div class="orbit"></div>
-          <div class="orbit two"></div>
-          <div class="orbit three"></div>
-          <div class="cube" aria-hidden="true"></div>
+        <div class="hero-stage reveal" aria-label="Abstract Arcana intelligence network visual">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="ring r4"></div>
+          <div class="arcana-object" aria-hidden="true"></div>
+
+          <div class="data-line l1"></div>
+          <div class="data-line l2"></div>
+          <div class="data-line l3"></div>
+          <div class="data-line l4"></div>
 
           <div class="node n1"><b>Signal</b>Market intelligence</div>
-          <div class="node n2"><b>Access</b>Trusted network</div>
-          <div class="node n3"><b>Capital</b>Aligned deployment</div>
-          <div class="node n4"><b>Conviction</b>Selective syndication</div>
+          <div class="node n2"><b>Trust</b>Counterparty network</div>
+          <div class="node n3"><b>Access</b>Private allocation</div>
+          <div class="node n4"><b>Judgment</b>Selective execution</div>
 
-          <div class="signal">
+          <div class="definition-card">
             <strong>Arcana / är-kā-nə</strong>
-            Specialized knowledge known by few. In private markets, access is rarely public — it is earned through judgment, trust and timing.
+            Deep secrets, mysteries or specialized knowledge. In private markets, the best opportunities are rarely broadcast — they move through trusted people, sharp judgment and timing.
           </div>
         </div>
       </section>
+    </main>
+  </div>
 
+  <div class="ticker" aria-label="Arcana themes">
+    <div class="ticker-track">
+      <span>Private research</span><span>Strategic access</span><span>Network-led opportunity</span><span>Founder relationships</span><span>Selective capital</span><span>Market intelligence</span><span>Private research</span><span>Strategic access</span><span>Network-led opportunity</span><span>Founder relationships</span><span>Selective capital</span><span>Market intelligence</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <main>
       <section id="thesis" class="reveal">
         <div class="thesis">
           <div>
             <div class="section-kicker">Thesis</div>
-            <h2>Capital is abundant. Trusted access is scarce.</h2>
+            <h2>The best deals do not need more noise. They need the right people.</h2>
+            <div class="quote">We sit at the intersection of <span>capital, context and access.</span></div>
           </div>
 
           <p>
-            Many investors have capital to deploy but limited bandwidth to map markets, meet founders, validate counterparties and secure allocation. Arcana sits between capital and opportunity — translating network, experience and research into investable conviction.
+            Many sophisticated investors have capital but not the time, proximity or market connectivity to source and assess every private opportunity themselves. Arcana helps bridge that gap: turning research, experience and relationships into investable conviction.
           </p>
         </div>
       </section>
 
-      <section id="approach">
+      <section id="method">
         <div class="section-head reveal">
           <div>
-            <div class="section-kicker">Approach</div>
-            <h2>From hidden signal to actionable opportunity.</h2>
+            <div class="section-kicker">Method</div>
+            <h2>A discreet process for finding signal before consensus.</h2>
           </div>
           <p class="section-copy">
-            We are deliberately selective. The work starts before the introduction: understanding the market, the founder, the timing, the capital stack and the people around the deal.
+            We are not a volume platform. We focus on opportunities where research, access and relationship capital can compound together.
           </p>
         </div>
 
-        <div class="grid four process">
-          <div class="card reveal">
-            <h3>Map the market</h3>
-            <p>We develop thematic views around sectors, technologies and emerging ecosystems where we believe asymmetric upside can exist.</p>
-          </div>
+        <div class="split-feature">
+          <div class="feature-panel reveal" aria-hidden="true"></div>
+          <div class="feature-list process">
+            <div class="card reveal">
+              <h3>Form the market map</h3>
+              <p>We build thematic views around sectors, founders and ecosystems where technical, cultural or capital shifts create asymmetric potential.</p>
+            </div>
 
-          <div class="card reveal">
-            <h3>Validate through network</h3>
-            <p>We use operator, investor and counterparty relationships to test quality, timing and credibility before engagement.</p>
-          </div>
+            <div class="card reveal">
+              <h3>Validate through people</h3>
+              <p>We test opportunities through trusted operators, investors and counterparties — the people closest to the market and the founder.</p>
+            </div>
 
-          <div class="card reveal">
-            <h3>Structure access</h3>
-            <p>We connect aligned investors and firms to selected opportunities where strategic capital can add more than money.</p>
-          </div>
-
-          <div class="card reveal">
-            <h3>Compound relationships</h3>
-            <p>We build long-term trust with founders, allocators and partners through discretion, execution and judgment.</p>
+            <div class="card reveal">
+              <h3>Structure the introduction</h3>
+              <p>We connect aligned capital with selected opportunities where the investor can bring more than money: credibility, network, speed or strategic value.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section id="clients">
         <div class="section-head reveal">
           <div>
             <div class="section-kicker">Who we serve</div>
-            <h2>For investors who need more than a deck.</h2>
+            <h2>Built for capital that values judgment.</h2>
           </div>
           <p class="section-copy">
-            Arcana is designed for capital partners, counterparties and firms who are sophisticated enough to know opportunity quality matters — but too time-constrained to source, assess and access every market themselves.
+            Arcana is for people and firms who are already credible — but want sharper visibility, better context and warmer access across private markets.
           </p>
         </div>
 
         <div class="grid three">
-          <div class="card reveal">
+          <div class="card audience-card reveal">
             <div class="icon"></div>
             <h3>Private investors</h3>
-            <p>Individuals and family-backed capital looking for trusted guidance, market context and selective private opportunities.</p>
+            <p>Individuals, families and principals looking for trusted guidance, thoughtful deal access and a clearer way to deploy capital.</p>
           </div>
 
-          <div class="card reveal">
+          <div class="card audience-card reveal">
             <div class="icon"></div>
             <h3>VCs and syndicates</h3>
-            <p>Firms and networks seeking credible deal flow, co-investment relationships and differentiated market access.</p>
+            <p>Firms and networks seeking differentiated deal flow, co-investment relationships and credible counterparty introductions.</p>
           </div>
 
-          <div class="card reveal">
+          <div class="card audience-card reveal">
             <div class="icon"></div>
-            <h3>Strategic counterparties</h3>
-            <p>Operators, advisers and capital partners who value discretion, warm access and high-signal relationship building.</p>
+            <h3>Founders and operators</h3>
+            <p>Teams seeking strategic capital, market narrative, warm access and investors who understand the opportunity beyond the deck.</p>
           </div>
         </div>
       </section>
@@ -857,10 +1073,10 @@
         <div class="section-head reveal">
           <div>
             <div class="section-kicker">Portfolio</div>
-            <h2>Selected exposure and themes.</h2>
+            <h2>Selected themes and exposure.</h2>
           </div>
           <p class="section-copy">
-            Placeholder company cards for launch. Replace these with real names, logos or anonymised examples once approvals are ready.
+            Use these as launch placeholders. Swap in approved companies, logos or anonymised case studies when ready.
           </p>
         </div>
 
@@ -868,33 +1084,33 @@
           <div class="card portfolio-card reveal">
             <div class="visual"></div>
             <h3>AI Infrastructure</h3>
-            <p>Applied intelligence, compute, tooling and infrastructure opportunities supporting the next wave of software creation.</p>
+            <p>Applied intelligence, compute, tooling and data infrastructure powering the next generation of software and automation.</p>
             <span class="tag">Theme placeholder</span>
           </div>
 
           <div class="card portfolio-card reveal">
-            <div class="visual"></div>
+            <div class="visual v2"></div>
             <h3>Deep Technology</h3>
-            <p>Frontier technology companies where technical advantage, timing and specialist capital can compound together.</p>
+            <p>Frontier technology companies where technical advantage, timing and specialist networks can create compounding advantage.</p>
             <span class="tag">Theme placeholder</span>
           </div>
 
           <div class="card portfolio-card reveal">
-            <div class="visual"></div>
+            <div class="visual v3"></div>
             <h3>Digital Assets</h3>
-            <p>Private and liquid digital-asset opportunities selected through market structure, network signal and risk discipline.</p>
+            <p>Private and liquid opportunities selected through market structure, network signal and disciplined risk assessment.</p>
             <span class="tag">Theme placeholder</span>
           </div>
 
           <div class="card portfolio-card reveal">
-            <div class="visual"></div>
+            <div class="visual v2"></div>
             <h3>Frontier Markets</h3>
-            <p>High-growth ecosystems where local access, timing and trusted relationships can create differentiated opportunity.</p>
+            <p>High-growth ecosystems where local relationships, timing and trusted access can uncover non-obvious opportunity.</p>
             <span class="tag">Theme placeholder</span>
           </div>
 
           <div class="card portfolio-card reveal">
-            <div class="visual"></div>
+            <div class="visual v3"></div>
             <h3>Private Networks</h3>
             <p>Syndicates, founders, allocators and counterparties connected through trust, reputation and repeat collaboration.</p>
             <span class="tag">Network placeholder</span>
@@ -903,7 +1119,7 @@
           <div class="card portfolio-card reveal">
             <div class="visual"></div>
             <h3>Strategic Advisory</h3>
-            <p>Selected advisory mandates where Arcana supports capital introduction, market narrative and investor positioning.</p>
+            <p>Selected mandates supporting capital introductions, investor positioning, narrative refinement and relationship execution.</p>
             <span class="tag">Mandate placeholder</span>
           </div>
         </div>
@@ -913,10 +1129,10 @@
         <div class="section-head reveal">
           <div>
             <div class="section-kicker">Team</div>
-            <h2>Built around trust, judgment and access.</h2>
+            <h2>Relationship-led. Research-backed. Execution-minded.</h2>
           </div>
           <p class="section-copy">
-            Arcana is relationship-led. The credibility of the platform comes from who we know, how we think and the judgment we bring to private market opportunities.
+            The platform is intentionally personal. Arcana’s credibility comes from the judgment, relationships and market intuition of Andrew and Alex.
           </p>
         </div>
 
@@ -933,7 +1149,7 @@
           </div>
 
           <div class="card team-card reveal">
-            <div class="avatar" aria-hidden="true"></div>
+            <div class="avatar alex" aria-hidden="true"></div>
             <div>
               <h3>Alex Chau</h3>
               <div class="meta">Partner · Strategy & Market Intelligence</div>
@@ -963,7 +1179,7 @@
 
     <footer>
       <span>© <span id="year"></span> Arcana Research. All rights reserved.</span>
-      <span>Private investment intelligence · Strategic advisory · Network-led access</span>
+      <span>Private market intelligence · Strategic advisory · Network-led access</span>
     </footer>
   </div>
 
@@ -979,7 +1195,26 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    document.querySelectorAll(".reveal").forEach((element, index) => {
+      element.style.transitionDelay = `${Math.min(index * 35, 220)}ms`;
+      observer.observe(element);
+    });
+
+    const stage = document.querySelector(".hero-stage");
+    const object = document.querySelector(".arcana-object");
+
+    if (stage && object && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      stage.addEventListener("pointermove", (event) => {
+        const rect = stage.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        object.style.transform = `translate(-50%, -50%) rotateX(${58 - y * 10}deg) rotateZ(${45 + x * 10}deg)`;
+      });
+
+      stage.addEventListener("pointerleave", () => {
+        object.style.transform = "translate(-50%, -50%) rotateX(58deg) rotateZ(45deg)";
+      });
+    }
   </script>
 </body>
 </html>
