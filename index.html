@@ -3,64 +3,214 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arcana Research</title>
-  <meta name="description" content="Arcana Research is a private market intelligence and strategic advisory network helping trusted capital access high-conviction opportunities through research, relationships, and judgment." />
-  <meta property="og:title" content="Arcana Research" />
+  <title>Arcana</title>
+  <meta name="description" content="Arcana is a private market intelligence and strategic advisory network helping trusted capital access high-conviction opportunities through research, relationships, and judgment." />
+  <meta property="og:title" content="Arcana" />
   <meta property="og:description" content="Access is the asset. Conviction is the edge." />
   <meta name="theme-color" content="#06030d" />
   <style>
-
-    :root { --ink:#f8f5ff; --muted:rgba(248,245,255,.68); --emerald:#91ffd3; --purple:#b26cff; --ease:cubic-bezier(.18,.84,.26,1); }
-    *{box-sizing:border-box;margin:0;padding:0} html,body{width:100%;min-height:100%}
-    body{overflow:hidden;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 50% 42%,rgba(67,33,129,.35),transparent 42%),radial-gradient(circle at 17% 86%,rgba(5,255,201,.10),transparent 28%),radial-gradient(circle at 82% 84%,rgba(255,77,216,.08),transparent 30%),linear-gradient(135deg,#02030a 0%,#070817 45%,#080313 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    :root{--ink:#f8f5ff;--muted:rgba(248,245,255,.66);--emerald:#91ffd3;--purple:#b26cff;--ease:cubic-bezier(.18,.84,.26,1)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    html,body{width:100%;min-height:100%}
+    body{color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 50% 42%,rgba(67,33,129,.35),transparent 42%),radial-gradient(circle at 17% 86%,rgba(5,255,201,.10),transparent 28%),radial-gradient(circle at 82% 84%,rgba(255,77,216,.08),transparent 30%),linear-gradient(135deg,#02030a 0%,#070817 45%,#080313 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
     body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.030) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(circle at 50% 50%,black,transparent 78%);opacity:.36}
-    body::after{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.04) 0 26%,rgba(0,0,0,.30) 62%,rgba(0,0,0,.70) 100%),linear-gradient(180deg,rgba(0,0,0,.22),transparent 28%,rgba(0,0,0,.40))}
-    #space{position:fixed;inset:0;z-index:0;width:100vw;height:100vh;display:block}.noise{position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E")}
-    .page{position:relative;z-index:5;min-height:100vh;display:grid;grid-template-rows:auto 1fr;padding:32px clamp(22px,4vw,58px);pointer-events:none} header{display:flex;align-items:center;justify-content:space-between;gap:24px;pointer-events:auto}.brand{display:inline-flex;align-items:center;gap:13px;color:#fff;font-size:12px;font-weight:850;letter-spacing:.24em;text-transform:uppercase;text-shadow:0 0 26px rgba(145,255,211,.18);text-decoration:none}.brand-mark{width:38px;height:38px;border-radius:15px;position:relative;border:1px solid rgba(145,255,211,.40);background:radial-gradient(circle at 28% 24%,rgba(145,255,211,.95),transparent 18%),radial-gradient(circle at 76% 78%,rgba(178,108,255,.88),transparent 32%),linear-gradient(135deg,rgba(110,61,255,.36),rgba(145,255,211,.12));box-shadow:0 0 44px rgba(145,255,211,.15),inset 0 1px 0 rgba(255,255,255,.18)}.brand-mark::before,.brand-mark::after{content:"";position:absolute;border-radius:9px;border:1px solid rgba(255,255,255,.22)}.brand-mark::before{inset:9px;transform:rotate(45deg)}.brand-mark::after{inset:14px;border-color:rgba(145,255,211,.42)}
-    nav{display:flex;align-items:center;gap:28px;color:rgba(248,245,255,.62);font-size:13px;font-weight:700}nav a{color:inherit;text-decoration:none;transition:color .25s var(--ease),transform .25s var(--ease)}nav a:hover{color:#fff;transform:translateY(-1px)}.nav-cta{color:#fff;padding:10px 17px;border-radius:999px;border:1px solid rgba(145,255,211,.25);background:rgba(145,255,211,.07);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 34px rgba(145,255,211,.08)}
-    .hero{width:min(1060px,calc(100vw - 44px));margin:0 auto;align-self:center;display:grid;justify-items:center;text-align:center;transform:translateY(-2vh);pointer-events:auto}.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:24px;padding:9px 15px;border-radius:999px;border:1px solid rgba(145,255,211,.22);background:rgba(7,3,18,.38);backdrop-filter:blur(14px);color:rgba(145,255,211,.90);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 70px rgba(0,0,0,.24)}.eyebrow::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--emerald);box-shadow:0 0 22px rgba(145,255,211,.78)}
-    h1{position:relative;display:inline-block;padding:0 .08em .1em 0;font-size:clamp(78px,13vw,190px);line-height:.9;letter-spacing:-.075em;font-weight:900;text-transform:uppercase;background:linear-gradient(90deg,#ffffff 0%,#dffff5 28%,#c7b3ff 66%,#f0cc86 112%);-webkit-background-clip:text;background-clip:text;color:transparent;overflow:visible;filter:drop-shadow(0 0 24px rgba(145,255,211,.12)) drop-shadow(0 0 52px rgba(178,108,255,.10))}h1::after{content:"ARCANA";position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);opacity:.68;transform:translate3d(0,0,0);pointer-events:none}
-    .tagline{margin-top:28px;max-width:800px;color:rgba(248,245,255,.88);font-size:clamp(22px,3vw,42px);line-height:1.08;letter-spacing:-.045em;font-weight:820;text-shadow:0 0 34px rgba(0,0,0,.48)}.lead{max-width:720px;margin-top:20px;color:var(--muted);font-size:clamp(15px,1.25vw,18px);line-height:1.72;text-shadow:0 0 28px rgba(0,0,0,.52)}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 22px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:820;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease)}.btn:hover{transform:translateY(-2px)}.btn-primary{color:#06120e;background:var(--emerald);border:1px solid var(--emerald);box-shadow:0 20px 58px rgba(145,255,211,.18)}.btn-secondary{color:#fff;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.055);backdrop-filter:blur(14px)}
-    .micro-strip{position:fixed;z-index:5;left:50%;bottom:28px;transform:translateX(-50%);display:flex;gap:18px;align-items:center;color:rgba(248,245,255,.42);font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;pointer-events:none}.micro-strip span{display:inline-flex;align-items:center;gap:18px}.micro-strip span+span::before{content:"";width:5px;height:5px;border-radius:999px;background:rgba(145,255,211,.72);box-shadow:0 0 18px rgba(145,255,211,.5)}
-    @media(max-width:900px){nav{display:none}.page{padding:24px 20px}.hero{transform:translateY(-1vh)}h1{font-size:clamp(64px,20vw,120px);line-height:.92;letter-spacing:-.07em;padding:0 .06em .08em 0}.tagline{max-width:560px}.micro-strip{display:none}}@media(max-width:560px){.brand{letter-spacing:.16em;font-size:11px}.brand-mark{width:34px;height:34px;border-radius:13px}.eyebrow{font-size:10px}.lead{max-width:92vw}.btn{width:100%;max-width:280px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+    body::after{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 50% 50%,rgba(0,0,0,.04) 0 26%,rgba(0,0,0,.30) 62%,rgba(0,0,0,.70) 100%),linear-gradient(180deg,rgba(0,0,0,.20),transparent 28%,rgba(0,0,0,.44))}
+    #space{position:fixed;inset:0;z-index:0;width:100vw;height:100vh;display:block}
+    .noise{position:fixed;inset:0;z-index:3;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E")}
 
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px clamp(22px,4vw,58px);pointer-events:auto}
+    .brand{display:inline-flex;align-items:center;gap:13px;color:#fff;font-size:12px;font-weight:850;letter-spacing:.24em;text-transform:uppercase;text-shadow:0 0 26px rgba(145,255,211,.18);text-decoration:none}
+    .brand-mark{width:38px;height:38px;border-radius:15px;position:relative;border:1px solid rgba(145,255,211,.40);background:radial-gradient(circle at 28% 24%,rgba(145,255,211,.95),transparent 18%),radial-gradient(circle at 76% 78%,rgba(178,108,255,.88),transparent 32%),linear-gradient(135deg,rgba(110,61,255,.36),rgba(145,255,211,.12));box-shadow:0 0 44px rgba(145,255,211,.15),inset 0 1px 0 rgba(255,255,255,.18)}
+    .brand-mark::before,.brand-mark::after{content:"";position:absolute;border-radius:9px;border:1px solid rgba(255,255,255,.22)}
+    .brand-mark::before{inset:9px;transform:rotate(45deg)}
+    .brand-mark::after{inset:14px;border-color:rgba(145,255,211,.42)}
+    nav{display:flex;align-items:center;gap:28px;color:rgba(248,245,255,.62);font-size:13px;font-weight:700}
+    nav a{color:inherit;text-decoration:none;transition:color .25s var(--ease),transform .25s var(--ease)}
+    nav a:hover,nav a.active{color:#fff;transform:translateY(-1px)}
+    .nav-cta{color:#fff;padding:10px 17px;border-radius:999px;border:1px solid rgba(145,255,211,.25);background:rgba(145,255,211,.07);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 34px rgba(145,255,211,.08)}
+
+    .section{position:relative;z-index:5;min-height:100vh;padding:112px clamp(22px,4vw,58px) 54px;display:grid;align-items:center;scroll-margin-top:0}
+    .content{width:min(1100px,calc(100vw - 44px));margin:0 auto}
+    .home-section{text-align:center}
+    .hero{width:min(1060px,calc(100vw - 44px));margin:0 auto;display:grid;justify-items:center;text-align:center;transform:translateY(1vh)}
+    .hero h1{position:relative;display:inline-block;padding:0 .08em .1em 0;font-size:clamp(78px,13vw,190px);line-height:.9;letter-spacing:-.075em;font-weight:900;text-transform:uppercase;background:linear-gradient(90deg,#ffffff 0%,#dffff5 28%,#c7b3ff 66%,#f0cc86 112%);-webkit-background-clip:text;background-clip:text;color:transparent;overflow:visible;filter:drop-shadow(0 0 24px rgba(145,255,211,.12)) drop-shadow(0 0 52px rgba(178,108,255,.10))}
+    .hero h1::after{content:"ARCANA";position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.14);opacity:.68;transform:translate3d(0,0,0);pointer-events:none}
+    .tagline{margin-top:28px;max-width:800px;color:rgba(248,245,255,.88);font-size:clamp(22px,3vw,42px);line-height:1.08;letter-spacing:-.045em;font-weight:820;text-shadow:0 0 34px rgba(0,0,0,.48)}
+    .lead{max-width:720px;margin-top:20px;color:var(--muted);font-size:clamp(15px,1.25vw,18px);line-height:1.72;text-shadow:0 0 28px rgba(0,0,0,.52)}
+    .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 22px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:820;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease),background .25s var(--ease)}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{color:#06120e;background:var(--emerald);border:1px solid var(--emerald);box-shadow:0 20px 58px rgba(145,255,211,.18)}
+    .btn-secondary{color:#fff;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.055);backdrop-filter:blur(14px)}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;color:rgba(145,255,211,.9);font-size:12px;font-weight:850;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--emerald);box-shadow:0 0 22px rgba(145,255,211,.78)}
+    .section-title{max-width:760px;font-size:clamp(38px,5.4vw,72px);line-height:.94;letter-spacing:-.055em;font-weight:920;text-transform:uppercase;background:linear-gradient(90deg,#fff 0%,#dffff5 32%,#c7b3ff 74%,#f0cc86 112%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 26px rgba(145,255,211,.10))}
+    .intro{max-width:680px;margin-top:18px;color:rgba(248,245,255,.78);font-size:clamp(17px,1.55vw,22px);line-height:1.42;letter-spacing:-.03em;font-weight:720}
+    .intro span{color:#fff;text-shadow:0 0 24px rgba(145,255,211,.24)}
+    .panel{margin-top:clamp(28px,4vw,42px);border-top:1px solid rgba(145,255,211,.22);padding-top:24px;display:grid;grid-template-columns:110px minmax(0,1fr);gap:clamp(18px,2.4vw,30px);align-items:start}
+    .kicker{color:rgba(145,255,211,.82);font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .copy{color:var(--muted);font-size:clamp(15px,1.1vw,17px);line-height:1.66}
+    .copy p+p{margin-top:13px}
+
+    .team-list{margin-top:clamp(20px,3vw,30px);border-top:1px solid rgba(145,255,211,.22)}
+    .person{display:grid;grid-template-columns:180px minmax(0,1fr);gap:clamp(24px,5vw,66px);padding:28px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .name{color:#fff;font-size:clamp(22px,2.4vw,34px);line-height:1;font-weight:900;letter-spacing:-.04em}
+    .role{margin-top:10px;color:rgba(145,255,211,.78);font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+    .bio{color:var(--muted);font-size:clamp(15px,1.2vw,17px);line-height:1.72}
+    .bio p+p{margin-top:13px}
+
+    @media(max-height:760px){
+      .section{padding-top:94px;padding-bottom:34px}
+      .eyebrow{margin-bottom:14px}
+      .section-title{font-size:clamp(34px,5vw,62px)}
+      .intro{margin-top:14px}
+      .panel{margin-top:24px;padding-top:20px}
+      .copy,.bio{line-height:1.55}
+      .copy p+p,.bio p+p{margin-top:10px}
+      .person{padding:22px 0}
+    }
+    @media(max-width:900px){
+      .site-header{padding:24px 20px}
+      nav{gap:18px;font-size:12px}
+      .nav-cta{padding:9px 13px}
+      .section{padding:104px 20px 44px}
+      .hero{transform:translateY(-1vh)}
+      .hero h1{font-size:clamp(64px,20vw,120px);line-height:.92;letter-spacing:-.07em;padding:0 .06em .08em 0}
+      .panel,.person{grid-template-columns:1fr}
+      .person{gap:14px}
+      .brand{letter-spacing:.16em;font-size:11px}
+      .brand-mark{width:34px;height:34px;border-radius:13px}
+    }
+    @media(max-width:620px){
+      nav{gap:14px}
+      .brand span:last-child{display:none}
+      .nav-cta{border:none;background:transparent;padding:0;box-shadow:none}
+      .actions{width:100%}
+      .btn{width:100%;max-width:280px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+    }
   </style>
 </head>
 <body>
   <canvas id="space" aria-hidden="true"></canvas>
   <div class="noise" aria-hidden="true"></div>
-  <main class="page">
-    <header>
-      <a href="#" class="brand" aria-label="Arcana home"><span class="brand-mark" aria-hidden="true"></span><span>ARCANA</span></a>
-      <nav aria-label="Primary navigation"><a href="#">Research</a><a href="#">Access</a><a href="#">Network</a><a class="nav-cta" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Contact</a></nav>
-    </header>
-    <section class="hero" aria-labelledby="arcana-title">
-      <h1 id="arcana-title">ARCANA</h1>
-      <p class="tagline">Access is the asset. Conviction is the edge.</p>
-      <p class="lead">Strategic advisory and private market intelligence for investors, counterparties, and founders operating where opportunity is not public, obvious, or easily accessed.</p>
-      <div class="actions"><a href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-primary">Start a conversation →</a><a href="#" class="btn btn-secondary">Explore the network</a></div>
+
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Arcana home"><span class="brand-mark" aria-hidden="true"></span><span>ARCANA</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#team" data-nav="team">Team</a>
+      <a class="nav-cta" href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section home-section" id="home" data-bg="home" aria-labelledby="arcana-title">
+      <div class="hero">
+        <h1 id="arcana-title">ARCANA</h1>
+        <p class="tagline">Access is the asset. Conviction is the edge.</p>
+        <p class="lead">Strategic advisory and private market intelligence for investors, counterparties, and founders operating where opportunity is not public, obvious, or easily accessed.</p>
+        <div class="actions">
+          <a href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-primary">Start a conversation →</a>
+          <a href="#about" class="btn btn-secondary">Explore Arcana</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" data-bg="about" aria-label="About Arcana">
+      <div class="content">
+        <div class="eyebrow">About Arcana</div>
+        <h2 class="section-title">The best deals do not need more noise.</h2>
+        <p class="intro">They need the right people. Arcana sits at the intersection of <span>capital, context and access.</span></p>
+
+        <section class="panel" aria-label="Arcana thesis">
+          <div class="kicker">Thesis</div>
+          <div class="copy">
+            <p>Many sophisticated investors have capital but not the time, proximity or market connectivity to source and assess every private opportunity themselves.</p>
+            <p>Arcana bridges that gap by combining market intelligence, operator insight and trusted relationships into investable conviction.</p>
+            <p>The best opportunities rarely arrive through public channels. They move through trusted people, informed judgment and timing.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section" id="team" data-bg="team" aria-label="Arcana team">
+      <div class="content">
+        <div class="eyebrow">Team</div>
+
+        <section class="team-list" aria-label="Arcana team biographies">
+          <article class="person">
+            <div>
+              <div class="name">Andrew Law</div>
+              <div class="role">Capital &amp; Strategy</div>
+            </div>
+            <div class="bio">
+              <p>Andrew graduated from UCL, ranking among the top of his cohort. Known for sharp intellect and hands-on leadership, he blends strategic vision with practical execution.</p>
+              <p>He co-founded a direct-to-consumer business, growing it into a six-figure enterprise while leading operations and strategy. He later joined Accrete, a private equity firm focused on high-growth technology, further strengthening his ability to scale innovative companies.</p>
+              <p>Recently, he served as CIO at LVL Limited, overseeing investments across real estate, technology, and traditional assets.</p>
+            </div>
+          </article>
+
+          <article class="person">
+            <div>
+              <div class="name">Alexandre Chau</div>
+              <div class="role">Market Intelligence</div>
+            </div>
+            <div class="bio">
+              <p>Alexandre is a French finance professional with over a decade of sell-side and buy-side experience across Europe and Asia. He holds a Master in Finance from Université Paris Dauphine–PSL.</p>
+              <p>He began his career at HSBC before moving to Goldman Sachs in London and Hong Kong, and later to Wellington Management, where he managed $12 billion in equity mandates. After becoming crypto native in 2020, he led Wellington’s crypto research and co-authored its institutional paper on digital assets.</p>
+              <p>At Mythos Liquid Capital he now focuses on systematic strategies and capital preservation.</p>
+            </div>
+          </article>
+        </section>
+      </div>
     </section>
   </main>
-  <script>
 
+  <script>
     const canvas = document.getElementById('space');
     const ctx = canvas.getContext('2d', { alpha: true });
-    let cx, cy, radius, dpr;
     const TWO_PI = Math.PI * 2;
     const GEOJSON_URL = 'https://r2.datahub.io/clvyjaryy0000la0cxieg4o8o/main/raw/data/countries.geojson';
+
+    let cx, cy, radius, dpr;
+    let mode = 'home';
+    let last = performance.now();
+    let t = 0;
+    let landRings = [];
 
     const stars = [];
     const globeDots = [];
     const links = [];
     const bursts = [];
     const hexes = [];
-    let landRings = [];
-    let last = performance.now();
-    let t = 0;
+    const orbitDots = [];
+    const sections = [...document.querySelectorAll('[data-bg]')];
+    const navLinks = [...document.querySelectorAll('[data-nav]')];
 
     function rand(min, max) { return min + Math.random() * (max - min); }
     function choose(a) { return a[Math.floor(Math.random() * a.length)]; }
     function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+    function colorFor(hue, alpha = 1) {
+      alpha = clamp(alpha, 0, 1);
+      if (hue === 'pink') return `rgba(255, 78, 219, ${alpha})`;
+      if (hue === 'cyan') return `rgba(135, 245, 255, ${alpha})`;
+      if (hue === 'purple') return `rgba(181, 93, 255, ${alpha})`;
+      if (hue === 'white') return `rgba(239, 248, 255, ${alpha})`;
+      return `rgba(126, 147, 192, ${alpha})`;
+    }
+
+    function setMode(next) {
+      if (next === mode) return;
+      mode = next;
+      makeScene();
+    }
 
     function resize() {
       dpr = Math.min(window.devicePixelRatio || 1, 1.55);
@@ -69,20 +219,41 @@
       canvas.style.width = innerWidth + 'px';
       canvas.style.height = innerHeight + 'px';
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      cx = innerWidth * .5;
-      cy = innerHeight * .50;
-      radius = Math.min(innerWidth, innerHeight) * (innerWidth < 900 ? .34 : .39);
+      configureCenter();
       makeScene();
     }
 
-    function makeScene() {
-      stars.length = globeDots.length = links.length = bursts.length = hexes.length = 0;
+    function configureCenter() {
+      if (mode === 'home') {
+        cx = innerWidth * .5;
+        cy = innerHeight * .50;
+        radius = Math.min(innerWidth, innerHeight) * (innerWidth < 900 ? .34 : .39);
+      } else if (mode === 'about') {
+        cx = innerWidth * (innerWidth < 900 ? .5 : .58);
+        cy = innerHeight * .54;
+        radius = Math.min(innerWidth, innerHeight) * (innerWidth < 900 ? .31 : .36);
+      } else {
+        cx = innerWidth * (innerWidth < 900 ? .5 : .64);
+        cy = innerHeight * .56;
+        radius = Math.min(innerWidth, innerHeight) * (innerWidth < 900 ? .30 : .34);
+      }
+    }
 
-      for (let i = 0; i < 300; i++) {
-        stars.push({ x: rand(0, innerWidth), y: rand(0, innerHeight), r: rand(.35, 1.75), a: rand(.1, .72), s: rand(.002, .009) });
+    function makeScene() {
+      configureCenter();
+      stars.length = globeDots.length = links.length = bursts.length = hexes.length = orbitDots.length = 0;
+
+      const starCount = mode === 'home' ? 300 : 280;
+      for (let i = 0; i < starCount; i++) {
+        stars.push({ x: rand(0, innerWidth), y: rand(0, innerHeight), r: rand(.35, 1.75), a: rand(.08, .72), s: rand(.002, .009) });
       }
 
-      // Sparse, elegant pulse points that sit over the real continents instead of covering them.
+      if (mode === 'home') makeHomeScene();
+      if (mode === 'about') makeAboutScene();
+      if (mode === 'team') makeTeamScene();
+    }
+
+    function makeHomeScene() {
       const clusters = [
         { lat: 42, lon: -96, n: 58, sx: 19, sy: 9 },
         { lat: 39, lon: -77, n: 42, sx: 12, sy: 7 },
@@ -100,22 +271,43 @@
       for (let i = 0; i < 100; i++) {
         globeDots.push({ lat: rand(-58, 68), lon: rand(-180, 180), size: rand(.25, .75), hue: choose(['dim','purple','cyan']), phase: rand(0, 20) });
       }
-
       for (let i = 0; i < 62; i++) {
         links.push({ lat1: rand(-58, 62), lon1: rand(-180, 180), lat2: rand(-58, 62), lon2: rand(-180, 180), a: rand(.04, .15) });
       }
-
       for (let i = 0; i < 86; i++) spawnBurst(true);
       for (let i = 0; i < 40; i++) hexes.push({ x: rand(0, innerWidth), y: rand(0, innerHeight), r: rand(5, 16), a: rand(.07, .24), vy: rand(-9, 7), rot: rand(0, TWO_PI), vr: rand(-.22, .22) });
     }
 
-    function colorFor(hue, alpha = 1) {
-      alpha = clamp(alpha, 0, 1);
-      if (hue === 'pink') return `rgba(255, 78, 219, ${alpha})`;
-      if (hue === 'cyan') return `rgba(135, 245, 255, ${alpha})`;
-      if (hue === 'purple') return `rgba(181, 93, 255, ${alpha})`;
-      if (hue === 'white') return `rgba(239, 248, 255, ${alpha})`;
-      return `rgba(126, 147, 192, ${alpha})`;
+    function makeAboutScene() {
+      for (let i = 0; i < 150; i++) {
+        orbitDots.push({
+          a: i * .58 + rand(-.08, .08),
+          rr: radius * rand(.72, 1.55),
+          speed: rand(.16, .42) * (i % 4 ? 1 : -1),
+          squash: rand(.65, .84),
+          size: i % 11 === 0 ? rand(2.1, 2.8) : rand(.85, 1.55),
+          hue: i % 4 === 0 ? 'pink' : choose(['cyan','cyan','purple','white']),
+          phase: rand(0, 20)
+        });
+      }
+      for (let i = 0; i < 80; i++) spawnBurst(true);
+      for (let i = 0; i < 28; i++) hexes.push({ x: rand(0, innerWidth), y: rand(0, innerHeight), r: rand(5, 14), a: rand(.045, .16), vy: rand(-6, 5), rot: rand(0, TWO_PI), vr: rand(-.18, .18) });
+    }
+
+    function makeTeamScene() {
+      for (let i = 0; i < 140; i++) {
+        orbitDots.push({
+          a: i * .58 + rand(-.08, .08),
+          rr: radius * rand(.72, 1.55),
+          speed: rand(.16, .42) * (i % 4 ? 1 : -1),
+          squash: rand(.65, .84),
+          size: i % 11 === 0 ? rand(2.1, 2.8) : rand(.85, 1.55),
+          hue: i % 4 === 0 ? 'pink' : choose(['cyan','cyan','purple','white']),
+          phase: rand(0, 20)
+        });
+      }
+      for (let i = 0; i < 76; i++) spawnBurst(true);
+      for (let i = 0; i < 24; i++) hexes.push({ x: rand(0, innerWidth), y: rand(0, innerHeight), r: rand(5, 14), a: rand(.045, .16), vy: rand(-6, 5), rot: rand(0, TWO_PI), vr: rand(-.18, .18) });
     }
 
     function project(lat, lon, extraRot = 0) {
@@ -131,8 +323,8 @@
 
     function drawBackground() {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
-      const g = ctx.createRadialGradient(cx, cy, radius * .2, cx, cy, radius * 1.65);
-      g.addColorStop(0, 'rgba(50, 96, 171, .2)');
+      const g = ctx.createRadialGradient(cx, cy, radius * .16, cx, cy, radius * 1.85);
+      g.addColorStop(0, mode === 'home' ? 'rgba(50, 96, 171, .2)' : 'rgba(50, 96, 171, .18)');
       g.addColorStop(.38, 'rgba(82, 25, 124, .12)');
       g.addColorStop(1, 'rgba(0,0,0,0)');
       ctx.fillStyle = g;
@@ -141,7 +333,7 @@
       for (const s of stars) {
         const a = s.a + Math.sin(t * 3 + s.x) * s.s * 30;
         ctx.beginPath();
-        ctx.fillStyle = `rgba(208, 222, 255, ${Math.max(.05, a)})`;
+        ctx.fillStyle = `rgba(208, 222, 255, ${Math.max(.04, a)})`;
         ctx.arc(s.x, s.y, s.r, 0, TWO_PI);
         ctx.fill();
       }
@@ -202,7 +394,6 @@
         }
       }
 
-      // Soft interior glow: second pass as tiny segments avoids expensive polygon clipping artifacts.
       ctx.lineWidth = 2.2;
       for (const ring of landRings) {
         let started = false;
@@ -289,15 +480,15 @@
 
     function spawnBurst(initial = false) {
       const angle = rand(-Math.PI * .95, Math.PI * .92);
-      const startR = radius * rand(.86, 1.08);
-      const len = rand(55, 205);
-      const speed = rand(26, 82);
+      const startR = radius * rand(mode === 'home' ? .86 : .62, 1.08);
+      const len = rand(mode === 'home' ? 55 : 44, mode === 'home' ? 205 : 178);
+      const speed = rand(24, mode === 'home' ? 82 : 78);
       const x = cx + Math.cos(angle) * startR;
-      const y = cy + Math.sin(angle) * startR * .88;
-      const outward = Math.atan2(y - cy, x - cx) + rand(-.55, .55);
-      const fadeRate = rand(.12, .22);
-      const maxLife = rand(1.1, 1.8);
-      bursts.push({ x, y, vx: Math.cos(outward) * speed, vy: Math.sin(outward) * speed, len, life: initial ? rand(.15, maxLife) : maxLife, maxLife, fadeRate, hue: choose(['pink','cyan','purple']), width: rand(1, 3.8) });
+      const y = cy + Math.sin(angle) * startR * (mode === 'home' ? .88 : .78);
+      const outward = Math.atan2(y - cy, x - cx) + rand(-.52, .52);
+      const fadeRate = rand(.12, .24);
+      const maxLife = rand(1.05, 1.8);
+      bursts.push({ x, y, vx: Math.cos(outward) * speed, vy: Math.sin(outward) * speed, len, life: initial ? rand(.12, maxLife) : maxLife, maxLife, fadeRate, hue: choose(['pink','cyan','purple']), width: rand(.8, mode === 'home' ? 3.8 : 3.1) });
     }
 
     function drawBursts(dt) {
@@ -309,16 +500,16 @@
         b.y += b.vy * dt;
         b.life -= b.fadeRate * dt;
         const dist = Math.hypot(b.x - cx, b.y - cy);
-        const travelFadeStart = radius * 1.15;
-        const travelFadeEnd = radius * 2.35;
-        const travelFade = clamp(1 - Math.max(0, (dist - travelFadeStart) / (travelFadeEnd - travelFadeStart)), 0, 1);
+        const travelFade = mode === 'home'
+          ? clamp(1 - Math.max(0, (dist - radius * 1.15) / (radius * 1.2)), 0, 1)
+          : clamp(1 - Math.max(0, (dist - radius * .92) / (radius * 1.28)), 0, 1);
         const a = clamp((b.life / b.maxLife) * travelFade, 0, 1);
         const tx = b.x - b.vx * (b.len / 58) * dt * 2.4;
         const ty = b.y - b.vy * (b.len / 58) * dt * 2.4;
         const grad = ctx.createLinearGradient(tx, ty, b.x, b.y);
         grad.addColorStop(0, colorFor(b.hue, 0));
-        grad.addColorStop(.66, colorFor(b.hue, a * .21));
-        grad.addColorStop(1, colorFor(b.hue, a * .82));
+        grad.addColorStop(.66, colorFor(b.hue, a * .20));
+        grad.addColorStop(1, colorFor(b.hue, a * .78));
         ctx.strokeStyle = grad;
         ctx.lineWidth = b.width;
         ctx.beginPath();
@@ -327,11 +518,11 @@
         ctx.stroke();
         ctx.beginPath();
         ctx.fillStyle = colorFor(b.hue, a);
-        ctx.arc(b.x, b.y, b.width * 1.1, 0, TWO_PI);
+        ctx.arc(b.x, b.y, b.width * 1.05, 0, TWO_PI);
         ctx.fill();
         if (b.life <= 0 || a <= .01 || b.x < -360 || b.x > innerWidth + 360 || b.y < -360 || b.y > innerHeight + 360) bursts.splice(i, 1);
       }
-      while (bursts.length < 90) spawnBurst();
+      while (bursts.length < (mode === 'home' ? 90 : mode === 'about' ? 80 : 76)) spawnBurst();
       ctx.restore();
     }
 
@@ -358,19 +549,44 @@
       ctx.restore();
     }
 
-    function drawOrbitParticles() {
+    function drawOrbitParticles(dt) {
       ctx.save();
       ctx.globalCompositeOperation = 'screen';
-      for (let i = 0; i < 140; i++) {
-        const a = i * .62 + t * (i % 3 ? .3 : -.22);
-        const rr = radius * (1.05 + (i % 17) / 78);
-        const squash = .76 + (i % 9) * .01;
-        const x = cx + Math.cos(a) * rr;
-        const y = cy + Math.sin(a) * rr * squash;
-        const alpha = .12 + (Math.sin(a + t) + 1) * .14;
+
+      const halo = ctx.createRadialGradient(cx, cy, radius * .08, cx, cy, radius * 1.15);
+      halo.addColorStop(0, 'rgba(145,255,211,.075)');
+      halo.addColorStop(.48, 'rgba(178,108,255,.07)');
+      halo.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = halo;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius * 1.14, 0, TWO_PI);
+      ctx.fill();
+
+      const ringCount = mode === 'team' ? 4 : 4;
+      for (let i = 0; i < ringCount; i++) {
         ctx.beginPath();
-        ctx.fillStyle = i % 4 === 0 ? `rgba(255,82,224,${alpha})` : `rgba(154,241,255,${alpha})`;
-        ctx.arc(x, y, i % 10 === 0 ? 2.4 : 1.15, 0, TWO_PI);
+        const turn = mode === 'about' ? t * .16 + i * .33 : t * .16 - i * .28;
+        const rx = radius * (mode === 'about' ? (.78 + i * .13) : (.64 + i * .16));
+        const ry = radius * (mode === 'about' ? (.48 + i * .055) : (.36 + i * .075));
+        ctx.ellipse(cx, cy, rx, ry, turn, 0, TWO_PI);
+        ctx.strokeStyle = `rgba(185, 89, 255, ${.13 - i * .024})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+
+      for (const p of orbitDots) {
+        p.a += p.speed * dt;
+        const wobble = Math.sin(t * (mode === 'about' ? 1.9 : 1.35) + p.phase) * (mode === 'about' ? 5 : 8);
+        const x = cx + Math.cos(mode === 'team' ? p.a * 1.12 : p.a) * (p.rr + wobble);
+        const y = cy + Math.sin(mode === 'team' ? p.a * .92 : p.a) * (p.rr + wobble) * p.squash;
+        const alpha = .10 + (Math.sin(p.a + t + p.phase) + 1) * .13;
+        ctx.beginPath();
+        ctx.fillStyle = colorFor(p.hue, alpha * .42);
+        ctx.arc(x, y, p.size * 2.2, 0, TWO_PI);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.fillStyle = colorFor(p.hue, alpha * 1.15);
+        ctx.arc(x, y, p.size, 0, TWO_PI);
         ctx.fill();
       }
       ctx.restore();
@@ -404,7 +620,6 @@
     }
 
     function fallbackLand() {
-      // Lightweight continent silhouettes, only used if the GeoJSON fetch is blocked.
       landRings = [
         [[-168,72],[-140,68],[-124,54],[-105,49],[-83,43],[-72,30],[-97,24],[-112,31],[-124,38],[-145,50],[-168,60]],
         [[-82,12],[-70,8],[-52,-4],[-42,-18],[-50,-35],[-63,-54],[-75,-40],[-80,-20],[-82,12]],
@@ -425,26 +640,46 @@
       }
     }
 
+    function updateActiveSection() {
+      const mid = innerHeight * .52;
+      let current = 'home';
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= mid && rect.bottom >= mid) {
+          current = section.dataset.bg;
+          break;
+        }
+      }
+      setMode(current);
+      navLinks.forEach(link => link.classList.toggle('active', link.dataset.nav === current));
+    }
+
     function animate(now) {
       const dt = Math.min(.034, (now - last) / 1000 || .016);
       last = now;
       t += dt;
+
       drawBackground();
       drawHexes(dt);
       drawBursts(dt);
-      drawOrbitParticles();
-      drawGlobe();
+      if (mode === 'home') {
+        drawOrbitParticles(dt);
+        drawGlobe();
+      } else {
+        drawOrbitParticles(dt);
+      }
+
       requestAnimationFrame(animate);
     }
 
-
-
     addEventListener('resize', resize);
-    resize();
+    addEventListener('scroll', updateActiveSection, { passive: true });
+
     fallbackLand();
+    resize();
     loadLand();
+    updateActiveSection();
     requestAnimationFrame(animate);
-  
   </script>
 </body>
 </html>
