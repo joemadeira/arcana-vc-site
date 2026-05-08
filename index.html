@@ -3,60 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Arcana Research | Private Market Intelligence</title>
-  <meta
-    name="description"
-    content="Arcana Research is a strategic advisory and private investment network focused on private market intelligence, strategic access and high-conviction opportunities."
-  />
+  <meta name="description" content="Arcana Research is a private market intelligence and strategic advisory network helping trusted capital access high-conviction opportunities through research, relationships, and judgment." />
   <meta property="og:title" content="Arcana Research" />
-  <meta property="og:description" content="Private research. Strategic access. High-conviction private opportunities." />
+  <meta property="og:description" content="Where hidden signal becomes strategic access." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#07030f" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
+  <meta name="theme-color" content="#090411" />
 
   <style>
     :root {
-      --bg: #07030f;
-      --bg2: #110721;
-      --ink: #ffffff;
-      --muted: rgba(255,255,255,.68);
-      --soft: rgba(255,255,255,.46);
-      --faint: rgba(255,255,255,.28);
+      --bg: #08030f;
+      --bg-2: #12071f;
+      --bg-3: #040207;
+      --ink: #f8f5ff;
+      --muted: rgba(248,245,255,.68);
+      --soft: rgba(248,245,255,.48);
+      --faint: rgba(248,245,255,.24);
+      --line: rgba(248,245,255,.12);
+      --line-strong: rgba(145,255,211,.28);
       --panel: rgba(255,255,255,.055);
-      --panel2: rgba(255,255,255,.085);
-      --line: rgba(255,255,255,.11);
-      --line2: rgba(143,255,210,.26);
-      --emerald: #8fffd2;
-      --emerald2: #2ee0a3;
-      --purple: #6d3cff;
-      --violet: #b7a4ff;
-      --gold: #f3d28b;
-      --max: 1220px;
-      --radius: 34px;
-      --radius2: 52px;
-      --ease: cubic-bezier(.2,.8,.2,1);
+      --panel-2: rgba(255,255,255,.085);
+      --emerald: #91ffd3;
+      --emerald-2: #28e3a7;
+      --purple: #6e3dff;
+      --violet: #bca7ff;
+      --amber: #f0cc86;
+      --danger: #ff6da7;
+      --max: 1240px;
+      --radius: 30px;
+      --radius-xl: 48px;
+      --ease: cubic-bezier(.18,.84,.26,1);
+      --shadow: 0 32px 110px rgba(0,0,0,.36);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
       min-height: 100vh;
-      background:
-        radial-gradient(900px 620px at 8% -12%, rgba(109,60,255,.36), transparent 62%),
-        radial-gradient(760px 540px at 100% 4%, rgba(143,255,210,.16), transparent 58%),
-        radial-gradient(840px 620px at 50% 112%, rgba(109,60,255,.22), transparent 62%),
-        linear-gradient(180deg, #07030f 0%, #090313 46%, #040208 100%);
       color: var(--ink);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(900px 640px at 8% -10%, rgba(110,61,255,.38), transparent 64%),
+        radial-gradient(840px 620px at 104% 0%, rgba(145,255,211,.16), transparent 56%),
+        radial-gradient(1000px 700px at 48% 118%, rgba(110,61,255,.26), transparent 62%),
+        linear-gradient(180deg, var(--bg) 0%, #090312 48%, var(--bg-3) 100%);
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
@@ -72,8 +63,8 @@
       background-image:
         linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
-        radial-gradient(rgba(255,255,255,.32) 1px, transparent 1px);
-      background-size: 54px 54px, 54px 54px, 140px 140px;
+        radial-gradient(rgba(145,255,211,.34) 1px, transparent 1.5px);
+      background-size: 64px 64px, 64px 64px, 170px 170px;
       mask-image: linear-gradient(to bottom, black, transparent 78%);
     }
 
@@ -84,16 +75,16 @@
       z-index: 1;
       pointer-events: none;
       background:
-        linear-gradient(90deg, rgba(0,0,0,.32), transparent 18%, transparent 82%, rgba(0,0,0,.32)),
-        radial-gradient(circle at 50% 0%, transparent 0 38%, rgba(0,0,0,.22) 78%, rgba(0,0,0,.62) 100%);
+        linear-gradient(90deg, rgba(0,0,0,.46), transparent 18%, transparent 80%, rgba(0,0,0,.48)),
+        radial-gradient(circle at 50% 0%, transparent 0 42%, rgba(0,0,0,.24) 80%, rgba(0,0,0,.72) 100%);
     }
 
     a { color: inherit; text-decoration: none; }
-    p { color: var(--muted); line-height: 1.75; }
+    p { color: var(--muted); line-height: 1.72; }
     h1, h2, h3, p { text-wrap: pretty; }
 
     .container {
-      width: min(var(--max), calc(100% - 42px));
+      width: min(var(--max), calc(100% - 44px));
       margin: 0 auto;
       position: relative;
       z-index: 3;
@@ -104,41 +95,41 @@
       inset: 0;
       z-index: 2;
       pointer-events: none;
-      opacity: .035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+      opacity: .04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.62'/%3E%3C/svg%3E");
     }
 
     .aurora {
       position: fixed;
-      width: 50vw;
-      height: 50vw;
-      min-width: 540px;
-      min-height: 540px;
-      right: -20vw;
-      top: 10vh;
+      width: 52vw;
+      height: 52vw;
+      min-width: 560px;
+      min-height: 560px;
+      right: -22vw;
+      top: 7vh;
       z-index: 0;
       pointer-events: none;
       border-radius: 999px;
+      filter: blur(42px);
       background:
-        radial-gradient(circle at 35% 35%, rgba(143,255,210,.24), transparent 36%),
-        radial-gradient(circle at 62% 58%, rgba(109,60,255,.32), transparent 42%),
-        radial-gradient(circle at 44% 68%, rgba(245,215,138,.10), transparent 34%);
-      filter: blur(38px);
-      animation: breathe 10s var(--ease) infinite alternate;
+        radial-gradient(circle at 36% 34%, rgba(145,255,211,.25), transparent 34%),
+        radial-gradient(circle at 68% 56%, rgba(110,61,255,.36), transparent 44%),
+        radial-gradient(circle at 44% 72%, rgba(240,204,134,.10), transparent 34%);
+      animation: aurora 11s var(--ease) infinite alternate;
     }
 
-    @keyframes breathe {
-      from { transform: translate3d(0,0,0) scale(.96) rotate(0deg); opacity: .72; }
-      to { transform: translate3d(-4vw,2vh,0) scale(1.08) rotate(18deg); opacity: 1; }
+    @keyframes aurora {
+      from { transform: translate3d(0,0,0) scale(.94) rotate(0deg); opacity: .72; }
+      to { transform: translate3d(-5vw,3vh,0) scale(1.08) rotate(18deg); opacity: 1; }
     }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(180deg, rgba(7,3,15,.86), rgba(7,3,15,.48));
-      border-bottom: 1px solid rgba(255,255,255,.055);
+      z-index: 50;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(180deg, rgba(8,3,15,.88), rgba(8,3,15,.50));
+      border-bottom: 1px solid rgba(255,255,255,.065);
     }
 
     header {
@@ -146,16 +137,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 14px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 850;
-      letter-spacing: .2em;
+      letter-spacing: .22em;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .brand-mark {
@@ -163,30 +156,32 @@
       height: 42px;
       border-radius: 16px;
       position: relative;
-      border: 1px solid rgba(143,255,210,.42);
+      display: inline-block;
+      border: 1px solid rgba(145,255,211,.42);
       background:
-        radial-gradient(circle at 32% 26%, rgba(143,255,210,.95), transparent 15%),
-        radial-gradient(circle at 74% 74%, rgba(109,60,255,.8), transparent 30%),
-        linear-gradient(135deg, rgba(109,60,255,.34), rgba(143,255,210,.12));
-      box-shadow: 0 0 42px rgba(143,255,210,.13), inset 0 1px 0 rgba(255,255,255,.18);
+        radial-gradient(circle at 28% 24%, rgba(145,255,211,.95), transparent 17%),
+        radial-gradient(circle at 76% 78%, rgba(110,61,255,.88), transparent 31%),
+        linear-gradient(135deg, rgba(110,61,255,.36), rgba(145,255,211,.12));
+      box-shadow: 0 0 44px rgba(145,255,211,.13), inset 0 1px 0 rgba(255,255,255,.18);
     }
 
-    .brand-mark::before, .brand-mark::after {
+    .brand-mark::before,
+    .brand-mark::after {
       content: "";
       position: absolute;
       border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.24);
+      border: 1px solid rgba(255,255,255,.23);
     }
-
     .brand-mark::before { inset: 10px; transform: rotate(45deg); }
-    .brand-mark::after { inset: 15px; border-color: rgba(143,255,210,.36); }
+    .brand-mark::after { inset: 15px; border-color: rgba(145,255,211,.40); }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 28px;
-      font-size: 14px;
+      gap: 27px;
       color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
     }
 
     nav a { transition: color .25s var(--ease), transform .25s var(--ease); }
@@ -194,212 +189,172 @@
 
     .nav-cta {
       color: #fff;
-      border: 1px solid rgba(143,255,210,.24);
-      border-radius: 999px;
       padding: 10px 18px;
-      background: rgba(143,255,210,.07);
+      border-radius: 999px;
+      border: 1px solid rgba(145,255,211,.25);
+      background: rgba(145,255,211,.07);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
 
     .hero {
       min-height: calc(100vh - 84px);
       display: grid;
-      grid-template-columns: 1.02fr .98fr;
-      gap: 58px;
+      grid-template-columns: minmax(0, 1.05fr) minmax(430px, .95fr);
+      gap: clamp(38px, 5vw, 76px);
       align-items: center;
-      padding: 78px 0 100px;
+      padding: clamp(62px, 7vw, 94px) 0 clamp(80px, 8vw, 116px);
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      border: 1px solid rgba(143,255,210,.24);
-      background: rgba(143,255,210,.075);
-      color: rgba(143,255,210,.92);
+      border: 1px solid rgba(145,255,211,.25);
+      background: rgba(145,255,211,.075);
+      color: rgba(145,255,211,.94);
       border-radius: 999px;
       padding: 8px 14px;
       font-size: 13px;
-      font-weight: 650;
+      font-weight: 700;
       margin-bottom: 26px;
       box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
     }
-
     .eyebrow::before {
       content: "";
       width: 8px;
       height: 8px;
       border-radius: 999px;
       background: var(--emerald);
-      box-shadow: 0 0 18px rgba(143,255,210,.76);
+      box-shadow: 0 0 20px rgba(145,255,211,.78);
     }
 
     h1 {
-      max-width: 900px;
-      font-size: clamp(52px, 7.6vw, 106px);
-      line-height: .9;
-      letter-spacing: -.085em;
-      font-weight: 820;
+      max-width: 850px;
+      font-size: clamp(46px, 5.9vw, 86px);
+      line-height: 1.035;
+      letter-spacing: -.065em;
+      font-weight: 860;
     }
 
     .gradient {
-      display: inline;
-      background: linear-gradient(90deg, #fff 0%, #dcfff4 34%, #b7a4ff 78%, #f3d28b 112%);
+      display: block;
+      margin-top: .02em;
+      padding-bottom: .12em;
+      background: linear-gradient(90deg, #fff 0%, #eafff7 24%, #bca7ff 68%, #f0cc86 112%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     .hero-lead {
-      max-width: 720px;
-      margin-top: 30px;
-      font-size: clamp(17px, 2vw, 20px);
+      max-width: 680px;
+      margin-top: 24px;
+      font-size: clamp(16px, 1.45vw, 19px);
+      line-height: 1.78;
     }
 
     .cred-strip {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      margin-top: 36px;
-      max-width: 700px;
-      border: 1px solid rgba(255,255,255,.09);
+      margin-top: 34px;
+      max-width: 690px;
+      border: 1px solid rgba(255,255,255,.10);
       border-radius: 24px;
-      background: rgba(255,255,255,.08);
       overflow: hidden;
-      box-shadow: 0 20px 80px rgba(0,0,0,.18);
+      background: rgba(255,255,255,.08);
+      box-shadow: 0 22px 80px rgba(0,0,0,.20);
     }
 
-    .cred { padding: 18px 16px; background: rgba(8,3,18,.72); }
+    .cred { padding: 18px 16px; background: rgba(8,3,16,.76); }
     .cred strong { display: block; color: #fff; font-size: 15px; line-height: 1.2; }
     .cred span { display: block; color: var(--soft); font-size: 12px; line-height: 1.45; margin-top: 6px; }
 
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 38px; }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       border-radius: 999px;
       padding: 14px 22px;
       font-size: 15px;
-      font-weight: 760;
-      transition: transform .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease);
+      font-weight: 780;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
     }
-
     .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: var(--emerald);
-      color: #06120d;
-      border: 1px solid var(--emerald);
-      box-shadow: 0 18px 56px rgba(143,255,210,.18);
-    }
-
-    .btn-primary:hover { box-shadow: 0 24px 70px rgba(143,255,210,.25); }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,.13);
-      background: rgba(255,255,255,.045);
-      color: #fff;
-    }
+    .btn-primary { background: var(--emerald); color: #06120e; border: 1px solid var(--emerald); box-shadow: 0 20px 58px rgba(145,255,211,.18); }
+    .btn-primary:hover { box-shadow: 0 26px 78px rgba(145,255,211,.26); }
+    .btn-secondary { border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.045); color: #fff; }
+    .btn-secondary:hover { border-color: rgba(145,255,211,.24); background: rgba(145,255,211,.055); }
 
     .hero-stage {
       position: relative;
-      min-height: 620px;
+      min-height: clamp(540px, 46vw, 650px);
       border-radius: 54px;
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(circle at 50% 44%, rgba(143,255,210,.12), transparent 39%),
-        radial-gradient(circle at 50% 52%, rgba(109,60,255,.20), transparent 48%),
-        linear-gradient(145deg, rgba(255,255,255,.078), rgba(255,255,255,.022));
-      box-shadow: 0 38px 140px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.13);
       overflow: hidden;
       isolation: isolate;
+      background:
+        radial-gradient(circle at 50% 44%, rgba(145,255,211,.13), transparent 38%),
+        radial-gradient(circle at 50% 54%, rgba(110,61,255,.22), transparent 50%),
+        linear-gradient(145deg, rgba(255,255,255,.086), rgba(255,255,255,.022));
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,.10);
     }
 
     .hero-stage::before {
       content: "";
       position: absolute;
-      inset: 32px;
+      inset: 30px;
       border-radius: 44px;
-      border: 1px solid rgba(143,255,210,.16);
+      border: 1px solid rgba(145,255,211,.16);
       background:
-        linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px);
-      background-size: 30px 30px;
+        linear-gradient(rgba(255,255,255,.034) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.034) 1px, transparent 1px);
+      background-size: 31px 31px;
       mask-image: radial-gradient(circle at 50% 50%, black, transparent 72%);
+      z-index: 1;
     }
 
     .hero-stage::after {
       content: "";
       position: absolute;
-      inset: -1px;
-      background: conic-gradient(from 180deg at 50% 50%, transparent, rgba(143,255,210,.16), transparent, rgba(109,60,255,.16), transparent);
-      opacity: .18;
-      filter: blur(16px);
-      animation: spin 20s linear infinite;
+      inset: -20%;
+      background: conic-gradient(from 180deg at 50% 50%, transparent, rgba(145,255,211,.20), transparent, rgba(110,61,255,.18), transparent);
+      opacity: .22;
+      filter: blur(18px);
+      animation: spin 22s linear infinite;
+      z-index: 0;
     }
 
-    .ring {
-      position: absolute;
-      border: 1px solid rgba(143,255,210,.20);
-      border-radius: 999px;
-      transform-origin: center;
-      z-index: 2;
-    }
-
-    .r1 { inset: 86px; animation: spin 44s linear infinite; }
-    .r2 { inset: 128px 74px; border-color: rgba(183,161,255,.24); animation: spinReverse 62s linear infinite; }
-    .r3 { inset: 72px 142px; border-color: rgba(255,255,255,.12); animation: spin 78s linear infinite; }
-    .r4 { inset: 182px; border-style: dashed; border-color: rgba(245,215,138,.18); animation: spinReverse 54s linear infinite; }
-
-    .core {
-      position: absolute;
-      width: 186px;
-      height: 186px;
-      left: 50%;
-      top: 49%;
-      z-index: 4;
-      transform: translate(-50%, -50%) rotateX(58deg) rotateZ(45deg);
-      transform-style: preserve-3d;
-      border-radius: 26px;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(143,255,210,.56), transparent 34%),
-        radial-gradient(circle at 80% 82%, rgba(245,215,138,.20), transparent 30%),
-        linear-gradient(135deg, rgba(109,60,255,.50), rgba(143,255,210,.15));
-      border: 1px solid rgba(255,255,255,.18);
-      box-shadow: 0 0 110px rgba(143,255,210,.20), inset 0 1px 0 rgba(255,255,255,.22);
-      animation: float 6s var(--ease) infinite alternate;
-      transition: transform .18s ease-out;
-    }
-
-    .core::before, .core::after {
-      content: "";
+    #arcana-canvas {
       position: absolute;
       inset: 0;
-      border-radius: inherit;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.035);
-    }
-
-    .core::before { transform: translate3d(24px, -24px, -20px); }
-    .core::after { transform: translate3d(-24px, 24px, 20px); }
-
-    .line {
-      position: absolute;
       z-index: 3;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(143,255,210,.44), transparent);
-      transform-origin: left center;
-      opacity: .72;
+      width: 100%;
+      height: 100%;
     }
 
-    .l1 { width: 210px; left: 96px; top: 178px; transform: rotate(18deg); }
-    .l2 { width: 250px; right: 84px; top: 230px; transform: rotate(-24deg); }
-    .l3 { width: 235px; left: 84px; bottom: 178px; transform: rotate(-18deg); }
-    .l4 { width: 210px; right: 112px; bottom: 150px; transform: rotate(22deg); }
+    .stage-label {
+      position: absolute;
+      z-index: 6;
+      left: 32px;
+      right: 32px;
+      bottom: 30px;
+      border: 1px solid rgba(145,255,211,.18);
+      border-radius: 26px;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, rgba(145,255,211,.08), rgba(255,255,255,.035)), rgba(6,2,14,.74);
+      backdrop-filter: blur(18px);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 22px 70px rgba(0,0,0,.24);
+    }
+    .stage-label strong { display: block; color: #fff; margin-bottom: 4px; }
 
-    .node {
+    .node-chip {
       position: absolute;
       z-index: 5;
       border: 1px solid rgba(255,255,255,.13);
@@ -407,46 +362,25 @@
       backdrop-filter: blur(16px);
       border-radius: 20px;
       padding: 12px 15px;
-      color: rgba(255,255,255,.76);
+      color: rgba(255,255,255,.74);
       font-size: 13px;
       box-shadow: 0 20px 60px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.08);
     }
-
-    .node strong { color: #fff; display: block; font-size: 14px; margin-bottom: 2px; }
-    .n1 { left: 38px; top: 80px; }
-    .n2 { right: 38px; top: 136px; }
-    .n3 { left: 42px; bottom: 132px; }
-    .n4 { right: 54px; bottom: 82px; }
-
-    .definition {
-      position: absolute;
-      z-index: 6;
-      left: 28px;
-      right: 28px;
-      bottom: 28px;
-      border: 1px solid rgba(143,255,210,.16);
-      border-radius: 26px;
-      padding: 18px;
-      background: rgba(143,255,210,.055);
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-    }
-
-    .definition strong { color: #fff; display: block; margin-bottom: 4px; }
+    .node-chip strong { color: #fff; display: block; font-size: 14px; margin-bottom: 2px; }
+    .chip-1 { left: 38px; top: 82px; }
+    .chip-2 { right: 38px; top: 136px; }
+    .chip-3 { left: 42px; bottom: 202px; }
+    .chip-4 { right: 54px; bottom: 202px; }
 
     .ticker {
-      border-top: 1px solid rgba(255,255,255,.08);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      overflow: hidden;
-      background: rgba(255,255,255,.025);
       position: relative;
       z-index: 3;
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.026);
+      overflow: hidden;
     }
-
     .ticker-track { display: flex; width: max-content; animation: ticker 34s linear infinite; }
-
     .ticker span {
       display: inline-flex;
       align-items: center;
@@ -457,433 +391,322 @@
       text-transform: uppercase;
       letter-spacing: .18em;
       white-space: nowrap;
-      font-weight: 650;
+      font-weight: 700;
     }
+    .ticker span::before { content: ""; width: 7px; height: 7px; border-radius: 999px; background: var(--emerald); opacity: .78; }
 
-    .ticker span::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: var(--emerald);
-      opacity: .78;
-    }
-
-    .section { padding: 98px 0; }
-
+    .section { padding: 100px 0; }
     .section-head {
       display: grid;
-      grid-template-columns: 1fr minmax(280px, 390px);
+      grid-template-columns: 1fr minmax(280px, 410px);
       gap: 44px;
       align-items: end;
-      margin-bottom: 42px;
+      margin-bottom: 44px;
     }
-
     .kicker {
-      color: rgba(143,255,210,.80);
+      color: rgba(145,255,211,.82);
       text-transform: uppercase;
       letter-spacing: .29em;
       font-size: 12px;
-      font-weight: 850;
+      font-weight: 880;
       margin-bottom: 16px;
     }
-
-    h2 {
-      max-width: 900px;
-      font-size: clamp(34px, 4.8vw, 62px);
-      line-height: 1;
-      letter-spacing: -.056em;
-      font-weight: 780;
-    }
-
+    h2 { max-width: 900px; font-size: clamp(34px, 4.8vw, 64px); line-height: 1; letter-spacing: -.058em; font-weight: 820; }
     .section-head p { font-size: 15px; }
 
     .thesis-card {
       border: 1px solid var(--line);
-      background:
-        radial-gradient(900px 340px at 100% 0%, rgba(143,255,210,.13), transparent 60%),
-        radial-gradient(700px 360px at 0% 100%, rgba(109,60,255,.18), transparent 64%),
-        linear-gradient(135deg, rgba(255,255,255,.088), rgba(255,255,255,.024));
-      border-radius: var(--radius2);
-      padding: clamp(34px, 5vw, 66px);
+      border-radius: var(--radius-xl);
+      padding: clamp(34px, 5vw, 68px);
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: .92fr 1.08fr;
       gap: 52px;
       align-items: end;
+      background:
+        radial-gradient(920px 360px at 100% 0%, rgba(145,255,211,.13), transparent 60%),
+        radial-gradient(720px 380px at 0% 100%, rgba(110,61,255,.19), transparent 64%),
+        linear-gradient(135deg, rgba(255,255,255,.088), rgba(255,255,255,.024));
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.18);
     }
-
-    .quote {
-      margin-top: 28px;
-      color: rgba(255,255,255,.9);
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 1.14;
-      letter-spacing: -.03em;
-      max-width: 660px;
-    }
-
+    .quote { margin-top: 30px; color: rgba(255,255,255,.92); font-size: clamp(22px, 3vw, 35px); line-height: 1.14; letter-spacing: -.033em; max-width: 680px; }
     .quote span { color: var(--emerald); }
 
     .grid { display: grid; gap: 18px; }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
     .grid-2 { grid-template-columns: repeat(2, 1fr); }
 
     .card {
       position: relative;
       border: 1px solid var(--line);
-      background: var(--panel);
       border-radius: var(--radius);
       padding: 30px;
-      min-height: 250px;
+      min-height: 244px;
       overflow: hidden;
+      background: var(--panel);
       box-shadow: 0 22px 80px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.06);
       transition: transform .28s var(--ease), border-color .28s var(--ease), background .28s var(--ease);
     }
-
     .card::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(380px 180px at 20% 0%, rgba(143,255,210,.08), transparent 64%),
-        radial-gradient(260px 180px at 100% 100%, rgba(109,60,255,.10), transparent 62%);
+        radial-gradient(390px 190px at 20% 0%, rgba(145,255,211,.09), transparent 64%),
+        radial-gradient(280px 190px at 100% 100%, rgba(110,61,255,.12), transparent 62%);
       opacity: 0;
-      transition: opacity .28s var(--ease);
       pointer-events: none;
+      transition: opacity .28s var(--ease);
     }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(143,255,210,.25);
-      background: var(--panel2);
-    }
-
+    .card:hover { transform: translateY(-6px); border-color: rgba(145,255,211,.25); background: var(--panel-2); }
     .card:hover::after { opacity: 1; }
+    .card h3 { position: relative; z-index: 2; font-size: 21px; line-height: 1.18; letter-spacing: -.024em; margin-bottom: 12px; }
+    .card p { position: relative; z-index: 2; font-size: 14px; }
 
     .icon {
+      position: relative;
+      z-index: 2;
       width: 46px;
       height: 46px;
       border-radius: 16px;
       margin-bottom: 28px;
-      border: 1px solid rgba(143,255,210,.25);
-      background:
-        radial-gradient(circle at 35% 28%, rgba(143,255,210,.34), transparent 32%),
-        linear-gradient(135deg, rgba(143,255,210,.16), rgba(109,60,255,.20));
-      box-shadow: 0 0 36px rgba(143,255,210,.08);
+      border: 1px solid rgba(145,255,211,.25);
+      background: radial-gradient(circle at 35% 28%, rgba(145,255,211,.34), transparent 32%), linear-gradient(135deg, rgba(145,255,211,.16), rgba(110,61,255,.20));
+      box-shadow: 0 0 36px rgba(145,255,211,.08);
     }
-
-    .card h3 {
-      font-size: 21px;
-      line-height: 1.2;
-      letter-spacing: -.02em;
-      margin-bottom: 12px;
-    }
-
-    .card p { font-size: 14px; }
 
     .method {
       display: grid;
       grid-template-columns: .92fr 1.08fr;
       gap: 18px;
     }
-
     .method-visual {
-      min-height: 540px;
-      border-radius: var(--radius2);
+      min-height: 560px;
+      border-radius: var(--radius-xl);
       border: 1px solid rgba(255,255,255,.11);
-      background:
-        radial-gradient(circle at 50% 40%, rgba(143,255,210,.12), transparent 38%),
-        radial-gradient(circle at 48% 55%, rgba(109,60,255,.20), transparent 50%),
-        rgba(255,255,255,.04);
-      position: relative;
       overflow: hidden;
+      position: relative;
+      background: radial-gradient(circle at 50% 40%, rgba(145,255,211,.12), transparent 38%), radial-gradient(circle at 48% 55%, rgba(110,61,255,.22), transparent 50%), rgba(255,255,255,.04);
       box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
     }
-
     .method-visual::before {
       content: "";
       position: absolute;
-      inset: 44px;
+      inset: 42px;
       border-radius: 999px;
-      border: 1px solid rgba(143,255,210,.16);
-      box-shadow:
-        0 0 0 68px rgba(143,255,210,.025),
-        0 0 0 136px rgba(109,60,255,.035),
-        0 0 0 204px rgba(255,255,255,.018);
+      border: 1px solid rgba(145,255,211,.16);
+      box-shadow: 0 0 0 68px rgba(145,255,211,.025), 0 0 0 136px rgba(110,61,255,.035), 0 0 0 204px rgba(255,255,255,.018);
+      animation: pulse-rings 5s var(--ease) infinite alternate;
     }
-
     .method-visual::after {
       content: "";
       position: absolute;
-      width: 160px;
-      height: 160px;
+      width: 172px;
+      height: 172px;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(45deg);
       border-radius: 40px;
       border: 1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(circle at 30% 20%, rgba(143,255,210,.45), transparent 34%),
-        linear-gradient(135deg, rgba(109,60,255,.36), rgba(143,255,210,.14));
-      box-shadow: 0 0 90px rgba(143,255,210,.16);
+      background: radial-gradient(circle at 30% 20%, rgba(145,255,211,.48), transparent 34%), linear-gradient(135deg, rgba(110,61,255,.38), rgba(145,255,211,.14));
+      box-shadow: 0 0 96px rgba(145,255,211,.17);
+      animation: float-gem 5.8s var(--ease) infinite alternate;
     }
-
+    .method-map {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(rgba(145,255,211,.55) 1px, transparent 1.5px),
+        linear-gradient(120deg, transparent 0 46%, rgba(145,255,211,.16) 46% 46.25%, transparent 46.25% 100%),
+        linear-gradient(35deg, transparent 0 51%, rgba(110,61,255,.18) 51% 51.25%, transparent 51.25% 100%);
+      background-size: 72px 72px, 100% 100%, 100% 100%;
+      opacity: .28;
+      mask-image: radial-gradient(circle at 50% 50%, black, transparent 70%);
+    }
     .steps { display: grid; gap: 18px; counter-reset: step; }
-
-    .step {
-      min-height: 168px;
-      counter-increment: step;
-    }
-
+    .step { min-height: 170px; counter-increment: step; }
     .step::before {
       content: "0" counter(step);
+      position: relative;
+      z-index: 2;
       display: block;
-      color: rgba(143,255,210,.82);
-      font-weight: 850;
+      color: rgba(145,255,211,.82);
+      font-weight: 880;
       letter-spacing: .18em;
       font-size: 12px;
-      margin-bottom: 44px;
+      margin-bottom: 42px;
     }
 
-    .portfolio-card { min-height: 292px; }
-
+    .portfolio-card { min-height: 306px; }
     .visual {
-      height: 122px;
-      border-radius: 25px;
-      margin-bottom: 28px;
-      background:
-        radial-gradient(circle at 20% 18%, rgba(143,255,210,.48), transparent 28%),
-        radial-gradient(circle at 82% 82%, rgba(109,60,255,.44), transparent 34%),
-        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.09);
       position: relative;
+      z-index: 2;
+      height: 128px;
+      border-radius: 24px;
+      margin-bottom: 28px;
       overflow: hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: radial-gradient(circle at 20% 18%, rgba(145,255,211,.48), transparent 28%), radial-gradient(circle at 82% 82%, rgba(110,61,255,.44), transparent 34%), linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
     }
-
     .visual::after {
       content: "";
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(255,255,255,.22) 1px, transparent 1.5px);
       background-size: 14px 14px;
       opacity: .28;
       mask-image: linear-gradient(115deg, black, transparent 76%);
     }
-
-    .visual.v2 {
-      background:
-        linear-gradient(120deg, transparent 0 24%, rgba(143,255,210,.18) 24% 25%, transparent 25% 54%, rgba(109,60,255,.25) 54% 55%, transparent 55%),
-        radial-gradient(circle at 72% 30%, rgba(143,255,210,.42), transparent 26%),
-        radial-gradient(circle at 25% 82%, rgba(109,60,255,.42), transparent 34%),
-        rgba(255,255,255,.035);
-    }
-
-    .visual.v3 {
-      background:
-        conic-gradient(from 120deg, rgba(143,255,210,.28), rgba(109,60,255,.30), rgba(245,215,138,.12), rgba(143,255,210,.28)),
-        rgba(255,255,255,.035);
-    }
-
+    .visual.v2 { background: linear-gradient(120deg, transparent 0 24%, rgba(145,255,211,.18) 24% 25%, transparent 25% 54%, rgba(110,61,255,.25) 54% 55%, transparent 55%), radial-gradient(circle at 72% 30%, rgba(145,255,211,.42), transparent 26%), radial-gradient(circle at 25% 82%, rgba(110,61,255,.42), transparent 34%), rgba(255,255,255,.035); }
+    .visual.v3 { background: conic-gradient(from 120deg, rgba(145,255,211,.28), rgba(110,61,255,.30), rgba(240,204,134,.12), rgba(145,255,211,.28)), rgba(255,255,255,.035); }
     .tag {
+      position: relative;
+      z-index: 2;
       display: inline-flex;
       margin-top: 18px;
-      color: rgba(143,255,210,.82);
-      border: 1px solid rgba(143,255,210,.18);
-      background: rgba(143,255,210,.055);
+      color: rgba(145,255,211,.82);
+      border: 1px solid rgba(145,255,211,.18);
+      background: rgba(145,255,211,.055);
       border-radius: 999px;
       padding: 5px 10px;
       font-size: 12px;
-      position: relative;
-      z-index: 2;
+      font-weight: 650;
     }
 
     .team-card {
       display: grid;
-      grid-template-columns: 128px 1fr;
+      grid-template-columns: 132px 1fr;
       gap: 26px;
       min-height: auto;
     }
-
     .avatar {
-      width: 128px;
-      height: 128px;
-      border-radius: 31px;
+      position: relative;
+      z-index: 2;
+      width: 132px;
+      height: 132px;
+      border-radius: 32px;
       border: 1px solid rgba(255,255,255,.12);
       background:
-        linear-gradient(90deg, transparent 0 14%, rgba(255,255,255,.07) 14% 17%, transparent 17% 31%, rgba(255,255,255,.07) 31% 34%, transparent 34%),
+        linear-gradient(90deg, transparent 0 14%, rgba(255,255,255,.075) 14% 17%, transparent 17% 31%, rgba(255,255,255,.075) 31% 34%, transparent 34%),
         linear-gradient(0deg, transparent 0 20%, rgba(0,0,0,.18) 20% 23%, transparent 23% 40%, rgba(0,0,0,.16) 40% 43%, transparent 43%),
-        radial-gradient(circle at 38% 20%, rgba(143,255,210,.30), transparent 35%),
-        linear-gradient(135deg, rgba(109,60,255,.30), rgba(143,255,210,.13));
+        radial-gradient(circle at 38% 20%, rgba(145,255,211,.30), transparent 35%),
+        linear-gradient(135deg, rgba(110,61,255,.30), rgba(145,255,211,.13));
       image-rendering: pixelated;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 28px 80px rgba(0,0,0,.24);
     }
-
+    .avatar::after {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border-radius: 999px 999px 42px 42px;
+      background: radial-gradient(circle at 50% 34%, rgba(255,255,255,.18), transparent 32%), rgba(255,255,255,.025);
+      border: 1px solid rgba(255,255,255,.08);
+    }
     .avatar.alex {
       background:
-        linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,.07) 18% 21%, transparent 21% 39%, rgba(255,255,255,.07) 39% 42%, transparent 42%),
+        linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,.075) 18% 21%, transparent 21% 39%, rgba(255,255,255,.075) 39% 42%, transparent 42%),
         linear-gradient(0deg, transparent 0 16%, rgba(0,0,0,.18) 16% 19%, transparent 19% 38%, rgba(0,0,0,.16) 38% 41%, transparent 41%),
-        radial-gradient(circle at 64% 22%, rgba(245,215,138,.22), transparent 32%),
-        radial-gradient(circle at 36% 24%, rgba(143,255,210,.28), transparent 34%),
-        linear-gradient(135deg, rgba(109,60,255,.28), rgba(143,255,210,.11));
+        radial-gradient(circle at 64% 22%, rgba(240,204,134,.24), transparent 32%),
+        radial-gradient(circle at 36% 24%, rgba(145,255,211,.28), transparent 34%),
+        linear-gradient(135deg, rgba(110,61,255,.30), rgba(145,255,211,.11));
     }
-
-    .team-card h3 {
-      font-size: 26px;
-      letter-spacing: -.03em;
-    }
-
-    .meta {
-      color: rgba(143,255,210,.78);
-      font-size: 12px;
-      font-weight: 780;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      margin: 8px 0 18px;
-    }
-
-    .team-card p {
-      font-size: 14px;
-      line-height: 1.78;
-    }
+    .team-card h3 { font-size: 26px; letter-spacing: -.03em; }
+    .meta { color: rgba(145,255,211,.78); font-size: 12px; font-weight: 780; letter-spacing: .13em; text-transform: uppercase; margin: 8px 0 18px; }
+    .team-card p { font-size: 14px; line-height: 1.78; }
 
     .contact {
-      border: 1px solid rgba(143,255,210,.24);
-      background:
-        radial-gradient(780px 340px at 0% 0%, rgba(143,255,210,.15), transparent 60%),
-        radial-gradient(640px 340px at 100% 100%, rgba(109,60,255,.21), transparent 62%),
-        rgba(143,255,210,.065);
-      border-radius: var(--radius2);
-      padding: clamp(38px, 5vw, 70px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.22);
       position: relative;
       overflow: hidden;
+      border: 1px solid rgba(145,255,211,.24);
+      border-radius: var(--radius-xl);
+      padding: clamp(38px, 5vw, 72px);
+      background:
+        radial-gradient(780px 340px at 0% 0%, rgba(145,255,211,.15), transparent 60%),
+        radial-gradient(640px 340px at 100% 100%, rgba(110,61,255,.22), transparent 62%),
+        rgba(145,255,211,.065);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 34px 100px rgba(0,0,0,.22);
     }
-
     .contact::after {
       content: "";
       position: absolute;
-      width: 320px;
-      height: 320px;
+      width: 330px;
+      height: 330px;
       right: -80px;
       top: -80px;
       border-radius: 999px;
-      border: 1px solid rgba(143,255,210,.14);
-      box-shadow: 0 0 0 80px rgba(143,255,210,.03), 0 0 0 160px rgba(109,60,255,.035);
+      border: 1px solid rgba(145,255,211,.14);
+      box-shadow: 0 0 0 82px rgba(145,255,211,.03), 0 0 0 164px rgba(110,61,255,.035);
     }
-
-    .contact h2, .contact p, .contact .actions, .contact .kicker {
-      position: relative;
-      z-index: 2;
-    }
-
-    .contact p {
-      max-width: 720px;
-      margin-top: 22px;
-      font-size: 18px;
-    }
+    .contact h2, .contact p, .contact .actions, .contact .kicker { position: relative; z-index: 2; }
+    .contact p { max-width: 760px; margin-top: 22px; font-size: 18px; }
 
     footer {
-      color: rgba(255,255,255,.42);
-      padding: 38px 0 56px;
-      font-size: 14px;
+      position: relative;
+      z-index: 3;
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      color: rgba(255,255,255,.42);
+      padding: 38px 0 56px;
       border-top: 1px solid rgba(255,255,255,.08);
-      position: relative;
-      z-index: 3;
+      font-size: 14px;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .75s var(--ease), transform .75s var(--ease);
+      transform: translateY(24px);
+      transition: opacity .78s var(--ease), transform .78s var(--ease);
     }
-
-    .reveal.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
 
     @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes spinReverse { to { transform: rotate(-360deg); } }
-
-    @keyframes float {
-      from { translate: 0 0; filter: saturate(1); }
-      to { translate: 0 -18px; filter: saturate(1.18); }
-    }
-
     @keyframes ticker { to { transform: translateX(-50%); } }
+    @keyframes pulse-rings { from { transform: scale(.985); opacity: .72; } to { transform: scale(1.025); opacity: 1; } }
+    @keyframes float-gem { from { translate: 0 0; filter: saturate(1); } to { translate: 0 -16px; filter: saturate(1.18); } }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-      }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
     }
 
-    @media (max-width: 1040px) {
+    @media (max-width: 1120px) {
       nav { display: none; }
-
-      .hero, .thesis-card, .section-head, .method, .grid-3, .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 56px;
-      }
-
-      .hero-stage {
-        max-width: 620px;
-        width: 100%;
-        min-height: 560px;
-        margin: 0 auto;
-      }
-
+      .hero, .thesis-card, .section-head, .method, .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding-top: 58px; }
+      .hero-stage { max-width: 660px; width: 100%; min-height: 590px; margin: 0 auto; }
       .section-head { gap: 18px; }
-      .method-visual { min-height: 420px; }
-      footer { flex-direction: column; }
+      .method-visual { min-height: 430px; }
     }
 
-    @media (max-width: 680px) {
+    @media (max-width: 720px) {
       .container { width: min(100% - 28px, var(--max)); }
       header { height: 74px; }
-      .brand { font-size: 13px; letter-spacing: .16em; }
-      .hero { padding: 52px 0 64px; gap: 42px; }
+      .brand { font-size: 12px; letter-spacing: .15em; }
+      .brand-mark { width: 38px; height: 38px; border-radius: 14px; }
+      .hero { padding: 52px 0 66px; gap: 42px; }
+      h1 { font-size: clamp(40px, 11vw, 56px); line-height: 1.08; letter-spacing: -.054em; }
+      .hero-lead { font-size: 16px; line-height: 1.7; }
       .cred-strip { grid-template-columns: 1fr; }
-      .hero-stage { min-height: 470px; border-radius: 36px; }
-      .core { width: 138px; height: 138px; }
-      .r1 { inset: 70px; }
-      .r2 { inset: 116px 52px; }
-      .r3 { inset: 56px 112px; }
-      .r4 { inset: 160px; }
-
-      .node {
-        font-size: 12px;
-        padding: 9px 11px;
-        border-radius: 16px;
-      }
-
-      .node strong { font-size: 12px; }
-      .n1 { left: 18px; top: 42px; }
-      .n2 { right: 18px; top: 78px; }
-      .n3 { left: 18px; bottom: 104px; }
-      .n4 { right: 18px; bottom: 64px; }
-      .definition, .line, .method-visual { display: none; }
-      .section { padding: 68px 0; }
+      .hero-stage { min-height: 500px; border-radius: 36px; }
+      .node-chip { font-size: 12px; padding: 9px 11px; border-radius: 16px; }
+      .node-chip strong { font-size: 12px; }
+      .chip-1 { left: 18px; top: 42px; }
+      .chip-2 { right: 18px; top: 78px; }
+      .chip-3 { left: 18px; bottom: 122px; }
+      .chip-4 { right: 18px; bottom: 78px; }
+      .stage-label { display: none; }
+      .section { padding: 70px 0; }
+      .card { padding: 24px; border-radius: 27px; }
       .team-card { grid-template-columns: 1fr; }
-      .card { padding: 24px; border-radius: 28px; }
       .contact { border-radius: 34px; }
+      footer { flex-direction: column; }
     }
   </style>
 </head>
 
 <body>
-  <div class="noise"></div>
-  <div class="aurora"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
 
   <div class="topbar">
     <header class="container">
@@ -893,7 +716,7 @@
       </a>
 
       <nav aria-label="Primary navigation">
-        <a href="#thesis">Thesis</a>
+        <a href="#about">About</a>
         <a href="#method">Method</a>
         <a href="#clients">Clients</a>
         <a href="#portfolio">Portfolio</a>
@@ -907,12 +730,10 @@
     <section class="hero container">
       <div class="reveal">
         <div class="eyebrow">Private market intelligence for trusted capital</div>
-
         <h1>
-          Access is the asset.
+          <span>Access is the asset.</span>
           <span class="gradient">Conviction is the edge.</span>
         </h1>
-
         <p class="hero-lead">
           Arcana Research is a strategic advisory and private investment network built for investors, counterparties and founders operating where opportunity is not public, obvious or easily accessed.
         </p>
@@ -922,12 +743,10 @@
             <strong>Research-led</strong>
             <span>Market theses before introductions.</span>
           </div>
-
           <div class="cred">
             <strong>Relationship-gated</strong>
             <span>Opportunities validated through trusted networks.</span>
           </div>
-
           <div class="cred">
             <strong>Capital-aligned</strong>
             <span>Selective deployment alongside strategic partners.</span>
@@ -940,25 +759,13 @@
         </div>
       </div>
 
-      <div class="hero-stage reveal" aria-label="Abstract Arcana intelligence network visual">
-        <div class="ring r1"></div>
-        <div class="ring r2"></div>
-        <div class="ring r3"></div>
-        <div class="ring r4"></div>
-
-        <div class="core" aria-hidden="true"></div>
-
-        <div class="line l1"></div>
-        <div class="line l2"></div>
-        <div class="line l3"></div>
-        <div class="line l4"></div>
-
-        <div class="node n1"><strong>Signal</strong>Market intelligence</div>
-        <div class="node n2"><strong>Trust</strong>Counterparty network</div>
-        <div class="node n3"><strong>Access</strong>Private allocation</div>
-        <div class="node n4"><strong>Judgment</strong>Selective execution</div>
-
-        <div class="definition">
+      <div class="hero-stage reveal" id="stage" aria-label="Interactive Arcana intelligence network visual">
+        <canvas id="arcana-canvas"></canvas>
+        <div class="node-chip chip-1"><strong>Signal</strong>Market intelligence</div>
+        <div class="node-chip chip-2"><strong>Trust</strong>Counterparty network</div>
+        <div class="node-chip chip-3"><strong>Access</strong>Private allocation</div>
+        <div class="node-chip chip-4"><strong>Judgment</strong>Selective execution</div>
+        <div class="stage-label">
           <strong>Arcana / är-kā-nə</strong>
           Deep secrets, mysteries or specialized knowledge. In private markets, the best opportunities are rarely broadcast — they move through trusted people, sharp judgment and timing.
         </div>
@@ -967,31 +774,22 @@
 
     <section class="ticker" aria-label="Arcana themes">
       <div class="ticker-track">
-        <span>Private research</span>
-        <span>Strategic access</span>
-        <span>Network-led opportunity</span>
-        <span>Founder relationships</span>
-        <span>Selective capital</span>
-        <span>Market intelligence</span>
-        <span>Private research</span>
-        <span>Strategic access</span>
-        <span>Network-led opportunity</span>
-        <span>Founder relationships</span>
-        <span>Selective capital</span>
-        <span>Market intelligence</span>
+        <span>Private research</span><span>Strategic access</span><span>Network-led opportunity</span><span>Market intelligence</span><span>Founder relationships</span><span>Selective capital</span>
+        <span>Private research</span><span>Strategic access</span><span>Network-led opportunity</span><span>Market intelligence</span><span>Founder relationships</span><span>Selective capital</span>
       </div>
     </section>
 
-    <section class="section container reveal" id="thesis">
+    <section class="section container reveal" id="about">
       <div class="thesis-card">
         <div>
           <div class="kicker">Thesis</div>
           <h2>The best deals do not need more noise. They need the right people.</h2>
           <div class="quote">We sit at the intersection of <span>capital, context and access.</span></div>
         </div>
-
         <p>
           Many sophisticated investors have capital but not the time, proximity or market connectivity to source and assess every private opportunity themselves. Arcana bridges that gap by combining market intelligence, operator insight and trusted relationships into investable conviction.
+          <br><br>
+          The best opportunities rarely arrive through public channels. They move through trusted people, informed judgment and timing. Arcana exists to identify that signal before it becomes consensus.
         </p>
       </div>
     </section>
@@ -1002,26 +800,22 @@
           <div class="kicker">Method</div>
           <h2>A discreet process for finding signal before consensus.</h2>
         </div>
-
         <p>We are not a volume platform. We focus on opportunities where research, access and relationship capital can compound together.</p>
       </div>
 
       <div class="method">
-        <div class="method-visual reveal" aria-hidden="true"></div>
-
+        <div class="method-visual reveal" aria-hidden="true"><div class="method-map"></div></div>
         <div class="steps">
           <div class="card step reveal">
-            <h3>Form the market map</h3>
+            <h3>Map the market</h3>
             <p>We build thematic views around sectors, founders and ecosystems where technical, cultural or capital shifts create asymmetric potential.</p>
           </div>
-
           <div class="card step reveal">
-            <h3>Validate through people</h3>
+            <h3>Validate through the network</h3>
             <p>We test opportunities through trusted operators, investors and counterparties — the people closest to the market and the founder.</p>
           </div>
-
           <div class="card step reveal">
-            <h3>Structure the introduction</h3>
+            <h3>Structure access</h3>
             <p>We connect aligned capital with selected opportunities where the investor can bring more than money: credibility, network, speed or strategic value.</p>
           </div>
         </div>
@@ -1034,28 +828,14 @@
           <div class="kicker">Who we serve</div>
           <h2>Built for capital that values judgment.</h2>
         </div>
-
         <p>Arcana is for people and firms who are already credible — but want sharper visibility, better context and warmer access across private markets.</p>
       </div>
 
-      <div class="grid grid-3">
-        <div class="card reveal">
-          <div class="icon"></div>
-          <h3>Private investors</h3>
-          <p>Individuals, families and principals looking for trusted guidance, thoughtful deal access and a clearer way to deploy capital.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="icon"></div>
-          <h3>VCs and syndicates</h3>
-          <p>Firms and networks seeking differentiated deal flow, co-investment relationships and credible counterparty introductions.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="icon"></div>
-          <h3>Founders and operators</h3>
-          <p>Teams seeking strategic capital, market narrative, warm access and investors who understand the opportunity beyond the deck.</p>
-        </div>
+      <div class="grid grid-4">
+        <div class="card reveal"><div class="icon"></div><h3>Private investors</h3><p>Individuals, families and principals looking for trusted guidance, thoughtful deal access and a clearer way to deploy capital.</p></div>
+        <div class="card reveal"><div class="icon"></div><h3>VCs and syndicates</h3><p>Firms and networks seeking differentiated deal flow, co-investment relationships and credible counterparty introductions.</p></div>
+        <div class="card reveal"><div class="icon"></div><h3>Founders and operators</h3><p>Teams seeking strategic capital, market narrative, warm access and investors who understand the opportunity beyond the deck.</p></div>
+        <div class="card reveal"><div class="icon"></div><h3>Strategic partners</h3><p>Counterparties looking for relevant relationships, capital introductions and private market intelligence.</p></div>
       </div>
     </section>
 
@@ -1065,52 +845,16 @@
           <div class="kicker">Portfolio</div>
           <h2>Selected themes and exposure.</h2>
         </div>
-
         <p>Launch placeholders for now. Replace with approved companies, logos or anonymised case studies when ready.</p>
       </div>
 
       <div class="grid grid-3">
-        <div class="card portfolio-card reveal">
-          <div class="visual"></div>
-          <h3>AI Infrastructure</h3>
-          <p>Applied intelligence, compute, tooling and data infrastructure powering the next generation of software and automation.</p>
-          <span class="tag">Theme placeholder</span>
-        </div>
-
-        <div class="card portfolio-card reveal">
-          <div class="visual v2"></div>
-          <h3>Deep Technology</h3>
-          <p>Frontier technology companies where technical advantage, timing and specialist networks can create compounding advantage.</p>
-          <span class="tag">Theme placeholder</span>
-        </div>
-
-        <div class="card portfolio-card reveal">
-          <div class="visual v3"></div>
-          <h3>Digital Assets</h3>
-          <p>Private and liquid opportunities selected through market structure, network signal and disciplined risk assessment.</p>
-          <span class="tag">Theme placeholder</span>
-        </div>
-
-        <div class="card portfolio-card reveal">
-          <div class="visual v2"></div>
-          <h3>Frontier Markets</h3>
-          <p>High-growth ecosystems where local relationships, timing and trusted access can uncover non-obvious opportunity.</p>
-          <span class="tag">Theme placeholder</span>
-        </div>
-
-        <div class="card portfolio-card reveal">
-          <div class="visual v3"></div>
-          <h3>Private Networks</h3>
-          <p>Syndicates, founders, allocators and counterparties connected through trust, reputation and repeat collaboration.</p>
-          <span class="tag">Network placeholder</span>
-        </div>
-
-        <div class="card portfolio-card reveal">
-          <div class="visual"></div>
-          <h3>Strategic Advisory</h3>
-          <p>Selected mandates supporting capital introductions, investor positioning, narrative refinement and relationship execution.</p>
-          <span class="tag">Mandate placeholder</span>
-        </div>
+        <div class="card portfolio-card reveal"><div class="visual"></div><h3>AI Infrastructure</h3><p>Applied intelligence, compute, tooling and data infrastructure powering the next generation of software and automation.</p><span class="tag">Theme placeholder</span></div>
+        <div class="card portfolio-card reveal"><div class="visual v2"></div><h3>Deep Technology</h3><p>Frontier companies where technical advantage, timing and specialist networks can create compounding advantage.</p><span class="tag">Theme placeholder</span></div>
+        <div class="card portfolio-card reveal"><div class="visual v3"></div><h3>Digital Assets</h3><p>Private and liquid opportunities selected through market structure, network signal and disciplined risk assessment.</p><span class="tag">Theme placeholder</span></div>
+        <div class="card portfolio-card reveal"><div class="visual v2"></div><h3>Tokenized RWAs</h3><p>Infrastructure and market systems for real-world assets, environmental markets and private asset liquidity.</p><span class="tag">Theme placeholder</span></div>
+        <div class="card portfolio-card reveal"><div class="visual v3"></div><h3>Private Networks</h3><p>Syndicates, founders, allocators and counterparties connected through trust, reputation and repeat collaboration.</p><span class="tag">Network placeholder</span></div>
+        <div class="card portfolio-card reveal"><div class="visual"></div><h3>Strategic Advisory</h3><p>Selected mandates supporting capital introductions, investor positioning, narrative refinement and relationship execution.</p><span class="tag">Mandate placeholder</span></div>
       </div>
     </section>
 
@@ -1120,54 +864,38 @@
           <div class="kicker">Team</div>
           <h2>Relationship-led. Research-backed. Execution-minded.</h2>
         </div>
-
-        <p>Arcana’s credibility comes from the judgment, relationships and market intuition of Andrew and Alexandre.</p>
+        <p>Arcana’s credibility comes from the judgment, relationships and market intuition of Andrew and Alex.</p>
       </div>
 
       <div class="grid grid-2">
         <div class="card team-card reveal">
           <div class="avatar" aria-hidden="true"></div>
-
           <div>
-            <h3>Andrew Law</h3>
+            <h3>Andrew</h3>
             <div class="meta">Partner · Capital & Strategy</div>
-            <p>
-              Andrew graduated from University College London, ranking among the top of his cohort. Recognised for sharp strategic thinking and hands-on leadership, he combines institutional-level judgment with practical execution across investing, operations and growth.
-              <br><br>
-              He co-founded and scaled a direct-to-consumer company into a six-figure enterprise, leading both strategy and operations through its expansion. He later joined Accrete, a private equity firm focused on high-growth technology, where he deepened his experience evaluating and supporting innovative businesses.
-              <br><br>
-              Most recently, Andrew served as CIO of LVL Limited, overseeing investments across real estate, technology and traditional assets while advising on broader strategic allocation and capital deployment.
-            </p>
+            <p>Andrew graduated from UCL, ranking among the top of his cohort. Known for sharp intellect and hands-on leadership, he blends strategic vision with practical execution.<br><br>He co-founded a direct-to-consumer business, growing it into a six-figure enterprise while leading operations and strategy. He later joined Accrete, a private equity firm focused on high-growth technology, further strengthening his ability to scale innovative companies.<br><br>Recently, he served as CIO at LVL Limited, overseeing investments across real estate, technology, and traditional assets.</p>
           </div>
         </div>
 
         <div class="card team-card reveal">
           <div class="avatar alex" aria-hidden="true"></div>
-
           <div>
-            <h3>Alexandre Chau</h3>
+            <h3>Alex Roessner</h3>
             <div class="meta">Partner · Market Intelligence</div>
-            <p>
-              Alexandre is a French finance professional with more than a decade of experience across both the sell-side and buy-side in Europe and Asia. He holds a Master in Finance from Université Paris Dauphine–PSL and has built a career spanning global banking, institutional asset management and digital assets.
-              <br><br>
-              He began his career at HSBC before joining Goldman Sachs across London and Hong Kong, later moving to Wellington Management where he managed over $12 billion in equity mandates. Following his transition into digital assets in 2020, he led Wellington’s crypto research initiatives and co-authored the firm’s institutional paper on digital assets.
-              <br><br>
-              Alexandre currently focuses on systematic strategies, market structure and capital preservation through his work at Mythos Liquid Capital.
-            </p>
+            <p>Alex Roessner studied Economics and Environmental Policy at Northwestern University, where he played Division I baseball and graduated with strong academic standing.<br><br>He began investing at age 12, growing a $150 baseball card collection into a seven-figure trading portfolio. He has since built experience across equities, commodities, FX, and digital assets, with a focus on systematic methods and disciplined risk management.<br><br>Alex is co-founder of Landseed, designing financial infrastructure for tokenized environmental assets. His work centers on building market-driven systems to capture underpriced opportunities.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section container">
+    <section class="section container" id="contact">
       <div class="contact reveal">
         <div class="kicker">Contact</div>
         <h2>For opportunities, partnerships and strategic allocation discussions.</h2>
         <p>Share what you are building, sourcing or looking to access. Arcana works selectively and confidentially with aligned founders, investors and counterparties.</p>
-
         <div class="actions">
           <a href="mailto:andrew@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-primary">andrew@arcanavc.com</a>
-          <a href="mailto:alex@arcanavc.com?subject=Arcana%20Introduction" class="btn btn-secondary">alex@arcanavc.com</a>
+          <a href="#about" class="btn btn-secondary">Read the thesis</a>
         </div>
       </div>
     </section>
@@ -1181,47 +909,189 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
     document.querySelectorAll(".reveal").forEach((element, index) => {
-      element.style.transitionDelay = `${Math.min(index * 35, 220)}ms`;
+      element.style.transitionDelay = `${Math.min(index * 34, 220)}ms`;
       observer.observe(element);
     });
 
-    const stage = document.querySelector(".hero-stage");
-    const core = document.querySelector(".core");
+    const canvas = document.getElementById("arcana-canvas");
+    const stage = document.getElementById("stage");
+    const ctx = canvas.getContext("2d");
+    const pointer = { x: 0, y: 0, active: false };
+    let width = 0;
+    let height = 0;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let particles = [];
+    let tick = 0;
 
-    if (stage && core && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      stage.addEventListener("pointermove", event => {
-        const rect = stage.getBoundingClientRect();
-        const x = (event.clientX - rect.left) / rect.width - 0.5;
-        const y = (event.clientY - rect.top) / rect.height - 0.5;
+    function resizeCanvas() {
+      const rect = stage.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      createParticles();
+    }
 
-        core.style.transform = `
-          translate(-50%, -50%)
-          rotateX(${58 - y * 10}deg)
-          rotateZ(${45 + x * 12}deg)
-        `;
-      });
-
-      stage.addEventListener("pointerleave", () => {
-        core.style.transform = `
-          translate(-50%, -50%)
-          rotateX(58deg)
-          rotateZ(45deg)
-        `;
+    function createParticles() {
+      const count = width < 680 ? 160 : 260;
+      particles = Array.from({ length: count }, (_, i) => {
+        const phi = Math.acos(1 - 2 * ((i + .5) / count));
+        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+        const variance = .82 + Math.random() * .28;
+        return {
+          x: Math.cos(theta) * Math.sin(phi) * variance,
+          y: Math.sin(theta) * Math.sin(phi) * variance,
+          z: Math.cos(phi) * variance,
+          r: .7 + Math.random() * 1.55,
+          hue: Math.random() > .72 ? "violet" : "emerald",
+          phase: Math.random() * Math.PI * 2
+        };
       });
     }
+
+    function project(point, rotationX, rotationY) {
+      const cosY = Math.cos(rotationY);
+      const sinY = Math.sin(rotationY);
+      const cosX = Math.cos(rotationX);
+      const sinX = Math.sin(rotationX);
+
+      let x = point.x * cosY - point.z * sinY;
+      let z = point.x * sinY + point.z * cosY;
+      let y = point.y * cosX - z * sinX;
+      z = point.y * sinX + z * cosX;
+
+      const radius = Math.min(width, height) * .305;
+      const perspective = 1.85 / (1.85 + z);
+      return {
+        x: width / 2 + x * radius * perspective,
+        y: height / 2 + y * radius * perspective - 12,
+        z,
+        scale: perspective
+      };
+    }
+
+    function draw() {
+      tick += prefersReducedMotion ? 0 : .0085;
+      ctx.clearRect(0, 0, width, height);
+
+      const cx = width / 2;
+      const cy = height / 2 - 12;
+      const pointerX = pointer.active ? pointer.x : 0;
+      const pointerY = pointer.active ? pointer.y : 0;
+      const rotY = tick * .95 + pointerX * .42;
+      const rotX = -.24 + Math.sin(tick * .7) * .08 - pointerY * .28;
+      const projected = particles.map((p) => ({ p, ...project(p, rotX, rotY) })).sort((a, b) => a.z - b.z);
+
+      const gradient = ctx.createRadialGradient(cx, cy, 30, cx, cy, Math.min(width, height) * .42);
+      gradient.addColorStop(0, "rgba(145,255,211,.18)");
+      gradient.addColorStop(.42, "rgba(110,61,255,.10)");
+      gradient.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(cx, cy, Math.min(width, height) * .39, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(tick * .35);
+      for (let ring = 0; ring < 4; ring++) {
+        const rx = Math.min(width, height) * (.19 + ring * .07);
+        const ry = rx * (.34 + ring * .045);
+        ctx.strokeStyle = ring % 2 === 0 ? "rgba(145,255,211,.15)" : "rgba(188,167,255,.14)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, rx, ry, ring * .62, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      for (let i = 0; i < projected.length; i += 1) {
+        const a = projected[i];
+        if (a.z < -.45) continue;
+        for (let j = i + 1; j < Math.min(projected.length, i + 9); j += 1) {
+          const b = projected[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 58 && Math.abs(a.z - b.z) < .34) {
+            ctx.strokeStyle = `rgba(145,255,211,${Math.max(0, .13 - dist / 520)})`;
+            ctx.lineWidth = .7;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      projected.forEach(({ p, x, y, z, scale }) => {
+        const front = Math.max(0, (z + 1) / 2);
+        const alpha = .22 + front * .72;
+        const pulse = 1 + Math.sin(tick * 4 + p.phase) * .16;
+        const color = p.hue === "violet" ? "188,167,255" : "145,255,211";
+        ctx.fillStyle = `rgba(${color},${alpha})`;
+        ctx.beginPath();
+        ctx.arc(x, y, p.r * scale * pulse, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(Math.PI / 4 + pointerX * .16);
+      const coreSize = Math.min(width, height) * .135;
+      const coreGradient = ctx.createLinearGradient(-coreSize, -coreSize, coreSize, coreSize);
+      coreGradient.addColorStop(0, "rgba(145,255,211,.72)");
+      coreGradient.addColorStop(.46, "rgba(110,61,255,.48)");
+      coreGradient.addColorStop(1, "rgba(240,204,134,.18)");
+      ctx.fillStyle = coreGradient;
+      ctx.strokeStyle = "rgba(255,255,255,.22)";
+      ctx.lineWidth = 1;
+      roundRect(ctx, -coreSize / 2, -coreSize / 2, coreSize, coreSize, 24);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+
+      if (!prefersReducedMotion) requestAnimationFrame(draw);
+    }
+
+    function roundRect(context, x, y, w, h, r) {
+      const radius = Math.min(r, w / 2, h / 2);
+      context.beginPath();
+      context.moveTo(x + radius, y);
+      context.arcTo(x + w, y, x + w, y + h, radius);
+      context.arcTo(x + w, y + h, x, y + h, radius);
+      context.arcTo(x, y + h, x, y, radius);
+      context.arcTo(x, y, x + w, y, radius);
+      context.closePath();
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    stage.addEventListener("pointermove", (event) => {
+      const rect = stage.getBoundingClientRect();
+      pointer.x = ((event.clientX - rect.left) / rect.width - .5) * 2;
+      pointer.y = ((event.clientY - rect.top) / rect.height - .5) * 2;
+      pointer.active = true;
+    });
+    stage.addEventListener("pointerleave", () => { pointer.active = false; });
+
+    resizeCanvas();
+    draw();
   </script>
 </body>
 </html>
