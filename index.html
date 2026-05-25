@@ -1759,6 +1759,132 @@
             }
         }
 
+    
+        /* ============================================
+           FINAL MOBILE HERO RECOMPOSITION
+           Desktop remains untouched. This makes the phone landing
+           feel like the desktop hero: image as the canvas, copy overlaid left.
+           ============================================ */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: calc(100svh - var(--nav-height-mobile)) !important;
+                display: block !important;
+                padding: calc(var(--nav-height-mobile) + 34px) 0 0 !important;
+                background-size: cover !important;
+                background-position: 62% center !important;
+                background-repeat: no-repeat !important;
+                overflow: hidden !important;
+            }
+
+            .hero::before {
+                background:
+                    linear-gradient(90deg,
+                        rgba(248, 242, 234, 0.98) 0%,
+                        rgba(248, 242, 234, 0.90) 31%,
+                        rgba(248, 242, 234, 0.42) 58%,
+                        rgba(248, 242, 234, 0.08) 100%) !important;
+                z-index: 0 !important;
+            }
+
+            .hero::after {
+                height: 82px !important;
+                background: linear-gradient(180deg, rgba(248, 242, 234, 0) 0%, var(--color-bg) 92%) !important;
+            }
+
+            .hero .container {
+                position: relative !important;
+                z-index: 2 !important;
+                height: 100% !important;
+            }
+
+            .hero-grid {
+                display: block !important;
+                min-height: calc(100svh - var(--nav-height-mobile) - 34px) !important;
+            }
+
+            .hero-content {
+                width: min(64vw, 290px) !important;
+                max-width: 290px !important;
+                padding: clamp(18px, 5.5vh, 48px) 0 0 !important;
+                text-align: left !important;
+            }
+
+            .hero-kicker {
+                width: 68px !important;
+                margin: 0 0 24px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2.55rem, 11.2vw, 3.2rem) !important;
+                line-height: 0.88 !important;
+                letter-spacing: -0.06em !important;
+                margin: 0 0 28px !important;
+                text-align: left !important;
+            }
+
+            .hero-headline span {
+                display: block !important;
+            }
+
+            .hero-description {
+                max-width: 280px !important;
+                margin: 0 0 24px !important;
+                font-size: clamp(0.74rem, 2.45vw, 0.88rem) !important;
+                line-height: 1.42 !important;
+                text-align: left !important;
+                color: #4b3a30 !important;
+            }
+
+            .hero-cta {
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+                gap: 0 !important;
+                margin: 0 !important;
+            }
+
+            .hero-cta .btn-secondary {
+                display: none !important;
+            }
+
+            .hero-cta .btn-primary {
+                min-width: 124px !important;
+                width: auto !important;
+                padding: 13px 26px !important;
+                border-radius: 999px !important;
+                justify-content: center !important;
+                font-size: 0.77rem !important;
+                box-shadow: 0 14px 28px rgba(118, 84, 55, 0.18) !important;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .hero {
+                background-position: 65% center !important;
+            }
+
+            .hero-content {
+                width: 62vw !important;
+                max-width: 250px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2.25rem, 10.7vw, 2.75rem) !important;
+                margin-bottom: 22px !important;
+            }
+
+            .hero-description {
+                max-width: 235px !important;
+                font-size: 0.70rem !important;
+                line-height: 1.36 !important;
+                margin-bottom: 18px !important;
+            }
+
+            .hero-cta .btn-primary {
+                padding: 12px 24px !important;
+                font-size: 0.72rem !important;
+            }
+        }
+
     </style>
 </head>
 <body>
