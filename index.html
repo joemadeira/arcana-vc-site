@@ -1886,6 +1886,84 @@
             }
         }
 
+    
+
+        /* ============================================
+           FINAL MOBILE TEXT REFINEMENT
+           Desktop remains untouched. Keeps the mobile hero image composition,
+           but reduces/crops the copy block to the left so it does not overlap
+           the arch/window image.
+           ============================================ */
+        @media (max-width: 768px) {
+            .hero-content {
+                width: min(44vw, 212px) !important;
+                max-width: 212px !important;
+                padding-top: clamp(16px, 4.8vh, 38px) !important;
+                text-align: left !important;
+            }
+
+            .hero-kicker {
+                width: 58px !important;
+                margin-bottom: 18px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2.15rem, 8.7vw, 2.55rem) !important;
+                line-height: 0.92 !important;
+                letter-spacing: -0.055em !important;
+                margin-bottom: 20px !important;
+                max-width: 100% !important;
+                text-align: left !important;
+            }
+
+            .hero-description {
+                width: min(44vw, 212px) !important;
+                max-width: 212px !important;
+                font-size: clamp(0.64rem, 2.05vw, 0.78rem) !important;
+                line-height: 1.42 !important;
+                margin-bottom: 18px !important;
+                text-align: left !important;
+            }
+
+            .hero-cta {
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+                text-align: left !important;
+            }
+
+            .hero-cta .btn-primary {
+                min-width: 118px !important;
+                padding: 12px 24px !important;
+                font-size: 0.72rem !important;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .hero-content {
+                width: 45vw !important;
+                max-width: 178px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2rem, 8.4vw, 2.25rem) !important;
+                margin-bottom: 16px !important;
+            }
+
+            .hero-description {
+                width: 45vw !important;
+                max-width: 178px !important;
+                font-size: 0.62rem !important;
+                line-height: 1.35 !important;
+                margin-bottom: 14px !important;
+            }
+
+            .hero-cta .btn-primary {
+                padding: 11px 22px !important;
+                font-size: 0.68rem !important;
+                min-width: 108px !important;
+            }
+        }
+
     </style>
 </head>
 <body>
