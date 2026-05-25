@@ -1964,6 +1964,110 @@
             }
         }
 
+    
+
+        /* ============================================
+           V20 FINAL MOBILE HERO TEXT + CTA FIX
+           Desktop preserved. Mobile copy sits in the left 35% text zone.
+           ============================================ */
+        .hero-primary-cta .mobile-label {
+            display: none;
+        }
+
+        .hero-primary-cta .desktop-label {
+            display: inline;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                width: 35vw !important;
+                max-width: 178px !important;
+                min-width: 138px !important;
+                padding-top: clamp(12px, 3.8vh, 30px) !important;
+                text-align: left !important;
+            }
+
+            .hero-kicker {
+                width: 58px !important;
+                margin: 0 0 16px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2.05rem, 8.15vw, 2.45rem) !important;
+                line-height: 0.92 !important;
+                letter-spacing: -0.055em !important;
+                margin: 0 0 18px !important;
+                max-width: 100% !important;
+                text-align: left !important;
+            }
+
+            .hero-description {
+                width: 35vw !important;
+                max-width: 178px !important;
+                min-width: 138px !important;
+                font-size: clamp(0.86rem, 2.95vw, 0.98rem) !important;
+                line-height: 1.48 !important;
+                margin: 0 0 18px !important;
+                text-align: left !important;
+                color: #4b3a30 !important;
+            }
+
+            .hero-cta {
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+                margin: 0 !important;
+                gap: 0 !important;
+                flex-direction: row !important;
+            }
+
+            .hero-cta .btn-secondary {
+                display: none !important;
+            }
+
+            .hero-primary-cta {
+                min-width: 124px !important;
+                width: auto !important;
+                padding: 12px 24px !important;
+                font-size: 0.78rem !important;
+                border-radius: 999px !important;
+                justify-content: center !important;
+            }
+
+            .hero-primary-cta .desktop-label {
+                display: none !important;
+            }
+
+            .hero-primary-cta .mobile-label {
+                display: inline !important;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .hero-content,
+            .hero-description {
+                width: 35vw !important;
+                max-width: 154px !important;
+                min-width: 126px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(1.95rem, 8.2vw, 2.28rem) !important;
+                margin-bottom: 16px !important;
+            }
+
+            .hero-description {
+                font-size: clamp(0.78rem, 2.9vw, 0.9rem) !important;
+                line-height: 1.43 !important;
+                margin-bottom: 16px !important;
+            }
+
+            .hero-primary-cta {
+                padding: 11px 22px !important;
+                font-size: 0.74rem !important;
+                min-width: 118px !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -2019,7 +2123,7 @@
                         Arcana Research is a research-driven advisory firm helping qualified investors preserve, grow, and transfer wealth through disciplined access to private markets, deep technology, and alternative assets.
                     </p>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary hero-primary-cta">
+                        <a href="#approach" class="btn btn-primary hero-primary-cta">
                             <span class="desktop-label">Discover Our Approach</span>
                             <span class="mobile-label">Contact Us</span>
                         </a>
@@ -2414,5 +2518,21 @@
         window.addEventListener('scroll', handleNavScroll);
         handleNavScroll();
     </script>
+
+    <script>
+        // Mobile-only hero CTA destination: desktop goes to Our Approach, mobile goes to Contact.
+        document.addEventListener('DOMContentLoaded', function () {
+            var heroCta = document.querySelector('.hero-primary-cta');
+            if (!heroCta) return;
+            heroCta.addEventListener('click', function (event) {
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    event.preventDefault();
+                    var contact = document.querySelector('#contact');
+                    if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
