@@ -1419,6 +1419,169 @@
             }
         }
 
+
+        /* ============================================
+           MOBILE HERO + MENU POLISH OVERRIDES
+           Desktop remains unchanged. These rules only improve phone/tablet presentation.
+           ============================================ */
+        @media (max-width: 768px) {
+            .nav {
+                background: rgba(248, 242, 234, 0.90);
+                border-bottom-color: rgba(229, 222, 212, 0.55);
+                box-shadow: 0 4px 18px rgba(61, 43, 31, 0.045);
+            }
+
+            .nav-mobile-menu {
+                top: var(--nav-height-mobile);
+                background: rgba(248, 242, 234, 0.985);
+                backdrop-filter: blur(22px);
+                -webkit-backdrop-filter: blur(22px);
+                border-top: 1px solid rgba(229, 222, 212, 0.72);
+                box-shadow: 0 28px 70px rgba(61, 43, 31, 0.14);
+                z-index: 999;
+            }
+
+            .nav-mobile-menu a {
+                color: var(--color-text-primary);
+                font-family: var(--font-heading);
+                font-size: 1.35rem;
+            }
+
+            .hero {
+                min-height: 100svh;
+                padding-top: calc(var(--nav-height-mobile) + 58px);
+                padding-bottom: 34vh;
+                background-size: auto 55%;
+                background-position: 66% bottom;
+                background-color: #F0E1D2;
+            }
+
+            .hero::before {
+                background:
+                    linear-gradient(180deg,
+                        rgba(248, 242, 234, 0.98) 0%,
+                        rgba(248, 242, 234, 0.96) 42%,
+                        rgba(248, 242, 234, 0.55) 68%,
+                        rgba(248, 242, 234, 0.10) 100%);
+            }
+
+            .hero-content {
+                width: min(100%, 620px);
+                margin: 0 auto;
+                padding: 0;
+                text-align: center;
+            }
+
+            .hero-kicker {
+                width: 92px;
+                margin-bottom: 38px;
+            }
+
+            .hero-headline {
+                font-size: clamp(3.4rem, 13vw, 5.15rem);
+                line-height: 0.91;
+                letter-spacing: -0.065em;
+                margin-bottom: 30px;
+            }
+
+            .hero-description {
+                max-width: 34rem;
+                font-size: clamp(1.02rem, 3.7vw, 1.25rem);
+                line-height: 1.72;
+                margin-bottom: 34px;
+            }
+
+            .hero-cta {
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 26px;
+                width: auto;
+            }
+
+            .hero-cta .btn {
+                width: auto;
+                justify-content: center;
+            }
+
+            .hero-cta .btn-primary {
+                min-width: 238px;
+                padding: 16px 28px;
+            }
+
+            .hero-cta .btn-secondary {
+                padding: 13px 0 9px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .nav-logo img {
+                height: 42px;
+            }
+
+            .nav-logo-text {
+                font-size: 0.72rem;
+                letter-spacing: 0.17em;
+            }
+
+            .hero {
+                padding-top: calc(var(--nav-height-mobile) + 70px);
+                padding-bottom: 31vh;
+                background-size: auto 47%;
+                background-position: 64% bottom;
+            }
+
+            .hero-kicker {
+                margin-bottom: 34px;
+            }
+
+            .hero-headline {
+                font-size: clamp(3.55rem, 14.8vw, 4.55rem);
+                margin-bottom: 26px;
+            }
+
+            .hero-description {
+                font-size: 1.04rem;
+                line-height: 1.66;
+                max-width: 22.5rem;
+                margin-bottom: 32px;
+            }
+
+            .hero-cta {
+                gap: 22px;
+                flex-wrap: wrap;
+            }
+
+            .hero-cta .btn-primary {
+                min-width: 230px;
+                width: auto;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .hero {
+                background-size: auto 43%;
+                padding-bottom: 29vh;
+            }
+
+            .hero-headline {
+                font-size: 3.35rem;
+            }
+
+            .hero-description {
+                font-size: 0.98rem;
+                max-width: 20rem;
+            }
+
+            .hero-cta {
+                gap: 18px;
+            }
+
+            .hero-cta .btn-primary {
+                min-width: 218px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1642,14 +1805,14 @@
 
                 <div class="team-card fade-in fade-in-delay-2">
                     <div class="team-avatar">A</div>
-                    <h4>Alexandre Chau</h4>
+                    <h4>Alexandre</h4>
                     <p class="team-role">Advisor · Investment Strategy</p>
                     <p>Alexandre is a French finance professional with over a decade of sell-side and buy-side experience across Europe and Asia. He holds a Master in Finance from Université Paris Dauphine–PSL. He began his career at HSBC before moving to Goldman Sachs in London and Hong Kong, and later to Wellington Management, where he managed $12 billion in equity mandates. After becoming crypto native in 2020, he led Wellington's crypto research and co-authored its institutional paper on digital assets. At Mythos Liquid Capital, he focuses on systematic strategies and capital preservation.</p>
                 </div>
 
                 <div class="team-card fade-in fade-in-delay-3">
                     <div class="team-avatar">L</div>
-                    <h4>Leon Foong</h4>
+                    <h4>Leon</h4>
                     <p class="team-role">Advisor · Strategic Growth</p>
                     <p>Leon is a dynamic leader with deep corporate finance experience and a proven record of driving growth and building high-performing teams. As former APAC head at Binance, he led efforts that secured five licenses across Asia. He co-founded SOCAR, helping grow it to a $213M valuation at Series B. At Uber, he drove major wins in Malaysia and Thailand, expanding Thai operations from one city to six. Known for his strategic acumen and entrepreneurial mindset, Leon excels at navigating complex regulatory environments and scaling businesses. He studied at St Peter's College, Oxford.</p>
                 </div>
