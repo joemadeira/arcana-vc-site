@@ -1582,6 +1582,183 @@
             }
         }
 
+
+        /* ============================================
+           FINAL MOBILE-ONLY HERO + MENU OVERRIDES
+           Desktop remains unchanged.
+           ============================================ */
+        @media (max-width: 768px) {
+            .nav {
+                background: #F8F2EA !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                border-bottom: 1px solid rgba(213, 199, 181, 0.62);
+                z-index: 1200;
+            }
+
+            .nav-mobile-menu,
+            .nav-mobile-menu.active {
+                position: fixed !important;
+                top: var(--nav-height-mobile) !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: auto !important;
+                width: 100% !important;
+                background: #F8F2EA !important;
+                background-color: #F8F2EA !important;
+                opacity: 1 !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+                border-top: 1px solid rgba(213, 199, 181, 0.55);
+                border-bottom: 1px solid rgba(213, 199, 181, 0.72);
+                box-shadow: 0 28px 70px rgba(61, 43, 31, 0.22);
+                padding: 18px 24px 24px !important;
+                z-index: 1199 !important;
+            }
+
+            .nav-mobile-menu {
+                display: none !important;
+            }
+
+            .nav-mobile-menu.active {
+                display: flex !important;
+                gap: 8px !important;
+            }
+
+            .nav-mobile-menu a {
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                min-height: 54px;
+                padding: 15px 18px !important;
+                border: 1px solid rgba(213, 199, 181, 0.68) !important;
+                border-radius: 18px;
+                background: rgba(255, 252, 247, 0.92) !important;
+                color: var(--color-text-primary) !important;
+                font-family: var(--font-sans) !important;
+                font-size: 0.98rem !important;
+                font-weight: 500;
+                letter-spacing: 0.01em;
+            }
+
+            .nav-mobile-menu a::after {
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-top: 1px solid var(--color-accent);
+                border-right: 1px solid var(--color-accent);
+                transform: rotate(45deg);
+            }
+
+            .hero {
+                min-height: auto !important;
+                padding-top: calc(var(--nav-height-mobile) + 44px) !important;
+                padding-bottom: 42vh !important;
+                background-size: auto 46% !important;
+                background-position: 66% bottom !important;
+            }
+
+            .hero::before {
+                background:
+                    linear-gradient(180deg,
+                        rgba(248, 242, 234, 0.98) 0%,
+                        rgba(248, 242, 234, 0.97) 46%,
+                        rgba(248, 242, 234, 0.70) 70%,
+                        rgba(248, 242, 234, 0.12) 100%) !important;
+            }
+
+            .hero-grid {
+                display: block !important;
+            }
+
+            .hero-content {
+                width: 100% !important;
+                max-width: 640px !important;
+                margin: 0 !important;
+                text-align: left !important;
+                padding: 0 !important;
+            }
+
+            .hero-kicker {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-bottom: 26px !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2.35rem, 9.8vw, 3.05rem) !important;
+                line-height: 1.02 !important;
+                letter-spacing: -0.035em !important;
+                margin-bottom: 22px !important;
+                text-align: left !important;
+            }
+
+            .hero-description {
+                max-width: 33rem !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-bottom: 28px !important;
+                text-align: left !important;
+                font-size: 1rem !important;
+                line-height: 1.62 !important;
+            }
+
+            .hero-cta {
+                justify-content: flex-start !important;
+                align-items: flex-start !important;
+                width: 100% !important;
+                gap: 0 !important;
+                flex-direction: row !important;
+            }
+
+            .hero-cta .btn-secondary {
+                display: none !important;
+            }
+
+            .hero-cta .btn-primary {
+                width: auto !important;
+                min-width: 168px !important;
+                padding: 14px 28px !important;
+                justify-content: center !important;
+            }
+
+            .hero-primary-cta .desktop-label {
+                display: none !important;
+            }
+
+            .hero-primary-cta .mobile-label {
+                display: inline !important;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .hero {
+                padding-top: calc(var(--nav-height-mobile) + 38px) !important;
+                padding-bottom: 39vh !important;
+                background-size: auto 42% !important;
+                background-position: 69% bottom !important;
+            }
+
+            .hero-headline {
+                font-size: clamp(2.25rem, 10.4vw, 2.75rem) !important;
+            }
+
+            .hero-description {
+                font-size: 0.98rem !important;
+                line-height: 1.58 !important;
+                max-width: 21.5rem !important;
+            }
+        }
+
+        @media (max-width: 390px) {
+            .hero {
+                padding-bottom: 36vh !important;
+                background-size: auto 39% !important;
+                background-position: 72% bottom !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1637,8 +1814,9 @@
                         Arcana Research is a research-driven advisory firm helping qualified investors preserve, grow, and transfer wealth through disciplined access to private markets, deep technology, and alternative assets.
                     </p>
                     <div class="hero-cta">
-                        <a href="#approach" class="btn btn-primary">
-                            Discover Our Approach
+                        <a href="#contact" class="btn btn-primary hero-primary-cta">
+                            <span class="desktop-label">Discover Our Approach</span>
+                            <span class="mobile-label">Contact Us</span>
                         </a>
                         <a href="#contact" class="btn btn-secondary">
                             Contact Us
