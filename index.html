@@ -2249,14 +2249,21 @@
         .hero-primary-mobile {
             display: inline-flex !important;
             min-width: 168px !important;
-            width: 100% !important;
+            width: 190px !important;
             max-width: 190px !important;
             justify-content: center !important;
             padding: 14px 24px !important;
             border-radius: 999px !important;
+            background-color: #B48A60 !important;
+            color: #FFFFFF !important;
             font-size: 0.80rem !important;
             letter-spacing: 0 !important;
             box-shadow: 0 18px 38px rgba(116, 83, 55, 0.18) !important;
+        }
+
+        .hero-primary-desktop:hover,
+        .hero-primary-mobile:hover {
+            background-color: #A77F58 !important;
         }
 
         .hero-secondary-desktop,
@@ -2273,6 +2280,8 @@
         .hero-primary-desktop,
         .hero-primary-mobile {
             min-width: 148px !important;
+            width: 168px !important;
+            max-width: 168px !important;
             padding: 12px 20px !important;
             font-size: 0.74rem !important;
         }
@@ -2729,21 +2738,6 @@
 
         window.addEventListener('scroll', handleNavScroll);
         handleNavScroll();
-    </script>
-
-    <script>
-        // Mobile-only hero CTA destination: desktop goes to Our Approach, mobile goes to Contact.
-        document.addEventListener('DOMContentLoaded', function () {
-            var heroCta = document.querySelector('.hero-primary-cta');
-            if (!heroCta) return;
-            heroCta.addEventListener('click', function (event) {
-                if (window.matchMedia('(max-width: 768px)').matches) {
-                    event.preventDefault();
-                    var contact = document.querySelector('#contact');
-                    if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
     </script>
 
 </body>
