@@ -2227,6 +2227,57 @@
       }
     }
 
+
+    /* ============================================
+       MOBILE HERO TWO-BUTTON CTA OVERRIDE
+       Desktop remains untouched.
+       ============================================ */
+    @media (max-width: 768px) {
+        .hero-content {
+            padding-top: clamp(24px, 5vh, 50px) !important;
+        }
+
+        .hero-cta {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            gap: 10px !important;
+            width: 100% !important;
+        }
+
+        .hero-primary-desktop,
+        .hero-primary-mobile {
+            display: inline-flex !important;
+            min-width: 168px !important;
+            width: 100% !important;
+            max-width: 190px !important;
+            justify-content: center !important;
+            padding: 14px 24px !important;
+            border-radius: 999px !important;
+            font-size: 0.80rem !important;
+            letter-spacing: 0 !important;
+            box-shadow: 0 18px 38px rgba(116, 83, 55, 0.18) !important;
+        }
+
+        .hero-secondary-desktop,
+        .hero-cta .btn-secondary {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .hero-content {
+            padding-top: 28px !important;
+        }
+
+        .hero-primary-desktop,
+        .hero-primary-mobile {
+            min-width: 148px !important;
+            padding: 12px 20px !important;
+            font-size: 0.74rem !important;
+        }
+    }
+
   </style>
 </head>
 <body>
