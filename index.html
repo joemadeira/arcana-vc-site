@@ -2248,22 +2248,42 @@
         .hero-primary-desktop,
         .hero-primary-mobile {
             display: inline-flex !important;
-            min-width: 168px !important;
-            width: 190px !important;
-            max-width: 190px !important;
+            width: 184px !important;
+            min-width: 184px !important;
+            max-width: 184px !important;
+            height: 42px !important;
+            align-items: center !important;
             justify-content: center !important;
-            padding: 14px 24px !important;
-            border-radius: 999px !important;
-            background-color: #B48A60 !important;
-            color: #FFFFFF !important;
-            font-size: 0.80rem !important;
-            letter-spacing: 0 !important;
-            box-shadow: 0 18px 38px rgba(116, 83, 55, 0.18) !important;
+            padding: 0 20px !important;
+            border-radius: 12px !important;
+            font-size: 0.74rem !important;
+            font-weight: 650 !important;
+            letter-spacing: -0.01em !important;
+            line-height: 1 !important;
+            box-shadow: none !important;
         }
 
-        .hero-primary-desktop:hover,
+        .hero-primary-desktop {
+            background-color: #9B7844 !important;
+            border: 1px solid #9B7844 !important;
+            color: #FFFFFF !important;
+        }
+
+        .hero-primary-mobile {
+            background-color: transparent !important;
+            border: 1px solid rgba(155, 120, 68, 0.72) !important;
+            color: #9B7844 !important;
+        }
+
+        .hero-primary-desktop:hover {
+            background-color: #8F6E3E !important;
+            border-color: #8F6E3E !important;
+        }
+
         .hero-primary-mobile:hover {
-            background-color: #A77F58 !important;
+            background-color: rgba(155, 120, 68, 0.08) !important;
+            border-color: #9B7844 !important;
+            color: #8F6E3E !important;
         }
 
         .hero-secondary-desktop,
@@ -2279,11 +2299,12 @@
 
         .hero-primary-desktop,
         .hero-primary-mobile {
-            min-width: 148px !important;
             width: 168px !important;
+            min-width: 168px !important;
             max-width: 168px !important;
-            padding: 12px 20px !important;
-            font-size: 0.74rem !important;
+            height: 40px !important;
+            padding: 0 18px !important;
+            font-size: 0.70rem !important;
         }
     }
 
