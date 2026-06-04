@@ -2319,6 +2319,39 @@
         }
     }
 
+        /* Mobile hero headline size fix */
+    @media (max-width: 768px) {
+        .hero-headline {
+            font-size: clamp(1.35rem, 5.4vw, 1.95rem) !important;
+            line-height: 1.08 !important;
+            letter-spacing: -0.035em !important;
+            margin-bottom: 18px !important;
+            max-width: 100% !important;
+        }
+    
+        .hero-description {
+            font-size: clamp(0.72rem, 2.6vw, 0.88rem) !important;
+            line-height: 1.45 !important;
+            margin-bottom: 14px !important;
+        }
+    
+        .hero-description-second {
+            margin-bottom: 20px !important;
+        }
+    }
+
+    @media (max-width: 390px) {
+        .hero-headline {
+            font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+            line-height: 1.08 !important;
+        }
+    
+        .hero-description {
+            font-size: 0.68rem !important;
+            line-height: 1.4 !important;
+        }
+    }
+        
   </style>
 </head>
 <body>
