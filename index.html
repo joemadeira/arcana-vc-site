@@ -2357,7 +2357,39 @@
             transform: translateY(-45px) !important;
         }
     }
-        
+
+            /* Desktop: Approach headline full-width, image remains below/right */
+    @media (min-width: 1025px) {
+        .approach-header {
+            grid-template-columns: minmax(0, 1fr) minmax(420px, 620px);
+            align-items: start;
+        }
+    
+        .approach-copy {
+            display: contents;
+        }
+    
+        .approach-copy .section-label {
+            grid-column: 1 / -1;
+        }
+    
+        .approach-copy .section-headline {
+            grid-column: 1 / -1;
+            max-width: 100%;
+            white-space: nowrap;
+            margin-bottom: 18px;
+        }
+    
+        .approach-copy .section-intro {
+            grid-column: 1;
+            max-width: 760px;
+        }
+    
+        .approach-visual {
+            grid-column: 2;
+            grid-row: 3;
+        }
+    }
   </style>
 </head>
 <body>
