@@ -457,40 +457,20 @@
 .approach-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(420px, 620px);
-    column-gap: clamp(42px, 5vw, 72px);
-    row-gap: 0;
-    align-items: start;
-}
-
-.approach-copy {
-    display: contents;
-}
-
-.approach-copy .section-label {
-    grid-column: 1 / -1;
-    margin-bottom: 22px;
+    gap: clamp(42px, 5vw, 72px);
+    align-items: end;
 }
 
 .approach-copy .section-headline {
-    grid-column: 1 / -1;
-    max-width: none;
-    margin-bottom: 44px;
-    white-space: nowrap;
-    font-size: clamp(2.2rem, 3.4vw, 3rem);
-    line-height: 1.08;
-    letter-spacing: -0.02em;
+    max-width: 830px;
 }
 
 .approach-copy .section-intro {
-    grid-column: 1;
-    grid-row: 3;
     max-width: 760px;
     margin-bottom: 0;
 }
 
 .approach-visual {
-    grid-column: 2;
-    grid-row: 3;
     position: relative;
     overflow: hidden;
     border-radius: 2px;
@@ -591,44 +571,6 @@
     stroke: #FFF8EF !important;
     fill: none !important;
 }
-
-/* Tablet / mobile reset */
-@media (max-width: 1024px) {
-    .approach-header {
-        grid-template-columns: 1fr;
-        row-gap: 36px;
-    }
-
-    .approach-copy {
-        display: block;
-    }
-
-    .approach-copy .section-label,
-    .approach-copy .section-headline,
-    .approach-copy .section-intro,
-    .approach-visual {
-        grid-column: auto;
-        grid-row: auto;
-    }
-
-    .approach-copy .section-headline {
-        white-space: normal;
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin-bottom: 24px;
-    }
-
-    .approach-visual {
-        width: 100%;
-        max-width: 760px;
-        justify-self: start;
-    }
-
-    .approach-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-}
-
 
         /* ============================================
            SOLUTIONS SECTION
